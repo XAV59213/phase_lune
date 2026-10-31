@@ -60,7 +60,6 @@ Nouveaux attributs : `anecdote`, `anecdote_en`, `day_of_year`, `poetic_en`, `poe
 
 ### Installation (HACS)
 
-[![Ouvrir dans HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=XAV59213&repository=phase_lune&category=integration)
 
 1. HACS → Intégrations → ⋮ → **Dépôts personnalisés**
 2. Ajouter `https://github.com/XAV59213/phase_lune`, catégorie **Intégration**
@@ -147,7 +146,6 @@ New attributes: `anecdote`, `anecdote_en`, `day_of_year`, `poetic_en`, `poetics`
 
 ### Installation (HACS)
 
-[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=XAV59213&repository=phase_lune&category=integration)
 
 1. HACS → Integrations → ⋮ → **Custom repositories**
 2. Add `https://github.com/XAV59213/phase_lune`, category **Integration**
