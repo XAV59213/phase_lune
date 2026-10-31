@@ -12,8 +12,10 @@
 
 ---
 
+> **1.2.3** : entity_id préfixés `phase_lune` (`sensor.phase_lune_slug`, `sensor.phase_lune`, `sensor.phase_lune_illumination`, `sensor.phase_lune_anecdote`) pour ne plus entrer en conflit avec l’intégration Moon du core (`sensor.moon_phase`). Migration automatique.
+
 ## 🌍 Pays / hémisphère (1.2.0)
-À l’installation, choisissez votre **pays** (défaut **France**) ; modifiable ensuite via *Configurer*. La phase (nom, illumination) est la même partout ; dans l’**hémisphère sud**, l’image est inversée (croissant ↔ décroissant). Attributs : `country`, `hemisphere`, `image_slug` (utilisez `image_slug` pour l’image : `/phase_lune/moon_phases/{{ state_attr('sensor.moon_phase','image_slug') }}.png`). En France : aucun changement, image = état.
+À l’installation, choisissez votre **pays** (défaut **France**) ; modifiable ensuite via *Configurer*. La phase (nom, illumination) est la même partout ; dans l’**hémisphère sud**, l’image est inversée (croissant ↔ décroissant). Attributs : `country`, `hemisphere`, `image_slug` (utilisez `image_slug` pour l’image : `/phase_lune/moon_phases/{{ state_attr('sensor.phase_lune_slug','image_slug') }}.png`). En France : aucun changement, image = état.
 
 ## 🇫🇷 Français
 
@@ -22,8 +24,8 @@ Intégration Home Assistant qui calcule **localement** (sans API, sans dépendan
 
 ### Fonctionnalités
 - **2 capteurs** :
-  - `sensor.moon_phase` → slug anglais (nom des images PNG) ; attributs `illumination`, `age_days`, `phase_fr`, `poetic`
-  - `sensor.phase_de_la_lune` → libellé français ; attributs `illumination`, `age_days`, `phase_slug`, `poetic`
+  - `sensor.phase_lune_slug` → slug anglais (nom des images PNG) ; attributs `illumination`, `age_days`, `phase_fr`, `poetic`
+  - `sensor.phase_lune` → libellé français ; attributs `illumination`, `age_days`, `phase_slug`, `poetic`
 - **Illumination** en % (0–100) et âge lunaire en jours
 - **Textes poétiques** pour chaque phase
 - Icônes `mdi:moon-*` dynamiques, traductions FR/EN, configuration UI en un clic
@@ -35,7 +37,7 @@ Tableau de bord → Modifier → Ajouter une carte → cherchez « Phase de la L
 ```yaml
 type: custom:phase-lune-card
 title: Phase de la Lune
-entity: sensor.phase_de_la_lune
+entity: sensor.phase_lune
 image_path: /phase_lune/moon_phases   # PNG incluses dans l'intégration (aucune copie)
 language: fr                     # ou en
 show_illumination: true
@@ -59,7 +61,7 @@ Paramètres → Appareils et services → **Ajouter une intégration** → « Ph
 ### Images
 Depuis 1.1.2, les 8 PNG sont **fournies dans l'intégration** et servies via `/phase_lune/moon_phases/<slug>.png` (aucune copie). Optionnel : les copier dans `config/www/moon_phases/` pour `/local/moon_phases/`. Noms :
 
-| État `sensor.moon_phase` | `sensor.phase_de_la_lune` | Fichier |
+| État `sensor.phase_lune_slug` | `sensor.phase_lune` | Fichier |
 |---|---|---|
 | `new_moon` | Nouvelle lune | `new_moon.png` |
 | `waxing_crescent` | Premier croissant | `waxing_crescent.png` |
@@ -81,13 +83,13 @@ card_mod:
   style: |
     ha-card { background: #0b1020; color: #e8e8f0; text-align: center; }
 content: |
-  <img src="/phase_lune/moon_phases/{{ states('sensor.moon_phase') }}.png" width="200">
+  <img src="/phase_lune/moon_phases/{{ states('sensor.phase_lune_slug') }}.png" width="200">
 
-  ## Phase actuelle : {{ states('sensor.phase_de_la_lune') }}
+  ## Phase actuelle : {{ states('sensor.phase_lune') }}
 
-  *{{ state_attr('sensor.phase_de_la_lune','poetic') }}*
+  *{{ state_attr('sensor.phase_lune','poetic') }}*
 
-  Illumination : {{ state_attr('sensor.phase_de_la_lune','illumination') }} %
+  Illumination : {{ state_attr('sensor.phase_lune','illumination') }} %
 ```
 (`card_mod` est optionnel ; sans lui, utiliser un thème sombre.)
 
@@ -112,8 +114,8 @@ Home Assistant integration that computes the moon phase, its illumination and a 
 
 ### Features
 - **2 sensors**:
-  - `sensor.moon_phase` → English slug (PNG image name); attributes `illumination`, `age_days`, `phase_fr`, `poetic`
-  - `sensor.phase_de_la_lune` → French label; attributes `illumination`, `age_days`, `phase_slug`, `poetic`
+  - `sensor.phase_lune_slug` → English slug (PNG image name); attributes `illumination`, `age_days`, `phase_fr`, `poetic`
+  - `sensor.phase_lune` → French label; attributes `illumination`, `age_days`, `phase_slug`, `poetic`
 - **Illumination** in % (0–100) and lunar age in days
 - **Poetic texts** for each phase (French)
 - Dynamic `mdi:moon-*` icons, FR/EN translations, one-click UI setup
@@ -124,7 +126,7 @@ The `custom:phase-lune-card` card is **loaded automatically** by the integration
 Dashboard → Edit → Add card → search “Phase de la Lune”, or YAML:
 ```yaml
 type: custom:phase-lune-card
-entity: sensor.phase_de_la_lune
+entity: sensor.phase_lune
 image_path: /phase_lune/moon_phases   # PNGs shipped with the integration (no copy)
 language: en
 ```
@@ -146,7 +148,7 @@ Settings → Devices & services → **Add integration** → "Phase de la Lune" �
 ### Images
 Since 1.1.2, the 8 PNGs **ship with the integration** at `/phase_lune/moon_phases/<slug>.png` (no copy). Optional: copy them to `config/www/moon_phases/` for `/local/moon_phases/`. Names:
 
-| `sensor.moon_phase` state | `sensor.phase_de_la_lune` | File |
+| `sensor.phase_lune_slug` state | `sensor.phase_lune` | File |
 |---|---|---|
 | `new_moon` | Nouvelle lune (New moon) | `new_moon.png` |
 | `waxing_crescent` | Premier croissant (Waxing crescent) | `waxing_crescent.png` |
@@ -168,13 +170,13 @@ card_mod:
   style: |
     ha-card { background: #0b1020; color: #e8e8f0; text-align: center; }
 content: |
-  <img src="/phase_lune/moon_phases/{{ states('sensor.moon_phase') }}.png" width="200">
+  <img src="/phase_lune/moon_phases/{{ states('sensor.phase_lune_slug') }}.png" width="200">
 
-  ## Current phase: {{ states('sensor.phase_de_la_lune') }}
+  ## Current phase: {{ states('sensor.phase_lune') }}
 
-  *{{ state_attr('sensor.phase_de_la_lune','poetic') }}*
+  *{{ state_attr('sensor.phase_lune','poetic') }}*
 
-  Illumination: {{ state_attr('sensor.phase_de_la_lune','illumination') }} %
+  Illumination: {{ state_attr('sensor.phase_lune','illumination') }} %
 ```
 (`card_mod` is optional; without it, use a dark theme.)
 

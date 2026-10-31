@@ -2,7 +2,7 @@
 (() => {
   const DEFAULTS = {
     title: "Phase de la Lune",
-    entity: "sensor.phase_de_la_lune",
+    entity: "sensor.phase_lune",
     image_path: "/phase_lune/moon_phases",
     language: "fr",
     show_illumination: true,
@@ -44,20 +44,20 @@
     _render() {
       if (!this._c || !this._h) return;
       if (!this.shadowRoot) this.attachShadow({ mode: "open" });
-      const c = this._c, st = this._h.states, s = st[c.entity] || st["sensor.moon_phase"];
+      const c = this._c, st = this._h.states, s = st[c.entity] || st["sensor.phase_lune"] || st["sensor.phase_de_la_lune"];
       if (!s) { this.shadowRoot.innerHTML = `<ha-card><div style="padding:16px">Entité introuvable : ${esc(c.entity)}</div></ha-card>`; return; }
       const a = s.attributes || {}, en = c.language === "en", t = L[en ? "en" : "fr"];
-      const slug = a.phase_slug || (s.entity_id === "sensor.moon_phase" ? s.state : "") || st["sensor.moon_phase"]?.state || "full_moon";
+      const slug = a.phase_slug || st["sensor.phase_lune_slug"]?.state || "full_moon";
       const img = a.image_slug || slug;
       const label = en ? EN[slug] || slug : (a.phase_fr || s.state);
-      const pick = (k) => { for (const o of [s, st["sensor.anecdote_lune"], st["sensor.phase_de_la_lune"], st["sensor.moon_phase"]]) { const v = o?.attributes?.[k]; if (v) return v; } return ""; };
+      const pick = (k) => { for (const o of [s, st["sensor.phase_lune_anecdote"], st["sensor.phase_lune"], st["sensor.phase_lune_slug"]]) { const v = o?.attributes?.[k]; if (v) return v; } return ""; };
       const poetic = en ? (pick("poetic_en") || pick("poetic")) : pick("poetic");
       let anec = en ? (pick("anecdote_en") || pick("anecdote")) : pick("anecdote");
       if (!anec) {
         const d = new Date(), doy = Math.min(365, Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 864e5));
         if (ANEC) { const x = ANEC[doy - 1] || ANEC[0]; anec = en ? x.en : x.fr; } else loadAnec(() => this._render());
       }
-      const ill = a.illumination ?? st["sensor.illumination_lune"]?.state ?? pick("illumination");
+      const ill = a.illumination ?? st["sensor.phase_lune_illumination"]?.state ?? pick("illumination");
       const [head, ...rest] = String(poetic || "").split(/(?<=\.)\s/);
       this.shadowRoot.innerHTML = `
 <style>
