@@ -1,7 +1,12 @@
+<p align="center"><img src="custom_components/phase_lune/brand/logo.png" alt="Phase de la Lune" width="400"></p>
+
 # 🌙 Phase de la Lune — Home Assistant
 
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+[![Release](https://img.shields.io/github/v/release/XAV59213/phase_lune)](https://github.com/XAV59213/phase_lune/releases)
+[![Hassfest](https://github.com/XAV59213/phase_lune/actions/workflows/hassfest.yml/badge.svg)](https://github.com/XAV59213/phase_lune/actions/workflows/hassfest.yml)
+[![HACS Validation](https://github.com/XAV59213/phase_lune/actions/workflows/hacs.yml/badge.svg)](https://github.com/XAV59213/phase_lune/actions/workflows/hacs.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Description
 Intégration Home Assistant qui calcule **localement** (sans API, sans dépendance) la phase de la lune, son illumination et un texte poétique en français.
@@ -15,6 +20,9 @@ Intégration Home Assistant qui calcule **localement** (sans API, sans dépendan
 - Icônes `mdi:moon-*` dynamiques, traductions FR/EN, configuration UI en un clic
 
 ## Installation (HACS)
+
+[![Ouvrir dans HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=XAV59213&repository=phase_lune&category=integration)
+
 1. HACS → Intégrations → ⋮ → **Dépôts personnalisés**
 2. Ajouter `https://github.com/XAV59213/phase_lune`, catégorie **Intégration**
 3. Installer **Phase de la Lune**, puis redémarrer Home Assistant
@@ -62,6 +70,12 @@ content: |
 
 ## À venir
 Icônes brand (`brand/icon.png`) pourront être ajoutées dans une version ultérieure.
+
+## Documentation
+Guides détaillés dans [`docs/`](docs/) (et le [wiki](https://github.com/XAV59213/phase_lune/wiki)) : [Installation](docs/Installation.md) · [Lovelace](docs/Lovelace.md) · [FAQ](docs/FAQ.md)
+
+## Contribution
+Issues et pull requests bienvenues : [ouvrir une issue](https://github.com/XAV59213/phase_lune/issues). Merci de vérifier que les workflows Hassfest et HACS passent.
 
 ## Licence
 MIT © 2025-2026 XAV59213

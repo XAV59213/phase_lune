@@ -1,7 +1,7 @@
 """Constantes pour l'intégration Phase de la Lune."""
 DOMAIN = "phase_lune"
 NAME = "Phase de la Lune"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 SYNODIC_MONTH = 29.530588853
 # Nouvelle lune de référence : 6 janvier 2000 18:14 UTC
