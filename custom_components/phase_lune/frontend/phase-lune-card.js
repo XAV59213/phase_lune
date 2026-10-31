@@ -16,6 +16,9 @@
     fr: { cur: "Phase actuelle", ill: "Illumination", know: "Anecdote du jour" },
     en: { cur: "Current phase", ill: "Illumination", know: "Fact of the day" },
   };
+  const LABELS = { title: "Titre", entity: "Entité", image_path: "Chemin des images", language: "Langue", show_illumination: "Afficher l’illumination", show_anecdote: "Afficher l’anecdote du jour" };
+  let ANEC = null;
+  const loadAnec = (cb) => { if (ANEC || loadAnec.p) return; loadAnec.p = fetch("/phase_lune/anecdotes.json").then((r) => r.json()).then((j) => { ANEC = j; cb(); }).catch(() => {}); };
   const EN = { new_moon: "New moon", waxing_crescent: "Waxing crescent", first_quarter: "First quarter", waxing_gibbous: "Waxing gibbous", full_moon: "Full moon", waning_gibbous: "Waning gibbous", last_quarter: "Last quarter", waning_crescent: "Waning crescent" };
 
   class PhaseLuneCard extends HTMLElement {
@@ -27,13 +30,12 @@
         { name: "language", selector: { select: { options: ["fr", "en"] } } },
         { name: "show_illumination", selector: { boolean: {} } },
         { name: "show_anecdote", selector: { boolean: {} } },
-      ] };
+      ], computeLabel: (x) => LABELS[x.name] || x.name };
     }
     static getStubConfig() { return { ...DEFAULTS }; }
     setConfig(c) {
       const cfg = { ...DEFAULTS, ...(c || {}) };
-      if (!cfg.image_path || /^\/local\/moon_phases\/?$/.test(cfg.image_path)) cfg.image_path = DEFAULTS.image_path;
-      cfg.image_path = String(cfg.image_path).replace(/\/+$/, "");
+      cfg.image_path = DEFAULTS.image_path; // chemin forcé : PNG servies par l'intégration
       if (cfg.show_anecdote === undefined || cfg.show_anecdote === null) cfg.show_anecdote = true;
       this._c = cfg; this._render();
     }
@@ -48,9 +50,14 @@
       const slug = a.phase_slug || (s.entity_id === "sensor.moon_phase" ? s.state : "") || st["sensor.moon_phase"]?.state || "full_moon";
       const img = a.image_slug || slug;
       const label = en ? EN[slug] || slug : (a.phase_fr || s.state);
-      const pick = (k) => { for (const o of [s, st["sensor.phase_de_la_lune"], st["sensor.moon_phase"]]) { const v = o?.attributes?.[k]; if (v) return v; } return ""; };
+      const pick = (k) => { for (const o of [s, st["sensor.anecdote_lune"], st["sensor.phase_de_la_lune"], st["sensor.moon_phase"]]) { const v = o?.attributes?.[k]; if (v) return v; } return ""; };
       const poetic = en ? (pick("poetic_en") || pick("poetic")) : pick("poetic");
-      const anec = en ? (pick("anecdote_en") || pick("anecdote")) : pick("anecdote");
+      let anec = en ? (pick("anecdote_en") || pick("anecdote")) : pick("anecdote");
+      if (!anec) {
+        const d = new Date(), doy = Math.min(365, Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 864e5));
+        if (ANEC) { const x = ANEC[doy - 1] || ANEC[0]; anec = en ? x.en : x.fr; } else loadAnec(() => this._render());
+      }
+      const ill = a.illumination ?? st["sensor.illumination_lune"]?.state ?? pick("illumination");
       const [head, ...rest] = String(poetic || "").split(/(?<=\.)\s/);
       this.shadowRoot.innerHTML = `
 <style>
@@ -67,8 +74,8 @@
  <img src="${esc(c.image_path)}/${esc(img)}.png" alt="${esc(label)}" onerror="this.style.display='none'">
  <p>🌕 <b>${t.cur} : ${esc(label)}</b></p>
  ${poetic ? `<p>🌗 <b>${esc(head)}</b> ${esc(rest.join(" "))}</p>` : ""}
- ${c.show_anecdote && anec ? `<p class="anec">✨ <b>${t.know} :</b> ${esc(anec)}</p>` : ""}
- ${c.show_illumination && a.illumination != null ? `<p class="s">💡 ${t.ill} : ${esc(a.illumination)} %</p>` : ""}
+ ${c.show_anecdote !== false && anec ? `<p class="anec">✨ <b>${t.know} :</b> ${esc(anec)}</p>` : ""}
+ ${c.show_illumination !== false && ill !== "" && ill != null ? `<p class="s">💡 ${t.ill} : ${esc(ill)} %</p>` : ""}
 </ha-card>`;
     }
   }

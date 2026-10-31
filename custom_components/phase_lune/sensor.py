@@ -6,7 +6,7 @@ import math
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 
-from homeassistant.components.sensor import SensorEntity
+from homeassistant.components.sensor import SensorEntity, SensorStateClass
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -65,7 +65,8 @@ def compute(now: datetime | None = None) -> dict:
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry,
                             async_add_entities: AddEntitiesCallback) -> None:
-    async_add_entities([MoonPhaseSensor(entry), PhaseDeLaLuneSensor(entry)], True)
+    async_add_entities([MoonPhaseSensor(entry), PhaseDeLaLuneSensor(entry),
+                        IlluminationSensor(entry), AnecdoteSensor(entry)], True)
 
 
 class _BaseMoonSensor(SensorEntity):
@@ -108,7 +109,7 @@ class MoonPhaseSensor(_BaseMoonSensor):
     def __init__(self, entry: ConfigEntry) -> None:
         super().__init__(entry)
         self.entity_id = "sensor.moon_phase"
-        self._attr_name = "Moon phase"
+        self._attr_name = "Phase lunaire (image)"
         self._attr_unique_id = f"{DOMAIN}_moon_phase"
 
     @property
@@ -146,3 +147,56 @@ class PhaseDeLaLuneSensor(_BaseMoonSensor):
                 "poetic_en": d["poetic_en"], "poetics": d["poetics"],
                 "anecdote": d["anecdote"], "anecdote_en": d["anecdote_en"],
                 "day_of_year": d["day_of_year"], **self._geo()}
+
+
+class IlluminationSensor(_BaseMoonSensor):
+    """sensor.illumination_lune : pourcentage éclairé."""
+
+    _attr_native_unit_of_measurement = "%"
+    _attr_state_class = SensorStateClass.MEASUREMENT
+
+    def __init__(self, entry: ConfigEntry) -> None:
+        super().__init__(entry)
+        self.entity_id = "sensor.illumination_lune"
+        self._attr_name = "Illumination de la Lune"
+        self._attr_unique_id = f"{DOMAIN}_illumination"
+
+    @property
+    def icon(self) -> str:
+        return "mdi:brightness-6"
+
+    @property
+    def native_value(self) -> float:
+        return self._data["illumination"]
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        return {"age_days": self._data["age_days"], "phase_slug": self._data["slug"]}
+
+
+class AnecdoteSensor(_BaseMoonSensor):
+    """sensor.anecdote_lune : anecdote du jour (FR), version EN en attribut."""
+
+    def __init__(self, entry: ConfigEntry) -> None:
+        super().__init__(entry)
+        self.entity_id = "sensor.anecdote_lune"
+        self._attr_name = "Anecdote lunaire du jour"
+        self._attr_unique_id = f"{DOMAIN}_anecdote"
+
+    @property
+    def icon(self) -> str:
+        return "mdi:book-open-variant"
+
+    @property
+    def entity_picture(self) -> None:
+        return None
+
+    @property
+    def native_value(self) -> str:
+        return self._data["anecdote"][:255]
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        d = self._data
+        return {"anecdote": d["anecdote"], "anecdote_en": d["anecdote_en"],
+                "day_of_year": d["day_of_year"]}

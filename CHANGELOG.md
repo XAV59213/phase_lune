@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.2
+- Nouveaux capteurs `sensor.illumination_lune` (%) et `sensor.anecdote_lune` (anecdote du jour).
+- `sensor.moon_phase` renommé « Phase lunaire (image) » (entity_id inchangé).
+- Éditeur de carte en français ; chemin images forcé `/phase_lune/moon_phases`.
+- Carte : anecdote + illumination toujours affichées (repli via `/phase_lune/anecdotes.json`).
+
 ## 1.2.1 — 2026-10-31
 - FR : carte — l’anecdote du jour s’affiche juste sous le texte poétique, encadrée et bien visible ; repli sur `sensor.phase_de_la_lune` / `sensor.moon_phase` si l’entité choisie n’a pas `anecdote`/`poetic` ; `image_path` `/local/moon_phases` migré automatiquement vers `/phase_lune/moon_phases` ; `show_anecdote` vrai par défaut ; taille de carte augmentée.
 - EN: card — fact of the day shown right under the poetic text, highlighted; fallback to `sensor.phase_de_la_lune` / `sensor.moon_phase` when the chosen entity lacks `anecdote`/`poetic`; `/local/moon_phases` image_path silently migrated to `/phase_lune/moon_phases`; `show_anecdote` defaults to true; larger card size.

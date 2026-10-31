@@ -37,6 +37,9 @@ async def async_register_card(hass: HomeAssistant) -> None:
     if images.is_dir():
         # PNG des phases servies depuis l'intégration : /phase_lune/moon_phases/<slug>.png
         paths.append(StaticPathConfig(IMAGES_URL, str(images), True))
+    anec = folder.parent / "anecdotes.json"
+    if anec.is_file():
+        paths.append(StaticPathConfig("/phase_lune/anecdotes.json", str(anec), True))
     try:
         await hass.http.async_register_static_paths(paths)
     except RuntimeError:

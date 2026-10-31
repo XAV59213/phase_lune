@@ -18,7 +18,7 @@
   "entity": {
     "sensor": {
       "moon_phase": {
-        "name": "Phase lunaire (slug)"
+        "name": "Phase lunaire (image)"
       },
       "phase_de_la_lune": {
         "name": "Phase de la Lune"
