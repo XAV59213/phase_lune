@@ -54,6 +54,8 @@ Placer 8 images PNG dans `config/www/moon_phases/` (accessibles via `/local/moon
 
 > Le dossier `www` nécessite parfois un redémarrage de HA après sa création.
 
+📦 Les 8 images prêtes à copier sont dans [`media/moon_phases/`](media/moon_phases/) (hors zip HACS). Source/crédit : [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [fil HA Community 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — licence non précisée par l'auteur, redistribuées avec crédit ([détails](media/moon_phases/README.md)).
+
 ### Exemple de carte Lovelace (fond sombre)
 ```yaml
 type: markdown
@@ -123,6 +125,8 @@ Put 8 PNG images in `config/www/moon_phases/` (served at `/local/moon_phases/`),
 | `waning_crescent` | Dernier croissant (Waning crescent) | `waning_crescent.png` |
 
 > The `www` folder may require a HA restart after it is created.
+
+📦 The 8 ready-to-copy images are in [`media/moon_phases/`](media/moon_phases/) (not in the HACS zip). Source/credit: [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [HA Community thread 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — no license stated by the author, redistributed with credit ([details](media/moon_phases/README.md)).
 
 ### Lovelace card example (dark)
 ```yaml

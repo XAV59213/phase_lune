@@ -15,5 +15,7 @@
 ## Images des phases
 Créer `config/www/moon_phases/` et y déposer 8 PNG : `new_moon.png`, `waxing_crescent.png`, `first_quarter.png`, `waxing_gibbous.png`, `full_moon.png`, `waning_gibbous.png`, `last_quarter.png`, `waning_crescent.png`. Elles sont servies via `/local/moon_phases/<slug>.png`.
 
+Images prêtes à copier : [`media/moon_phases/`](https://github.com/XAV59213/phase_lune/tree/main/media/moon_phases) — source : [papo-o](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) / [HA Community 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646), redistribuées avec crédit.
+
 ## Mise à jour
 HACS propose automatiquement les nouvelles versions ; redémarrer après mise à jour.
