@@ -94,7 +94,7 @@ class _BaseMoonSensor(SensorEntity):
     _attr_should_poll = True
 
     def __init__(self, entry: ConfigEntry) -> None:
-        self._country = entry.options.get(CONF_COUNTRY, entry.data.get(CONF_COUNTRY, DEFAULT_COUNTRY))
+        self._country = str(entry.options.get(CONF_COUNTRY, entry.data.get(CONF_COUNTRY, DEFAULT_COUNTRY))).lower()
         self._hemi = COUNTRIES.get(self._country, "N")
         self._data: dict = compute()
         self._attr_device_info = {

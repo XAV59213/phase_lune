@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.5
+- Correctif hassfest : clés pays en minuscules (compatibilité anciennes configs)
+- Captures d’écran dans le README
+
 ## 1.2.2
 - Nouveaux capteurs `sensor.illumination_lune` (%) et `sensor.anecdote_lune` (anecdote du jour).
 - `sensor.moon_phase` renommé « Phase lunaire (image) » (entity_id inchangé).

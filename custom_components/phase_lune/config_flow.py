@@ -41,5 +41,5 @@ class PhaseLuneOptionsFlow(config_entries.OptionsFlow):
     async def async_step_init(self, user_input: dict[str, Any] | None = None):
         if user_input is not None:
             return self.async_create_entry(title="", data=user_input)
-        cur = self.config_entry.options.get(CONF_COUNTRY, self.config_entry.data.get(CONF_COUNTRY, DEFAULT_COUNTRY))
+        cur = str(self.config_entry.options.get(CONF_COUNTRY, self.config_entry.data.get(CONF_COUNTRY, DEFAULT_COUNTRY))).lower()
         return self.async_show_form(step_id="init", data_schema=_schema(cur))
