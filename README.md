@@ -1,4 +1,4 @@
-<p align="center"><img src="custom_components/phase_lune/brand/logo.png" alt="Phase de la Lune" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/XAV59213/phase_lune/main/custom_components/phase_lune/brand/logo.png" alt="Phase de la Lune" width="400"></p>
 
 # 🌙 Phase de la Lune / Moon Phase — Home Assistant
 
