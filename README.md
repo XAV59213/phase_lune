@@ -15,6 +15,8 @@
   <img src="https://raw.githubusercontent.com/XAV59213/phase_lune/main/docs/images/card-preview.jpg" alt="Carte Phase de la Lune" width="360">
   &nbsp;
   <img src="https://raw.githubusercontent.com/XAV59213/phase_lune/main/docs/images/device-sensors.jpg" alt="Capteurs Phase de la Lune" width="360">
+  <img src="https://raw.githubusercontent.com/XAV59213/phase_lune/main/docs/images/config-country.jpg" alt="Réglage pays" width="360">
+
 </p>
 
 
