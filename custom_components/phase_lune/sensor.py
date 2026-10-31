@@ -73,11 +73,18 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry,
                      (f"{DOMAIN}_illumination", "sensor.phase_lune_illumination"),
                      (f"{DOMAIN}_anecdote", "sensor.phase_lune_anecdote")):
         old = reg.async_get_entity_id("sensor", DOMAIN, uid)
-        if old and old != new and reg.async_get(new) is None:
-            try:
-                reg.async_update_entity(old, new_entity_id=new)
-            except ValueError:
-                pass
+        if old and old != new:
+            if reg.async_get(new) is None:
+                try:
+                    reg.async_update_entity(old, new_entity_id=new)
+                    continue
+                except ValueError:
+                    pass
+            reg.async_remove(old)
+    # supprime toute ancienne entité phase_lune (ex. *_2) qui ne porte pas le nouveau préfixe
+    for ent in list(reg.entities.values()):
+        if ent.platform == DOMAIN and not ent.entity_id.startswith("sensor.phase_lune"):
+            reg.async_remove(ent.entity_id)
     async_add_entities([MoonPhaseSensor(entry), PhaseDeLaLuneSensor(entry),
                         IlluminationSensor(entry), AnecdoteSensor(entry)], True)
 

@@ -44,7 +44,7 @@
     _render() {
       if (!this._c || !this._h) return;
       if (!this.shadowRoot) this.attachShadow({ mode: "open" });
-      const c = this._c, st = this._h.states, s = st[c.entity] || st["sensor.phase_lune"] || st["sensor.phase_de_la_lune"];
+      const c = this._c, st = this._h.states, s = st[c.entity] || st["sensor.phase_lune"];
       if (!s) { this.shadowRoot.innerHTML = `<ha-card><div style="padding:16px">Entité introuvable : ${esc(c.entity)}</div></ha-card>`; return; }
       const a = s.attributes || {}, en = c.language === "en", t = L[en ? "en" : "fr"];
       const slug = a.phase_slug || st["sensor.phase_lune_slug"]?.state || "full_moon";

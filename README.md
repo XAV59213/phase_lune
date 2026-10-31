@@ -12,7 +12,7 @@
 
 ---
 
-> **1.2.3** : entity_id préfixés `phase_lune` (`sensor.phase_lune_slug`, `sensor.phase_lune`, `sensor.phase_lune_illumination`, `sensor.phase_lune_anecdote`) pour ne plus entrer en conflit avec l’intégration Moon du core (`sensor.moon_phase`). Migration automatique.
+> **1.2.3** : entity_id préfixés `phase_lune` (`sensor.phase_lune_slug`, `sensor.phase_lune`, `sensor.phase_lune_illumination`, `sensor.phase_lune_anecdote`) pour ne plus entrer en conflit avec l’intégration Moon du core (`sensor.moon_phase`). Migration automatique : les anciens `sensor.moon_phase`, `sensor.phase_de_la_lune`, `sensor.illumination_lune`, `sensor.anecdote_lune` (et `*_2`) de cette intégration ne sont plus créés et sont retirés du registre. S’il reste des entités orphelines (« Entité non disponible ») : Paramètres → Appareils et services → Entités → filtrer `moon_phase` / `phase_de_la_lune` / `_2` → sélectionner → Supprimer. Ne supprimez pas `sensor.moon_phase` de l’intégration Moon du core si vous l’utilisez.
 
 ## 🌍 Pays / hémisphère (1.2.0)
 À l’installation, choisissez votre **pays** (défaut **France**) ; modifiable ensuite via *Configurer*. La phase (nom, illumination) est la même partout ; dans l’**hémisphère sud**, l’image est inversée (croissant ↔ décroissant). Attributs : `country`, `hemisphere`, `image_slug` (utilisez `image_slug` pour l’image : `/phase_lune/moon_phases/{{ state_attr('sensor.phase_lune_slug','image_slug') }}.png`). En France : aucun changement, image = état.
