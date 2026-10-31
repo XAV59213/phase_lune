@@ -10,6 +10,15 @@
 
 **[🇫🇷 Français](#-français) · [🇬🇧 English](#-english)**
 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/XAV59213/phase_lune/main/docs/images/card-preview.jpg" alt="Carte Phase de la Lune" width="360">
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/XAV59213/phase_lune/main/docs/images/device-sensors.jpg" alt="Capteurs Phase de la Lune" width="360">
+</p>
+
+
+
 ---
 
 > **1.2.3** : entity_id préfixés `phase_lune` (`sensor.phase_lune_slug`, `sensor.phase_lune`, `sensor.phase_lune_illumination`, `sensor.phase_lune_anecdote`) pour ne plus entrer en conflit avec l’intégration Moon du core (`sensor.moon_phase`). Migration automatique : les anciens `sensor.moon_phase`, `sensor.phase_de_la_lune`, `sensor.illumination_lune`, `sensor.anecdote_lune` (et `*_2`) de cette intégration ne sont plus créés et sont retirés du registre. S’il reste des entités orphelines (« Entité non disponible ») : Paramètres → Appareils et services → Entités → filtrer `moon_phase` / `phase_de_la_lune` / `_2` → sélectionner → Supprimer. Ne supprimez pas `sensor.moon_phase` de l’intégration Moon du core si vous l’utilisez.
