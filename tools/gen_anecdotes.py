@@ -1,5 +1,5 @@
 """Génère custom_components/phase_lune/anecdotes.json (365 jours, FR+EN)."""
-import json, pathlib
+import json, pathlib, re
 F = [
 ("La Lune s’éloigne de la Terre d’environ 3,8 cm par an.","The Moon drifts away from Earth by about 3.8 cm per year."),
 ("La Lune montre toujours la même face : c’est la rotation synchrone.","The Moon always shows the same face: synchronous rotation."),
@@ -76,11 +76,24 @@ F = [
 ("Le cratère Tycho est entouré de rayons visibles aux jumelles.","Tycho crater has rays visible with binoculars."),
 ]
 assert len(F) == 73, len(F)
-P = [("Le saviez-vous ? ","Did you know? "),("Anecdote lunaire : ","Moon fact: "),("Sous la Lune : ","Under the Moon: "),("Curiosité du ciel : ","Sky curiosity: "),("Petite histoire : ","A little story: ")]
-out = []
-for d in range(365):
-    fr, en = F[(d * 29) % 73]  # 29 premier avec 73 : chaque fait une fois par bloc
-    p = P[d // 73]
-    out.append({"day": d + 1, "fr": p[0] + fr, "en": p[1] + en})
-assert len({o["fr"] for o in out}) == 365
+import random
+BAD = ("Une vingtaine de tonnes", "Le PIB lunaire", "La NASA vend", "Le cratère Hergé", "Notre Lune est la seule", "L’année 2026")
+X = []
+for line in pathlib.Path(__file__).with_name("anecdotes_extra.txt").read_text("utf-8").splitlines():
+    if line.strip() and not line.startswith(BAD):
+        fr, en = line.split("|")
+        X.append((fr.strip(), en.strip()))
+ALL = F + X
+seen = set(); U = []
+for fr, en in ALL:
+    k = re.sub(r"\W+", "", fr.lower())[:60]
+    if k not in seen:
+        seen.add(k); U.append((fr, en))
+assert len(U) >= 365, len(U)
+U = U[:73] + random.Random(1969).sample(U[73:], 365 - 73)  # 365 faits distincts
+random.Random(29).shuffle(U)
+out = [{"day": d + 1, "fr": fr, "en": en} for d, (fr, en) in enumerate(U)]
+assert len(out) == 365
+assert len({o["fr"] for o in out}) == 365 and len({o["en"] for o in out}) == 365
 pathlib.Path(__file__).parent.parent.joinpath("custom_components/phase_lune/anecdotes.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), "utf-8")
+print("ok", len(out), "faits uniques")

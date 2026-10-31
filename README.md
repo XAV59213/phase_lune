@@ -26,7 +26,7 @@ Intégration Home Assistant qui calcule **localement** (sans API, sans dépendan
 - Icônes `mdi:moon-*` dynamiques, traductions FR/EN, configuration UI en un clic
 
 ### Carte Lovelace custom (1.1.0)
-La carte `custom:phase-lune-card` est **chargée automatiquement** par l’intégration (aucune ressource à ajouter). Fond sombre hexagones, grande image de lune, phase actuelle, texte poétique (4 par phase, rotation quotidienne) et **anecdote du jour** (365 anecdotes FR/EN, une par jour de l’année).
+La carte `custom:phase-lune-card` est **chargée automatiquement** par l’intégration (aucune ressource à ajouter). Fond sombre hexagones, grande image de lune, phase actuelle, texte poétique (4 par phase, rotation quotidienne) et **anecdote du jour** (365 anecdotes uniques FR/EN, une par jour de l’année).
 
 Tableau de bord → Modifier → Ajouter une carte → cherchez « Phase de la Lune », ou en YAML :
 ```yaml

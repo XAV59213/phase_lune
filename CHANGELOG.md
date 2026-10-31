@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 — 2026-10-31
+- FR : 365 anecdotes FR/EN **toutes uniques** (plus de recyclage de 73 faits) — science, exploration, mythologie, culture, folklore, nature ; source `tools/anecdotes_extra.txt`.
+- EN: 365 **truly unique** FR/EN Moon facts (no more recycling of 73 facts) — science, exploration, mythology, culture, folklore, nature; source `tools/anecdotes_extra.txt`.
+
 ## 1.1.0 — 2026-10-31
 - FR : carte Lovelace `custom:phase-lune-card` (chargée automatiquement, éditeur visuel) ; 365 anecdotes FR/EN (jour de l’année, `anecdotes.json`) ; 4 textes poétiques FR/EN par phase en rotation quotidienne ; nouveaux attributs `anecdote`, `anecdote_en`, `day_of_year`, `poetic_en`, `poetics`.
 - EN: `custom:phase-lune-card` Lovelace card (auto-loaded, visual editor); 365 FR/EN facts (day of year, `anecdotes.json`); 4 FR/EN poetic texts per phase with daily rotation; new attributes.

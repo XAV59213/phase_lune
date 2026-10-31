@@ -1,0 +1,393 @@
+La Lune a une masse d’environ 1,2 % de celle de la Terre.|The Moon’s mass is about 1.2% of Earth’s.
+La densité moyenne de la Lune est d’environ 3,34 g/cm³, moins que celle de la Terre.|The Moon’s mean density is about 3.34 g/cm³, lower than Earth’s.
+La Lune possède un petit noyau métallique d’environ 350 km de rayon.|The Moon has a small metallic core about 350 km in radius.
+La vitesse de libération lunaire est d’environ 2,4 km/s.|The Moon’s escape velocity is about 2.4 km/s.
+Le mois sidéral, un tour complet par rapport aux étoiles, dure environ 27,3 jours.|The sidereal month, one orbit relative to the stars, lasts about 27.3 days.
+Le mois draconitique, lié aux nœuds de l’orbite, dure environ 27,2 jours.|The draconic month, tied to the orbit’s nodes, lasts about 27.2 days.
+Le mois anomalistique, de périgée à périgée, dure environ 27,55 jours.|The anomalistic month, perigee to perigee, lasts about 27.55 days.
+Les nœuds de l’orbite lunaire font le tour de l’écliptique en 18,6 ans.|The lunar orbit’s nodes circle the ecliptic every 18.6 years.
+Le cycle de Saros, environ 18 ans et 11 jours, permet de prédire les éclipses.|The Saros cycle, about 18 years 11 days, lets us predict eclipses.
+Le cycle de Méton : 19 années solaires valent presque exactement 235 lunaisons.|The Metonic cycle: 19 solar years almost equal 235 lunar months.
+La Lune se lève en moyenne environ 50 minutes plus tard chaque jour.|The Moon rises on average about 50 minutes later each day.
+La pleine lune se lève à peu près au coucher du Soleil.|The full moon rises around sunset.
+Le premier quartier est visible l’après-midi et en début de nuit.|The first quarter moon is visible in the afternoon and early evening.
+Le dernier quartier se lève vers minuit et reste visible le matin.|The last quarter moon rises around midnight and lingers in the morning.
+Un croissant juste après la nouvelle lune n’est visible que peu après le coucher du Soleil.|A crescent just after new moon is only visible shortly after sunset.
+Le plus jeune croissant observé à l’œil nu avait environ 15 heures.|The youngest crescent seen with the naked eye was about 15 hours old.
+Près de l’équateur, le croissant lunaire apparaît couché, comme un sourire.|Near the equator, the crescent moon lies on its back like a smile.
+Dans l’hémisphère sud, les phases de la Lune apparaissent inversées.|In the southern hemisphere, the Moon’s phases look reversed.
+Moyen mnémotechnique : la Lune est menteuse, un « C » décroît et un « D » croît.|French mnemonic: the Moon ‘lies’ — a ‘C’ shape is waning, a ‘D’ is waxing.
+La pleine lune est environ 10 fois plus lumineuse qu’un demi-disque au quartier.|The full moon is about 10 times brighter than a quarter moon.
+Ce surcroît d’éclat à la pleine lune s’appelle l’effet d’opposition.|That extra brightness at full moon is called the opposition effect.
+La pleine lune atteint une magnitude d’environ −12,7.|The full moon reaches a magnitude of about −12.7.
+Le Soleil est environ 400 000 fois plus lumineux que la pleine lune.|The Sun is about 400,000 times brighter than the full moon.
+Le Soleil est 400 fois plus grand que la Lune mais aussi 400 fois plus loin.|The Sun is 400 times wider than the Moon but also 400 times farther away.
+Une éclipse annulaire laisse voir un anneau de feu autour de la Lune.|An annular eclipse leaves a ring of fire around the Moon.
+Dans un lointain avenir, la Lune trop éloignée ne permettra plus d’éclipses totales.|In the far future the Moon will be too distant for total solar eclipses.
+La totalité d’une éclipse de Soleil ne dépasse jamais environ 7 min 30 s.|Totality in a solar eclipse never exceeds about 7 min 30 s.
+Une éclipse totale de Lune est visible de toute la moitié nocturne de la Terre.|A total lunar eclipse is visible from the whole night side of Earth.
+La couleur d’une lune de sang vient des couchers de soleil de toute la Terre filtrés par l’atmosphère.|A blood moon’s colour comes from all of Earth’s sunsets filtered through the atmosphere.
+L’échelle de Danjon note de 0 à 4 la luminosité d’une éclipse de Lune.|The Danjon scale rates a lunar eclipse’s brightness from 0 to 4.
+Après de grandes éruptions volcaniques, les éclipses de Lune sont plus sombres.|After big volcanic eruptions, lunar eclipses look darker.
+Colomb aurait utilisé l’éclipse de Lune de 1504 pour impressionner les Taïnos de Jamaïque.|Columbus reportedly used the 1504 lunar eclipse to awe the Taíno of Jamaica.
+Aristote a déduit la rondeur de la Terre de son ombre courbe sur la Lune.|Aristotle inferred Earth’s roundness from its curved shadow on the Moon.
+Aristarque de Samos a tenté de mesurer la distance Terre-Lune vers 270 av. J.-C.|Aristarchus of Samos tried to measure the Earth–Moon distance around 270 BC.
+Hipparque a estimé la distance de la Lune à environ 60 rayons terrestres, presque juste.|Hipparchus estimated the Moon at about 60 Earth radii, nearly right.
+Newton a montré que la même gravité fait tomber une pomme et tourner la Lune.|Newton showed that the same gravity drops an apple and keeps the Moon in orbit.
+Le mouvement de la Lune est si complexe que Newton disait qu’il lui donnait mal à la tête.|Newton said the Moon’s motion was the only problem that made his head ache.
+Thomas Harriot a dessiné la Lune à la lunette quelques mois avant Galilée.|Thomas Harriot drew the Moon through a telescope months before Galileo.
+Giovanni Riccioli a baptisé en 1651 la plupart des cratères d’après des savants.|Giovanni Riccioli named most craters after scholars in 1651.
+Les mers lunaires portent des noms poétiques comme mer de la Sérénité ou des Pluies.|Lunar seas have poetic names like the Sea of Serenity or Sea of Rains.
+Il existe un « lac des Rêves », Lacus Somniorum, sur la Lune.|There is a ‘Lake of Dreams’, Lacus Somniorum, on the Moon.
+L’océan des Tempêtes est la plus grande mer lunaire.|The Ocean of Storms is the largest lunar mare.
+Une baie lunaire s’appelle Sinus Iridum, la baie des Arcs-en-ciel.|One lunar bay is Sinus Iridum, the Bay of Rainbows.
+Le cratère Copernic mesure environ 93 km de diamètre.|Copernicus crater is about 93 km across.
+Le cratère Clavius, près du pôle sud, mesure environ 225 km.|Clavius crater, near the south pole, is about 225 km across.
+Dans « 2001, l’Odyssée de l’espace », le monolithe est découvert dans le cratère Tycho.|In ‘2001: A Space Odyssey’ the monolith is found in Tycho crater.
+Le cratère Aristarque est le point le plus brillant de la Lune.|Aristarchus crater is the brightest spot on the Moon.
+Le cratère Platon a un fond de lave très sombre et lisse.|Plato crater has a very dark, smooth lava floor.
+Les Apennins lunaires forment une chaîne de plus de 600 km.|The lunar Apennines form a range over 600 km long.
+La vallée des Alpes est une entaille de 166 km dans les montagnes lunaires.|The Alpine Valley is a 166 km gash through the lunar mountains.
+Le « Mur droit » (Rupes Recta) est une faille de 110 km visible au télescope.|The Straight Wall (Rupes Recta) is a 110 km fault visible in telescopes.
+Au terminateur, les ombres longues révèlent le mieux le relief.|At the terminator, long shadows show the relief best.
+Le « X lunaire » est un jeu d’ombres visible quelques heures avant le premier quartier.|The ‘Lunar X’ is a play of shadows seen a few hours before first quarter.
+La « lune V » est un autre effet d’ombre près du cratère Ukert.|The ‘Lunar V’ is another shadow effect near Ukert crater.
+Les rainures sinueuses comme la vallée de Schröter sont d’anciens chenaux de lave.|Sinuous rilles like Schröter’s Valley are ancient lava channels.
+Des tunnels de lave lunaires pourraient un jour abriter des bases humaines.|Lunar lava tubes could one day shelter human bases.
+Des « fosses » lunaires profondes donnent accès à des cavités souterraines.|Deep lunar pits lead into underground cavities.
+Les tourbillons clairs de Reiner Gamma sont liés à un champ magnétique local.|The bright swirls of Reiner Gamma are tied to a local magnetic field.
+La Lune n’a plus de champ magnétique global, mais en a eu un il y a des milliards d’années.|The Moon has no global magnetic field now, but had one billions of years ago.
+La croûte lunaire est plus épaisse sur la face cachée.|The lunar crust is thicker on the far side.
+La face cachée compte très peu de mers et beaucoup plus de cratères.|The far side has very few maria and many more craters.
+On dit à tort « face sombre » : il faudrait dire face cachée.|‘Dark side’ is a misnomer: it is really the far side.
+Les hautes terres claires sont faites d’anorthosite, une roche riche en feldspath.|The bright highlands are made of anorthosite, a feldspar-rich rock.
+La Lune primitive était couverte d’un océan de magma.|The early Moon was covered by a magma ocean.
+Le grand bombardement tardif aurait criblé la Lune il y a environ 3,9 milliards d’années.|The Late Heavy Bombardment may have pounded the Moon about 3.9 billion years ago.
+Les roches lunaires ont une composition isotopique d’oxygène presque identique à la Terre.|Lunar rocks have oxygen isotopes almost identical to Earth’s.
+Les roches lunaires ne contiennent pratiquement pas d’eau liée aux minéraux comme sur Terre.|Lunar rocks hold almost none of the mineral-bound water found on Earth.
+Un minéral, l’armalcolite, doit son nom à Armstrong, Aldrin et Collins.|The mineral armalcolite is named after Armstrong, Aldrin and Collins.
+La tranquillityite, découverte dans les roches d’Apollo 11, a été retrouvée en Australie en 2011.|Tranquillityite, found in Apollo 11 rocks, was found in Australia in 2011.
+La « Genesis Rock » rapportée par Apollo 15 est un morceau de croûte primitive.|The ‘Genesis Rock’ brought back by Apollo 15 is a piece of primitive crust.
+Le régolithe contient de l’hélium 3 déposé par le vent solaire.|Regolith contains helium-3 deposited by the solar wind.
+Le régolithe lunaire contient environ 40 % d’oxygène, lié aux minéraux.|Lunar regolith is about 40% oxygen, locked in minerals.
+La couche de régolithe fait de quelques mètres à une quinzaine de mètres d’épaisseur.|The regolith layer ranges from a few metres to about fifteen metres thick.
+On a retrouvé sur Terre des centaines de météorites venues de la Lune.|Hundreds of meteorites from the Moon have been found on Earth.
+La première météorite lunaire identifiée a été trouvée en Antarctique en 1982.|The first identified lunar meteorite was found in Antarctica in 1982.
+Les micrométéorites « jardinent » sans cesse le sol lunaire.|Micrometeorites constantly ‘garden’ the lunar soil.
+Des flashs d’impacts de météorites sont observés sur la face nocturne de la Lune.|Meteorite impact flashes are seen on the Moon’s night side.
+La Lune a une exosphère ténue contenant sodium, potassium et argon.|The Moon has a tenuous exosphere with sodium, potassium and argon.
+Une longue traînée de sodium lunaire s’étend dans l’espace, la « queue » de la Lune.|A long sodium trail streams from the Moon into space, its ‘tail’.
+La poussière lunaire peut léviter au terminateur sous l’effet de charges électriques.|Lunar dust may levitate at the terminator due to electric charges.
+Les astronautes d’Apollo 17 ont souffert d’un « rhume des foins lunaire » à cause de la poussière.|Apollo 17 astronauts suffered ‘lunar hay fever’ from the dust.
+La poussière a usé les joints des combinaisons Apollo en quelques jours.|Dust wore down Apollo spacesuit seals within days.
+Les sismomètres d’Apollo ont enregistré des séismes jusqu’en 1977.|Apollo seismometers recorded quakes until 1977.
+Certains lunaséismes superficiels ont atteint une magnitude d’environ 5.|Some shallow moonquakes reached about magnitude 5.
+La Lune « sonne » longtemps après un impact, comme une cloche.|The Moon ‘rings’ long after an impact, like a bell.
+La Lune rétrécit légèrement en refroidissant, créant des escarpements.|The Moon is shrinking slightly as it cools, creating scarps.
+Les marées terrestres déforment aussi la Lune de quelques centimètres.|Earth’s tides also deform the Moon by a few centimetres.
+La croûte terrestre se soulève de plusieurs dizaines de centimètres sous l’effet de la Lune.|Earth’s crust rises by tens of centimetres under the Moon’s pull.
+Il y a deux marées hautes par jour car la Lune étire la Terre des deux côtés.|There are two high tides a day because the Moon stretches Earth on both sides.
+Les marées de mortes-eaux se produisent aux quartiers de Lune.|Neap tides occur at the quarter moons.
+La baie de Fundy, au Canada, connaît des marées de plus de 15 m.|Canada’s Bay of Fundy has tides over 15 m high.
+Au Mont-Saint-Michel, la mer monte « à la vitesse d’un cheval au galop », dit-on.|At Mont-Saint-Michel the tide is said to rise ‘as fast as a galloping horse’.
+Le mascaret est une vague remontant un fleuve lors des grandes marées.|A tidal bore is a wave running up a river at spring tides.
+L’usine marémotrice de la Rance utilise l’énergie des marées depuis 1966.|The Rance tidal power plant has used tidal energy since 1966.
+Le jour terrestre s’allonge d’environ 2 millisecondes par siècle à cause des marées.|Earth’s day lengthens by about 2 milliseconds per century due to tides.
+Au moment de sa formation, la Lune était peut-être 15 fois plus proche qu’aujourd’hui.|When it formed, the Moon may have been 15 times closer than today.
+Une nouvelle hypothèse imagine la Lune née d’une synestia, nuage de roche vaporisée.|One newer idea has the Moon forming from a synestia, a cloud of vapourised rock.
+Avant Apollo, on pensait que la Lune avait pu être capturée par la Terre.|Before Apollo, some thought Earth had captured the Moon.
+George Darwin, fils de Charles, pensait que la Lune s’était détachée de la Terre.|George Darwin, Charles’s son, thought the Moon split off from Earth.
+Le barycentre Terre-Lune se trouve à l’intérieur de la Terre, à environ 4 670 km du centre.|The Earth–Moon barycentre is inside Earth, about 4,670 km from the centre.
+Le Soleil attire la Lune plus fort que la Terre ne le fait.|The Sun pulls on the Moon harder than Earth does.
+L’orbite de la Lune autour du Soleil est toujours concave, sans boucle.|The Moon’s path around the Sun is always concave, never looping.
+L’orbite de la Lune est légèrement elliptique, entre environ 356 500 et 406 700 km.|The Moon’s orbit is slightly elliptical, between about 356,500 and 406,700 km.
+L’axe de la Lune n’est incliné que d’environ 1,5° : elle n’a presque pas de saisons.|The Moon’s axis is tilted only about 1.5°: it has almost no seasons.
+Certains cratères polaires n’ont pas vu le Soleil depuis des milliards d’années.|Some polar craters haven’t seen the Sun for billions of years.
+Les cratères polaires ombragés comptent parmi les endroits les plus froids du Système solaire.|Shadowed polar craters are among the coldest places in the Solar System.
+Des sommets près des pôles sont éclairés presque en permanence.|Some peaks near the poles are lit almost permanently.
+Le cratère Shackleton, au pôle sud, est une cible privilégiée d’Artemis.|Shackleton crater at the south pole is a prime Artemis target.
+La sonde LCROSS a percuté le cratère Cabeus en 2009 et a détecté de l’eau.|The LCROSS probe hit Cabeus crater in 2009 and detected water.
+La sonde indienne Chandrayaan-1 a cartographié de l’eau à la surface en 2009.|India’s Chandrayaan-1 mapped surface water in 2009.
+En 2023, Chandrayaan-3 a fait de l’Inde le premier pays à se poser près du pôle sud.|In 2023, Chandrayaan-3 made India the first to land near the south pole.
+L’observatoire SOFIA a détecté de l’eau même dans des zones ensoleillées.|The SOFIA observatory detected water even in sunlit areas.
+Le satellite LRO cartographie la Lune depuis 2009.|The LRO orbiter has been mapping the Moon since 2009.
+LRO a photographié les sites Apollo, avec les traces des astronautes.|LRO photographed the Apollo sites, astronaut tracks included.
+Les missions GRAIL ont cartographié la gravité lunaire avec deux sondes jumelles.|The GRAIL mission mapped lunar gravity with twin probes.
+La gravité lunaire est irrégulière à cause des « mascons », concentrations de masse.|Lunar gravity is lumpy because of ‘mascons’, mass concentrations.
+À cause des mascons, la plupart des orbites lunaires basses sont instables.|Because of mascons, most low lunar orbits are unstable.
+La sonde européenne SMART-1 a rejoint la Lune en 2003 grâce à un moteur ionique.|Europe’s SMART-1 reached the Moon in 2003 using an ion engine.
+SMART-1 a terminé sa mission en s’écrasant volontairement sur la Lune en 2006.|SMART-1 ended its mission by crashing into the Moon on purpose in 2006.
+La sonde japonaise Kaguya a filmé un lever de Terre en haute définition.|Japan’s Kaguya probe filmed an Earthrise in high definition.
+En 2024, la sonde japonaise SLIM s’est posée à quelques mètres de sa cible, à l’envers.|In 2024 Japan’s SLIM landed within metres of its target — upside down.
+En 2024, Odysseus est devenu le premier atterrisseur privé à se poser sur la Lune.|In 2024, Odysseus became the first private lander on the Moon.
+Chang’e 5 a rapporté environ 1,7 kg d’échantillons en 2020.|Chang’e 5 brought back about 1.7 kg of samples in 2020.
+Chang’e 6 a rapporté en 2024 les premiers échantillons de la face cachée.|Chang’e 6 returned the first far-side samples in 2024.
+Le rover chinois Yutu-2 a parcouru plus de 1,5 km sur la face cachée.|China’s Yutu-2 rover has driven over 1.5 km on the far side.
+Le satellite relais Queqiao permet de communiquer avec la face cachée.|The Queqiao relay satellite allows contact with the far side.
+Chang’e 4 a fait germer des graines de coton sur la Lune en 2019.|Chang’e 4 sprouted cotton seeds on the Moon in 2019.
+Lunokhod 1, en 1970, fut le premier rover sur un autre astre.|Lunokhod 1, in 1970, was the first rover on another world.
+Lunokhod 2 a parcouru environ 39 km en 1973.|Lunokhod 2 drove about 39 km in 1973.
+Le réflecteur de Lunokhod 1, perdu pendant des décennies, a été retrouvé en 2010.|Lunokhod 1’s reflector, lost for decades, was found again in 2010.
+Luna 9 a réussi le premier atterrissage en douceur sur la Lune en 1966.|Luna 9 made the first soft landing on the Moon in 1966.
+Luna 16 a rapporté automatiquement des échantillons lunaires en 1970.|Luna 16 robotically returned lunar samples in 1970.
+Surveyor 1 fut le premier atterrisseur américain, en 1966.|Surveyor 1 was the first US lander, in 1966.
+Les astronautes d’Apollo 12 ont rapporté des pièces de la sonde Surveyor 3.|Apollo 12 astronauts brought back parts of the Surveyor 3 probe.
+Les sondes Ranger ont transmis des images jusqu’à l’impact.|Ranger probes sent images right up to impact.
+Lunar Orbiter a cartographié la Lune pour choisir les sites d’Apollo.|Lunar Orbiter mapped the Moon to choose Apollo sites.
+Lunar Orbiter 1 a pris en 1966 la première photo de la Terre vue de la Lune.|Lunar Orbiter 1 took the first picture of Earth from the Moon in 1966.
+Apollo 8 fut la première mission habitée à faire le tour de la Lune, à Noël 1968.|Apollo 8 was the first crewed mission to circle the Moon, at Christmas 1968.
+La photo « Earthrise » a été prise par Bill Anders pendant Apollo 8.|The ‘Earthrise’ photo was taken by Bill Anders on Apollo 8.
+L’équipage d’Apollo 8 a lu la Genèse en direct la veille de Noël.|Apollo 8’s crew read from Genesis live on Christmas Eve.
+Apollo 10 a fait une répétition générale à 15 km de la surface.|Apollo 10 did a dress rehearsal 15 km above the surface.
+Le module lunaire d’Apollo 10 s’appelait Snoopy, et le vaisseau Charlie Brown.|Apollo 10’s lunar module was Snoopy and its command module Charlie Brown.
+Le module lunaire d’Apollo 11 s’appelait Eagle et le module de commande Columbia.|Apollo 11’s lunar module was Eagle and its command module Columbia.
+Eagle s’est posé avec seulement environ 25 secondes de carburant de marge.|Eagle landed with only about 25 seconds of fuel margin.
+Les alarmes 1201 et 1202 ont retenti pendant la descente d’Apollo 11.|The 1201 and 1202 alarms sounded during Apollo 11’s descent.
+Michael Collins est resté seul en orbite pendant qu’Armstrong et Aldrin marchaient.|Michael Collins stayed alone in orbit while Armstrong and Aldrin walked.
+Buzz Aldrin a communié sur la Lune juste après l’alunissage.|Buzz Aldrin took communion on the Moon right after landing.
+Environ 600 millions de personnes ont regardé les premiers pas en direct.|About 600 million people watched the first steps live.
+Apollo 11 a laissé une plaque : « Nous sommes venus en paix pour toute l’humanité ».|Apollo 11 left a plaque: ‘We came in peace for all mankind’.
+Le drapeau d’Apollo 11 a été renversé par le souffle du décollage.|Apollo 11’s flag was knocked over by the ascent engine blast.
+Les drapeaux plantés sur la Lune ont probablement été blanchis par les UV.|The flags on the Moon have probably been bleached white by UV.
+Aldrin a dû utiliser un feutre pour réparer un disjoncteur cassé avant le décollage.|Aldrin used a felt-tip pen to fix a broken circuit breaker before liftoff.
+Au retour, l’équipage d’Apollo 11 a passé 21 jours en quarantaine.|On return, Apollo 11’s crew spent 21 days in quarantine.
+Apollo 12 a été frappée deux fois par la foudre au décollage.|Apollo 12 was struck by lightning twice at launch.
+Pete Conrad, d’Apollo 12, a lancé : « C’était peut-être un petit pas pour Neil, mais un long pour moi ! »|Apollo 12’s Pete Conrad quipped: ‘That may have been a small one for Neil, but it’s a long one for me!’
+Apollo 13 a dû renoncer à l’alunissage après l’explosion d’un réservoir d’oxygène.|Apollo 13 had to abort its landing after an oxygen tank exploded.
+L’équipage d’Apollo 13 a utilisé le module lunaire comme canot de sauvetage.|Apollo 13’s crew used the lunar module as a lifeboat.
+Apollo 13 détient le record de la plus grande distance atteinte par des humains.|Apollo 13 holds the record for the farthest humans have travelled.
+Apollo 14 a emporté des graines devenues les « arbres lunaires » plantés sur Terre.|Apollo 14 carried seeds that became ‘Moon trees’ planted on Earth.
+Apollo 15 a inauguré la jeep lunaire (LRV).|Apollo 15 debuted the Lunar Roving Vehicle.
+Trois jeeps lunaires sont restées sur la Lune.|Three lunar rovers remain on the Moon.
+David Scott a reproduit l’expérience de Galilée : un marteau et une plume tombent ensemble.|David Scott recreated Galileo’s test: a hammer and feather fell together.
+Apollo 15 a laissé une statuette « Fallen Astronaut » en hommage aux astronautes disparus.|Apollo 15 left the ‘Fallen Astronaut’ figurine honouring lost astronauts.
+Apollo 16 a exploré les hautes terres de Descartes.|Apollo 16 explored the Descartes highlands.
+Charlie Duke a laissé une photo de sa famille sur la Lune.|Charlie Duke left a photo of his family on the Moon.
+Apollo 17 a emmené le seul scientifique de terrain, le géologue Harrison Schmitt.|Apollo 17 carried the only field scientist, geologist Harrison Schmitt.
+Schmitt a découvert un sol orange dû à d’anciennes billes volcaniques.|Schmitt found orange soil made of ancient volcanic glass beads.
+La photo « Blue Marble » a été prise par l’équipage d’Apollo 17 en 1972.|The ‘Blue Marble’ photo was taken by Apollo 17’s crew in 1972.
+Gene Cernan, d’Apollo 17, est le dernier homme à avoir marché sur la Lune.|Apollo 17’s Gene Cernan is the last person to have walked on the Moon.
+Cernan a écrit les initiales de sa fille dans la poussière lunaire.|Cernan wrote his daughter’s initials in the lunar dust.
+Apollo 18, 19 et 20 ont été annulées faute de budget.|Apollo 18, 19 and 20 were cancelled for lack of budget.
+La fusée Saturn V mesurait 110 m de haut.|The Saturn V rocket was 110 m tall.
+L’ordinateur de guidage d’Apollo avait environ 4 Ko de mémoire vive.|The Apollo Guidance Computer had about 4 KB of RAM.
+Margaret Hamilton a dirigé l’équipe qui a écrit le logiciel de vol d’Apollo.|Margaret Hamilton led the team that wrote Apollo’s flight software.
+Katherine Johnson a calculé des trajectoires clés pour les missions lunaires.|Katherine Johnson computed key trajectories for Moon missions.
+La mémoire de l’ordinateur d’Apollo était tissée à la main : la « core rope ».|Apollo’s computer memory was hand-woven ‘core rope’.
+Les combinaisons Apollo étaient cousues par des couturières de la marque Playtex.|Apollo spacesuits were sewn by seamstresses from the Playtex company.
+Les montres Omega Speedmaster ont été portées sur la Lune.|Omega Speedmaster watches were worn on the Moon.
+Environ 96 sacs de déchets humains ont été laissés sur la Lune par Apollo.|About 96 bags of human waste were left on the Moon by Apollo.
+Une vingtaine de tonnes d’objets humains reposent sur la Lune.|Hundreds of tonnes of human-made objects rest on the Moon.
+Le programme Artemis tire son nom de la sœur jumelle d’Apollon.|Artemis is named after Apollo’s twin sister.
+Artemis I a fait voler sans équipage le vaisseau Orion autour de la Lune en 2022.|Artemis I flew the uncrewed Orion around the Moon in 2022.
+Artemis II prévoit d’emmener quatre astronautes autour de la Lune.|Artemis II plans to send four astronauts around the Moon.
+La station Gateway est prévue en orbite autour de la Lune.|The Gateway station is planned in lunar orbit.
+Le Canadien Jeremy Hansen est le premier non-Américain choisi pour un vol vers la Lune.|Canadian Jeremy Hansen is the first non-American picked for a Moon flight.
+Les accords Artemis encadrent l’exploration civile de la Lune.|The Artemis Accords set guidelines for civil lunar exploration.
+Le traité de l’espace de 1967 interdit à tout pays de s’approprier la Lune.|The 1967 Outer Space Treaty bars any nation from claiming the Moon.
+L’Accord sur la Lune de 1979 n’a été ratifié que par peu de pays.|The 1979 Moon Agreement was ratified by only a few countries.
+Le temps lunaire officiel (LTC) est en cours de définition pour les futures missions.|An official lunar time (LTC) is being defined for future missions.
+Sur la Lune, les horloges avancent d’environ 56 microsecondes par jour par rapport à la Terre.|On the Moon, clocks run about 56 microseconds a day faster than on Earth.
+Vue de la Lune, la Terre reste presque immobile dans le ciel.|Seen from the Moon, Earth stays almost fixed in the sky.
+Vue de la Lune, la Terre a des phases opposées à celles de la Lune.|Seen from the Moon, Earth shows phases opposite to the Moon’s.
+Depuis la Lune, la Terre paraît environ 3,7 fois plus large que la Lune vue d’ici.|From the Moon, Earth looks about 3.7 times wider than the Moon does from here.
+La « pleine Terre » éclaire la Lune bien plus que la pleine lune n’éclaire la Terre.|A ‘full Earth’ lights the Moon far more than a full moon lights Earth.
+Sur la Lune, on pourrait sauter environ six fois plus haut.|On the Moon you could jump about six times higher.
+Une personne de 60 kg ne pèserait que l’équivalent de 10 kg sur la Lune.|A 60 kg person would weigh the equivalent of 10 kg on the Moon.
+Les astronautes avançaient sur la Lune en sautillant comme des kangourous.|Astronauts moved on the Moon by hopping like kangaroos.
+L’horizon lunaire est à seulement environ 2,4 km pour un humain debout.|The lunar horizon is only about 2.4 km away for a standing person.
+Sans air, les distances sont difficiles à estimer sur la Lune.|Without air, distances are hard to judge on the Moon.
+Les étoiles n’apparaissent pas sur les photos Apollo car les poses étaient courtes.|Stars don’t show in Apollo photos because exposures were short.
+Le drapeau semble flotter car une tige horizontale le maintenait déployé.|The flag seems to wave because a horizontal rod held it out.
+Les miroirs laser permettent de mesurer la distance Terre-Lune au millimètre près.|Laser mirrors let us measure the Earth–Moon distance to the millimetre.
+L’Observatoire de la Côte d’Azur effectue des tirs laser vers la Lune.|The Côte d’Azur Observatory fires lasers at the Moon.
+La télémétrie laser lunaire teste la relativité générale d’Einstein.|Lunar laser ranging tests Einstein’s general relativity.
+La Lune est un relais radio naturel : les radioamateurs font rebondir leurs signaux dessus.|The Moon is a natural relay: ham radio operators bounce signals off it.
+La face cachée est l’endroit idéal pour un radiotélescope à l’abri des ondes terrestres.|The far side is ideal for a radio telescope shielded from Earth’s noise.
+La Lune bloque une partie des rayons cosmiques : on voit son « ombre » dans les détecteurs.|The Moon blocks cosmic rays: detectors see its ‘shadow’.
+Le vent solaire frappe directement la surface lunaire, faute de champ magnétique.|The solar wind hits the lunar surface directly, lacking a magnetic field.
+La queue magnétique de la Terre balaie la Lune à chaque pleine lune.|Earth’s magnetotail sweeps over the Moon at every full moon.
+Les astronautes d’Apollo voyaient des éclairs lumineux, dus aux rayons cosmiques dans leurs yeux.|Apollo astronauts saw light flashes from cosmic rays in their eyes.
+Le phénomène lunaire transitoire désigne d’étranges lueurs observées sur la Lune.|Transient lunar phenomena are odd glows reported on the Moon.
+Des moines de Canterbury ont décrit en 1178 une « flamme » sur la Lune.|Canterbury monks described a ‘flame’ on the Moon in 1178.
+La Lune peut occulter des étoiles et des planètes en passant devant.|The Moon can occult stars and planets as it passes in front.
+Les occultations rasantes révèlent le profil des montagnes au bord de la Lune.|Grazing occultations reveal mountain profiles on the Moon’s edge.
+Le halo lunaire de 22° est dû à des cristaux de glace dans l’atmosphère.|The 22° lunar halo is caused by ice crystals in the air.
+Un halo autour de la Lune annonce souvent la pluie, selon le dicton.|A ring around the Moon often means rain, says the proverb.
+Un arc-en-ciel lunaire peut apparaître la nuit, pâle et presque blanc.|A moonbow can appear at night, pale and almost white.
+Les chutes Victoria sont célèbres pour leurs arcs-en-ciel lunaires.|Victoria Falls is famous for its moonbows.
+Une couronne colorée autour de la Lune vient de fines gouttelettes d’eau.|A coloured corona around the Moon comes from tiny water droplets.
+Les parasélènes sont des « fausses lunes » de part et d’autre de la Lune.|Paraselenae are ‘mock moons’ on either side of the Moon.
+La Lune paraît blanche, mais sa surface est en réalité gris foncé, comme l’asphalte.|The Moon looks white but its surface is really dark grey, like asphalt.
+Au lever, la Lune paraît orange car sa lumière traverse plus d’atmosphère.|At moonrise the Moon looks orange because its light crosses more air.
+Une lune bleue réelle peut apparaître après des incendies ou éruptions.|A truly blue moon can appear after fires or eruptions.
+Après l’éruption du Krakatoa en 1883, la Lune a paru bleue pendant des mois.|After Krakatoa erupted in 1883, the Moon looked blue for months.
+Les yeux s’adaptent si bien qu’on peut lire à la lumière de la pleine lune.|Eyes adapt so well you can read by full moonlight.
+À la lumière de la Lune, on voit peu les couleurs : c’est l’effet Purkinje.|By moonlight we see few colours: the Purkinje effect.
+Les peintres représentent souvent la nuit en bleu, bien que le clair de lune soit plutôt jaunâtre.|Painters show night in blue, though moonlight is actually slightly yellowish.
+Une « micro-lune » est une pleine lune proche de l’apogée.|A ‘micromoon’ is a full moon near apogee.
+Le terme « super lune » a été inventé par l’astrologue Richard Nolle en 1979.|The term ‘supermoon’ was coined by astrologer Richard Nolle in 1979.
+Une « lune noire » désigne parfois la deuxième nouvelle lune d’un mois.|A ‘black moon’ sometimes means the second new moon in a month.
+Février peut n’avoir aucune pleine lune.|February can have no full moon at all.
+La pleine lune de février est la « lune des neiges » chez les Amérindiens.|February’s full moon is the ‘Snow Moon’ in Native American lore.
+La pleine lune de mars est appelée « lune du ver ».|March’s full moon is called the ‘Worm Moon’.
+La pleine lune d’avril est la « lune rose », d’après des fleurs printanières.|April’s full moon is the ‘Pink Moon’, after spring flowers.
+La pleine lune de mai est la « lune des fleurs ».|May’s full moon is the ‘Flower Moon’.
+La pleine lune de juin est la « lune des fraises ».|June’s full moon is the ‘Strawberry Moon’.
+La pleine lune de juillet est la « lune du cerf », quand poussent les bois.|July’s full moon is the ‘Buck Moon’, when antlers grow.
+La pleine lune d’août est la « lune de l’esturgeon ».|August’s full moon is the ‘Sturgeon Moon’.
+La pleine lune d’octobre est la « lune du chasseur ».|October’s full moon is the ‘Hunter’s Moon’.
+La pleine lune de novembre est la « lune du castor ».|November’s full moon is the ‘Beaver Moon’.
+La pleine lune de décembre est la « lune froide ».|December’s full moon is the ‘Cold Moon’.
+Près de l’équinoxe d’automne, la Lune se lève presque à la même heure plusieurs soirs de suite.|Near the autumn equinox, the Moon rises at nearly the same time several nights running.
+En hiver, la pleine lune monte haut dans le ciel ; en été, elle reste basse.|In winter the full moon rides high; in summer it stays low.
+La Lune peut être visible en plein jour presque la moitié du mois.|The Moon can be seen in daylight for about half the month.
+L’arrêt lunaire majeur, tous les 18,6 ans, fait se lever la Lune très au nord et au sud.|A major lunar standstill, every 18.6 years, makes the Moon rise far north and south.
+Stonehenge pourrait être aligné sur les arrêts lunaires.|Stonehenge may be aligned with lunar standstills.
+Le disque de Nebra, vieux de 3 600 ans, montre une lune en croissant.|The 3,600-year-old Nebra sky disc shows a crescent moon.
+L’os d’Ishango, vieux d’environ 20 000 ans, pourrait être un calendrier lunaire.|The Ishango bone, about 20,000 years old, may be a lunar calendar.
+Des encoches sur l’os de Blanchard, en Dordogne, suivraient les phases de la Lune.|Notches on the Blanchard bone from the Dordogne may track lunar phases.
+La carte lunaire la plus ancienne pourrait être gravée à Knowth, en Irlande, il y a 5 000 ans.|The oldest Moon map may be carved at Knowth, Ireland, 5,000 years ago.
+Les Babyloniens savaient prédire les éclipses de Lune.|The Babylonians could predict lunar eclipses.
+La machine d’Anticythère reproduisait les phases et le mouvement de la Lune.|The Antikythera mechanism modelled the Moon’s phases and motion.
+Le mot « mois » est apparenté au mot « moon » en anglais.|The English word ‘month’ comes from ‘moon’.
+« Ménisque » vient du grec « petite lune ».|‘Meniscus’ comes from Greek for ‘little moon’.
+Le mot « sélénologie » désigne l’étude géologique de la Lune.|‘Selenology’ is the geological study of the Moon.
+L’élément chimique sélénium tient son nom de Séléné, la Lune.|The element selenium is named after Selene, the Moon.
+Le métal argent était associé à la Lune par les alchimistes.|Alchemists linked silver to the Moon.
+Le croissant de lune figure sur les drapeaux de la Turquie et du Pakistan.|The crescent appears on the flags of Turkey and Pakistan.
+Le drapeau du Laos représente une pleine lune sur le Mékong.|Laos’s flag shows a full moon over the Mekong.
+Le drapeau des Palaos montre une lune jaune sur fond bleu.|Palau’s flag shows a yellow moon on a blue field.
+Le croissant parisien n’a probablement rien à voir avec un siège de Vienne : c’est une légende.|The croissant’s link to the siege of Vienna is probably just a legend.
+Le gâteau de lune est la spécialité de la fête de la mi-automne.|Mooncakes are the treat of the Mid-Autumn Festival.
+Chang’e, déesse chinoise de la Lune, y vivrait avec un lapin de jade.|Chang’e, the Chinese Moon goddess, lives there with a jade rabbit.
+Le lapin de jade prépare l’élixir d’immortalité sur la Lune.|The jade rabbit pounds the elixir of immortality on the Moon.
+Au Japon, le lapin de la Lune prépare des mochis.|In Japan, the Moon rabbit pounds mochi.
+Le tsukimi est la fête japonaise d’admiration de la Lune en automne.|Tsukimi is Japan’s autumn moon-viewing festival.
+Le Chuseok coréen, fête des récoltes, a lieu à la pleine lune d’automne.|Korea’s Chuseok harvest festival falls on the autumn full moon.
+Dans le bouddhisme, un lièvre se sacrifia et fut placé sur la Lune.|In a Buddhist tale, a self-sacrificing hare was placed on the Moon.
+Le Ramadan commence avec l’observation du premier croissant.|Ramadan begins with the sighting of the first crescent.
+Diwali, fête des lumières, est célébré à la nouvelle lune.|Diwali, the festival of lights, is celebrated at new moon.
+Holi, la fête des couleurs, a lieu à la pleine lune de printemps.|Holi, the festival of colours, is held at the spring full moon.
+Le Vesak bouddhiste est célébré à la pleine lune de mai.|Buddhist Vesak is celebrated at the full moon of May.
+La Pâque juive commence à la pleine lune du printemps.|Passover begins at the spring full moon.
+Le calendrier hébraïque ajoute un mois tous les deux ou trois ans pour suivre les saisons.|The Hebrew calendar adds a month every two or three years to keep up with seasons.
+L’année lunaire islamique compte environ 354 jours.|The Islamic lunar year has about 354 days.
+Soma, dans l’hindouisme, est un dieu associé à la Lune.|Soma, in Hinduism, is a god associated with the Moon.
+Pour les Égyptiens, Thot et Khonsou étaient des dieux lunaires.|To the Egyptians, Thoth and Khonsu were Moon gods.
+Sîn (ou Nanna) était le dieu lunaire des Mésopotamiens.|Sin (or Nanna) was the Mesopotamian Moon god.
+Chez les Romains, la Lune était personnifiée par Luna.|The Romans personified the Moon as Luna.
+Artémis, puis Diane chez les Romains, est aussi associée à la Lune.|Artemis, Diana for the Romans, is also linked to the Moon.
+Endymion, berger aimé de Séléné, dort éternellement selon le mythe.|Endymion, Selene’s beloved shepherd, sleeps forever in the myth.
+Dans la mythologie nordique, Máni conduit la Lune, poursuivi par le loup Hati.|In Norse myth, Máni drives the Moon, chased by the wolf Hati.
+Chez les Germains, la Lune est masculine et le Soleil féminin.|In German, the Moon is masculine and the Sun feminine.
+Pour les Aztèques, Coyolxauhqui fut décapitée par son frère et devint la Lune.|For the Aztecs, Coyolxauhqui was beheaded by her brother and became the Moon.
+Les Mayas associaient la Lune à la déesse Ixchel.|The Maya linked the Moon to the goddess Ixchel.
+Pour les Incas, Mama Quilla, déesse de la Lune, veillait sur les femmes.|For the Incas, Mama Quilla, the Moon goddess, watched over women.
+Dans la tradition inuit, Aningan, le frère, poursuit Malina, le Soleil, sa sœur.|In Inuit lore, the brother Aningan chases his sister Malina, the Sun.
+Des Aborigènes d’Australie expliquaient les marées par la Lune bien avant Newton.|Some Aboriginal Australians linked tides to the Moon long before Newton.
+En Europe, on voyait sur la Lune un homme portant un fagot.|In Europe people saw a man carrying a bundle of sticks on the Moon.
+Une vieille comptine affirmait que la Lune était faite de fromage.|An old saying claimed the Moon was made of cheese.
+Le folklore voulait que la pleine lune transforme certains hommes en loups-garous.|Folklore held that the full moon turned some men into werewolves.
+Selon la croyance, couper ses cheveux en lune croissante les ferait pousser plus vite.|Folklore says cutting hair on a waxing moon makes it grow faster.
+On disait qu’il fallait couper le bois en lune descendante pour qu’il se conserve.|Tradition says timber cut on a waning moon lasts longer.
+Les études n’ont pas montré de hausse des naissances à la pleine lune.|Studies have found no rise in births at the full moon.
+Certaines études suggèrent qu’on dort un peu moins bien autour de la pleine lune.|Some studies suggest we sleep slightly worse around the full moon.
+Le plancton remonte à la surface la nuit, et la lumière lunaire influence ce rythme.|Plankton rise at night, and moonlight affects that rhythm.
+Pendant la nuit polaire arctique, le zooplancton suit les mouvements de la Lune.|During the Arctic polar night, zooplankton follow the Moon.
+Les grunions de Californie pondent sur les plages juste après les grandes marées.|California grunion spawn on beaches just after spring tides.
+Les tortues marines nouvellement écloses peuvent être guidées par le reflet de la Lune.|Hatchling sea turtles may be guided by moonlight on the water.
+Les lions chassent plus souvent par les nuits sans lune.|Lions hunt more on moonless nights.
+Les chauves-souris réduisent souvent leur activité par pleine lune.|Bats often reduce activity under a full moon.
+Les engoulevents chassent plus intensément au clair de lune.|Nightjars hunt more actively by moonlight.
+Le palolo, un ver marin du Pacifique, essaime à une phase lunaire précise.|The Pacific palolo worm swarms at a precise lunar phase.
+Les crabes rouges de l’île Christmas libèrent leurs œufs selon la Lune.|Christmas Island red crabs release eggs in time with the Moon.
+Les loups ne hurlent pas à la Lune : ils hurlent simplement la nuit pour communiquer.|Wolves don’t howl at the Moon: they just howl at night to communicate.
+Certaines fleurs, comme la belle-de-nuit, s’ouvrent la nuit pour les papillons nocturnes.|Some flowers, like the four o’clock, open at night for moths.
+Le « Moon garden » est un jardin de plantes blanches qui brillent au clair de lune.|A ‘moon garden’ is filled with white plants that glow by moonlight.
+Des tortues, des mouches et des vers ont fait le tour de la Lune sur Zond 5 en 1968.|Tortoises, flies and worms circled the Moon on Zond 5 in 1968.
+Un tardigrade a peut-être survécu au crash de la sonde Beresheet sur la Lune en 2019.|Tardigrades may have survived the Beresheet probe’s crash on the Moon in 2019.
+Des cendres d’Eugene Shoemaker reposent sur la Lune, emportées par Lunar Prospector.|Eugene Shoemaker’s ashes rest on the Moon, carried by Lunar Prospector.
+Le cratère Daedalus, sur la face cachée, est l’un des lieux les plus calmes en ondes radio.|Daedalus crater, on the far side, is one of the radio-quietest places.
+Le cratère Hergé n’existe pas, mais Tintin a marché sur la Lune dès 1954 en BD.|Tintin walked on the Moon in comics as early as 1954.
+« On a marché sur la Lune » d’Hergé a anticipé de 15 ans la mission Apollo 11.|Hergé’s ‘Explorers on the Moon’ came 15 years before Apollo 11.
+Cyrano de Bergerac a écrit un voyage dans la Lune au XVIIe siècle.|Cyrano de Bergerac wrote a voyage to the Moon in the 17th century.
+Lucien de Samosate a imaginé un voyage lunaire au IIe siècle.|Lucian of Samosata imagined a Moon voyage in the 2nd century.
+Kepler a écrit « Somnium », un récit de voyage vers la Lune publié en 1634.|Kepler wrote ‘Somnium’, a Moon-voyage tale published in 1634.
+H. G. Wells a imaginé des Sélénites dans « Les Premiers Hommes dans la Lune ».|H. G. Wells imagined Selenites in ‘The First Men in the Moon’.
+Le « Grand canular de la Lune » de 1835 prétendait qu’on avait vu des hommes-chauves-souris sur la Lune.|The 1835 ‘Great Moon Hoax’ claimed bat-men had been seen on the Moon.
+Dans l’Arioste, Astolphe retrouve sur la Lune la raison perdue de Roland.|In Ariosto’s poem, Astolfo finds Orlando’s lost wits on the Moon.
+« Au clair de la lune » est une comptine française du XVIIIe siècle.|‘Au clair de la lune’ is an 18th-century French nursery song.
+La plus ancienne voix enregistrée connue chante « Au clair de la lune » en 1860.|The oldest known recorded voice sings ‘Au clair de la lune’ in 1860.
+Debussy a composé « Clair de lune », inspiré d’un poème de Verlaine.|Debussy wrote ‘Clair de lune’, inspired by a Verlaine poem.
+La « Sonate au clair de lune » de Beethoven doit ce surnom à un critique, pas au compositeur.|Beethoven’s ‘Moonlight Sonata’ got its nickname from a critic, not the composer.
+« Fly Me to the Moon » a été jouée sur la Lune par Buzz Aldrin, sur cassette.|Buzz Aldrin played ‘Fly Me to the Moon’ on cassette on the Moon.
+« The Dark Side of the Moon » de Pink Floyd est resté plus de 900 semaines au classement.|Pink Floyd’s ‘The Dark Side of the Moon’ charted for over 900 weeks.
+Michael Jackson a rendu célèbre le « moonwalk » en 1983.|Michael Jackson made the ‘moonwalk’ famous in 1983.
+Le logo de DreamWorks montre un garçon pêchant assis sur un croissant de lune.|DreamWorks’ logo shows a boy fishing on a crescent moon.
+Le premier homme sur la Lune devait selon une rumeur dire « Bonne chance, M. Gorsky » : c’est faux.|The ‘Good luck, Mr Gorsky’ Moon quote is a myth.
+Selon Armstrong, sa phrase était « un petit pas pour un homme », le « un » ayant été mal entendu.|Armstrong said his line was ‘one small step for a man’, the ‘a’ being lost.
+Le prix Google Lunar X Prize de 30 millions de dollars n’a jamais été remporté.|The $30 million Google Lunar X Prize was never won.
+Beresheet, en 2019, fut la première tentative privée d’alunissage, par Israël.|Israel’s Beresheet in 2019 was the first private landing attempt.
+La sonde Luna 25 russe s’est écrasée sur la Lune en 2023.|Russia’s Luna 25 probe crashed on the Moon in 2023.
+Un module japonais d’ispace s’est écrasé en 2023, faute d’avoir bien mesuré son altitude.|A Japanese ispace lander crashed in 2023 after misjudging its altitude.
+Intuitive Machines a basculé sur le côté lors de son alunissage en 2024.|Intuitive Machines’ lander tipped onto its side on landing in 2024.
+Blue Ghost, de Firefly, a réussi un alunissage parfait en mars 2025.|Firefly’s Blue Ghost made a flawless Moon landing in March 2025.
+Blue Ghost a photographié une éclipse de Soleil par la Terre depuis la Lune.|Blue Ghost photographed Earth eclipsing the Sun from the Moon.
+Le PIB lunaire inclut déjà des projets de mines d’eau pour fabriquer du carburant.|Plans already exist to mine lunar water for rocket fuel.
+L’eau lunaire pourrait être séparée en hydrogène et oxygène pour les fusées.|Lunar water could be split into hydrogen and oxygen for rockets.
+On étudie l’impression 3D de bâtiments en régolithe lunaire.|Researchers study 3D-printing buildings from lunar regolith.
+L’ESA envisage un « Village lunaire » international.|ESA has proposed an international ‘Moon Village’.
+Pour se protéger des radiations, une base lunaire devrait être enterrée sous du régolithe.|To shield from radiation, a Moon base would need a regolith covering.
+Les nuits lunaires de deux semaines obligent les rovers à survivre au froid.|Two-week lunar nights force rovers to survive the cold.
+Les Lunokhod utilisaient une source radioactive pour se chauffer la nuit.|The Lunokhods used a radioactive heat source to survive the night.
+La Lune ne possède pas de tectonique des plaques active.|The Moon has no active plate tectonics.
+Le volcanisme lunaire a pu durer jusqu’à il y a environ 1 à 2 milliards d’années.|Lunar volcanism may have lasted until about 1–2 billion years ago.
+Les échantillons de Chang’e 5 ont révélé des laves vieilles d’environ 2 milliards d’années.|Chang’e 5 samples revealed lavas about 2 billion years old.
+La formation Ina pourrait être une trace de volcanisme lunaire très récent.|The Ina formation may hint at very recent lunar volcanism.
+La Lune est plus dense d’un côté : son centre de masse est décalé vers la Terre.|The Moon’s centre of mass is offset towards Earth.
+La Lune a peut-être eu deux lunes qui ont fusionné, selon une hypothèse.|One hypothesis says Earth once had two moons that merged.
+Des quasi-satellites comme Kamo’oalewa accompagnent la Terre ; il serait un fragment lunaire.|Quasi-satellites like Kamo’oalewa accompany Earth; it may be a lunar fragment.
+La Terre capture parfois temporairement des « mini-lunes », de petits astéroïdes.|Earth sometimes captures temporary ‘minimoons’, small asteroids.
+Notre Lune est la seule du Système solaire sans autre nom propre que « la Lune ».|Our Moon is the only one with no proper name besides ‘the Moon’.
+Rapportée à sa planète, la Lune est un très grand satellite, après Charon.|Relative to its planet, the Moon is very large, second only to Charon.
+Ganymède, la plus grande lune du Système solaire, est plus grande que Mercure.|Ganymede, the largest moon in the Solar System, is bigger than Mercury.
+Phobos, lune de Mars, s’approche de sa planète et finira par se disloquer.|Phobos, a moon of Mars, is spiralling in and will break apart.
+Plus de 200 lunes ont été découvertes autour de Saturne et de Jupiter réunis.|Over 200 moons are known around Saturn and Jupiter combined.
+Le mot « lune » désigne aussi les satellites des autres planètes depuis Galilée.|Since Galileo, ‘moon’ has also meant other planets’ satellites.
+Des exolunes, lunes d’autres systèmes, sont recherchées mais pas encore confirmées.|Exomoons, moons of other systems, are sought but not yet confirmed.
+Sans la Lune, les nuits seraient beaucoup plus sombres et les marées trois fois plus faibles.|Without the Moon, nights would be darker and tides about a third as strong.
+Les marées lunaires ont peut-être aidé la vie à sortir de l’eau.|Lunar tides may have helped life move onto land.
+La Lune éclaire la Terre avec une lumière polarisée en partie.|Moonlight reaching Earth is partly polarised.
+Certains insectes utilisent la lumière polarisée de la Lune pour s’orienter.|Some insects use the Moon’s polarised light to navigate.
+Les marins utilisaient les « distances lunaires » pour calculer leur longitude.|Sailors used ‘lunar distances’ to work out their longitude.
+Les almanachs nautiques publiaient des tables de la Lune pour la navigation.|Nautical almanacs published Moon tables for navigation.
+La Société lunaire de Birmingham se réunissait les soirs de pleine lune pour rentrer à la lumière.|Birmingham’s Lunar Society met on full-moon nights to travel home by its light.
+Pendant le Blitz, les nuits de pleine lune étaient appelées « lunes de bombardiers ».|During the Blitz, full-moon nights were called ‘bomber’s moons’.
+Le Débarquement de Normandie a été planifié selon la Lune et les marées.|D-Day was planned around the Moon and tides.
+Le projet A119 envisageait en 1958 de faire exploser une bombe sur la Lune.|Project A119 in 1958 considered detonating a bomb on the Moon.
+La NASA vend des « Moon rocks » ? Non : leur commerce privé est illégal aux États-Unis.|Apollo Moon rocks cannot legally be sold privately in the US.
+Des pierres de Lune offertes par les États-Unis à 135 pays ont parfois disparu.|Moon rock gifts from the US to 135 nations have sometimes gone missing.
+Une roche lunaire exposée au Rijksmuseum s’est révélée être du bois pétrifié.|A ‘Moon rock’ at the Rijksmuseum turned out to be petrified wood.
+La pierre de lune, minéral à reflets bleutés, n’a aucun lien avec la Lune.|Moonstone, a gem with a blue sheen, has no link to the Moon.
+La sélénographie est la cartographie de la Lune.|Selenography is the mapping of the Moon.
+Hevelius a publié en 1647 « Selenographia », un atlas lunaire détaillé.|Hevelius published ‘Selenographia’, a detailed lunar atlas, in 1647.
+La première photographie de la Lune a été prise par John Draper en 1840.|The first photograph of the Moon was taken by John Draper in 1840.
+L’Atlas photographique de la Lune de Loewy et Puiseux a été réalisé à Paris.|Loewy and Puiseux made their photographic Moon atlas in Paris.
+Un cratère lunaire porte le nom de Jules Verne, sur la face cachée.|A far-side lunar crater is named after Jules Verne.
+Les cratères lunaires sont nommés par l’Union astronomique internationale.|Lunar craters are named by the International Astronomical Union.
+Douze petits cratères près du site d’Apollo 11 portent les noms des astronautes.|Small craters near the Apollo 11 site bear the astronauts’ names.
+Il existe un cratère nommé d’après le cosmonaute Iouri Gagarine.|There is a crater named after cosmonaut Yuri Gagarin.
+Le cratère Tsiolkovski est l’un des rares avec un fond sombre sur la face cachée.|Tsiolkovskiy crater is one of the few dark-floored craters on the far side.
+La mer de Moscou est l’une des rares mers de la face cachée.|The Sea of Moscow is one of the few far-side maria.
+La mer Orientale est un bassin d’impact en forme de cible, à cheval sur le bord ouest.|Mare Orientale is a bullseye impact basin on the western limb.
+La mer des Crises est visible à l’œil nu comme une tache ovale isolée.|The Sea of Crises is visible to the naked eye as an isolated oval.
+Les taches sombres de la Lune forment pour certains le profil d’une femme.|Some see a woman’s profile in the Moon’s dark patches.
+Voir des visages dans la Lune est un exemple de paréidolie.|Seeing faces in the Moon is an example of pareidolia.
+Aux jumelles, on distingue déjà des dizaines de cratères.|With binoculars you can already spot dozens of craters.
+Le meilleur moment pour observer la Lune au télescope n’est pas la pleine lune.|The best time to view the Moon by telescope is not full moon.
+Un filtre lunaire réduit l’éblouissement à l’oculaire.|A Moon filter reduces glare at the eyepiece.
+Photographier la Lune au smartphone est plus facile à travers un oculaire.|Photographing the Moon with a phone is easier through an eyepiece.
+La Nuit internationale de la Lune invite chaque automne à observer notre satellite.|International Observe the Moon Night invites people to watch it every autumn.
+Le 20 juillet est la Journée internationale de la Lune, proclamée par l’ONU.|20 July is International Moon Day, proclaimed by the UN.
+L’année 2026 voit le retour des humains autour de la Lune avec Artemis II.|Artemis II aims to send humans around the Moon again for the first time since 1972.
