@@ -1,7 +1,7 @@
 """Constantes pour l'intégration Phase de la Lune."""
 DOMAIN = "phase_lune"
 NAME = "Phase de la Lune"
-VERSION = "1.1.1"
+VERSION = "1.1.2"
 
 URL_BASE = "/phase_lune_frontend"
 CARD_FILENAME = "phase-lune-card.js"
@@ -73,3 +73,6 @@ POETICS = {
         ("Lâchez prise : la nouvelle lune approche.", "Let go: the new moon is coming."),
     ],
 }
+
+IMAGES_URL = "/phase_lune/moon_phases"
+IMAGES_DIR = "www/moon_phases"

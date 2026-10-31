@@ -33,7 +33,7 @@ Tableau de bord → Modifier → Ajouter une carte → cherchez « Phase de la L
 type: custom:phase-lune-card
 title: Phase de la Lune
 entity: sensor.phase_de_la_lune
-image_path: /local/moon_phases   # PNG à copier dans config/www/moon_phases/
+image_path: /phase_lune/moon_phases   # PNG incluses dans l'intégration (aucune copie)
 language: fr                     # ou en
 show_illumination: true
 show_anecdote: true
@@ -54,7 +54,7 @@ Installation manuelle : copier `custom_components/phase_lune` dans `config/custo
 Paramètres → Appareils et services → **Ajouter une intégration** → « Phase de la Lune » → Valider. Aucune option (instance unique).
 
 ### Images
-Placer 8 images PNG dans `config/www/moon_phases/` (accessibles via `/local/moon_phases/`), nommées exactement :
+Depuis 1.1.2, les 8 PNG sont **fournies dans l'intégration** et servies via `/phase_lune/moon_phases/<slug>.png` (aucune copie). Optionnel : les copier dans `config/www/moon_phases/` pour `/local/moon_phases/`. Noms :
 
 | État `sensor.moon_phase` | `sensor.phase_de_la_lune` | Fichier |
 |---|---|---|
@@ -69,7 +69,7 @@ Placer 8 images PNG dans `config/www/moon_phases/` (accessibles via `/local/moon
 
 > Le dossier `www` nécessite parfois un redémarrage de HA après sa création.
 
-📦 Les 8 images prêtes à copier sont dans [`media/moon_phases/`](media/moon_phases/) (hors zip HACS). Source/crédit : [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [fil HA Community 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — licence non précisée par l'auteur, redistribuées avec crédit ([détails](media/moon_phases/README.md)).
+📦 Les 8 images prêtes à copier sont dans [`media/moon_phases/`](media/moon_phases/) (incluses dans le zip HACS depuis 1.1.2, servies via `/phase_lune/moon_phases/<slug>.png` — aucune copie). Source/crédit : [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [fil HA Community 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — licence non précisée par l'auteur, redistribuées avec crédit ([détails](media/moon_phases/README.md)).
 
 ### Exemple de carte Lovelace (fond sombre)
 ```yaml
@@ -78,7 +78,7 @@ card_mod:
   style: |
     ha-card { background: #0b1020; color: #e8e8f0; text-align: center; }
 content: |
-  <img src="/local/moon_phases/{{ states('sensor.moon_phase') }}.png" width="200">
+  <img src="/phase_lune/moon_phases/{{ states('sensor.moon_phase') }}.png" width="200">
 
   ## Phase actuelle : {{ states('sensor.phase_de_la_lune') }}
 
@@ -119,7 +119,7 @@ Dashboard → Edit → Add card → search “Phase de la Lune”, or YAML:
 ```yaml
 type: custom:phase-lune-card
 entity: sensor.phase_de_la_lune
-image_path: /local/moon_phases   # copy PNGs to config/www/moon_phases/
+image_path: /phase_lune/moon_phases   # PNGs shipped with the integration (no copy)
 language: en
 ```
 New attributes: `anecdote`, `anecdote_en`, `day_of_year`, `poetic_en`, `poetics`.
@@ -138,7 +138,7 @@ Manual install: copy `custom_components/phase_lune` into `config/custom_componen
 Settings → Devices & services → **Add integration** → "Phase de la Lune" → Submit. No options (single instance).
 
 ### Images
-Put 8 PNG images in `config/www/moon_phases/` (served at `/local/moon_phases/`), named exactly:
+Since 1.1.2, the 8 PNGs **ship with the integration** at `/phase_lune/moon_phases/<slug>.png` (no copy). Optional: copy them to `config/www/moon_phases/` for `/local/moon_phases/`. Names:
 
 | `sensor.moon_phase` state | `sensor.phase_de_la_lune` | File |
 |---|---|---|
@@ -153,7 +153,7 @@ Put 8 PNG images in `config/www/moon_phases/` (served at `/local/moon_phases/`),
 
 > The `www` folder may require a HA restart after it is created.
 
-📦 The 8 ready-to-copy images are in [`media/moon_phases/`](media/moon_phases/) (not in the HACS zip). Source/credit: [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [HA Community thread 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — no license stated by the author, redistributed with credit ([details](media/moon_phases/README.md)).
+📦 The 8 ready-to-copy images are in [`media/moon_phases/`](media/moon_phases/) (included in the HACS zip since 1.1.2, served at `/phase_lune/moon_phases/<slug>.png` — no copy needed). Source/credit: [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [HA Community thread 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — no license stated by the author, redistributed with credit ([details](media/moon_phases/README.md)).
 
 ### Lovelace card example (dark)
 ```yaml
@@ -162,7 +162,7 @@ card_mod:
   style: |
     ha-card { background: #0b1020; color: #e8e8f0; text-align: center; }
 content: |
-  <img src="/local/moon_phases/{{ states('sensor.moon_phase') }}.png" width="200">
+  <img src="/phase_lune/moon_phases/{{ states('sensor.moon_phase') }}.png" width="200">
 
   ## Current phase: {{ states('sensor.phase_de_la_lune') }}
 

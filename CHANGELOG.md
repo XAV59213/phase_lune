@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2 — 2026-10-31
+- FR : les 8 PNG des phases sont incluses dans le zip HACS (`custom_components/phase_lune/www/moon_phases/`) et servies par l'intégration via `/phase_lune/moon_phases/<slug>.png` — plus de copie dans `www`. Image par défaut de la carte mise à jour.
+- EN: the 8 phase PNGs ship in the HACS zip and are served by the integration at `/phase_lune/moon_phases/<slug>.png` — no more copying to `www`. Card default image path updated.
+
 ## 1.1.1 — 2026-10-31
 - FR : 365 anecdotes FR/EN **toutes uniques** (plus de recyclage de 73 faits) — science, exploration, mythologie, culture, folklore, nature ; source `tools/anecdotes_extra.txt`.
 - EN: 365 **truly unique** FR/EN Moon facts (no more recycling of 73 facts) — science, exploration, mythology, culture, folklore, nature; source `tools/anecdotes_extra.txt`.

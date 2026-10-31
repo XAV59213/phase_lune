@@ -10,7 +10,7 @@ from homeassistant.components.frontend import add_extra_js_url
 from homeassistant.components.http import StaticPathConfig
 from homeassistant.core import HomeAssistant
 
-from ..const import CARD_FILENAME, CARD_URL, URL_BASE
+from ..const import CARD_FILENAME, CARD_URL, IMAGES_DIR, IMAGES_URL, URL_BASE
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -32,10 +32,13 @@ async def async_register_card(hass: HomeAssistant) -> None:
     if not (folder / CARD_FILENAME).is_file():
         _LOGGER.warning("Fichier de carte introuvable : %s", folder / CARD_FILENAME)
         return
+    paths = [StaticPathConfig(URL_BASE, str(folder), False)]
+    images = folder.parent / IMAGES_DIR
+    if images.is_dir():
+        # PNG des phases servies depuis l'intégration : /phase_lune/moon_phases/<slug>.png
+        paths.append(StaticPathConfig(IMAGES_URL, str(images), True))
     try:
-        await hass.http.async_register_static_paths(
-            [StaticPathConfig(URL_BASE, str(folder), False)]
-        )
+        await hass.http.async_register_static_paths(paths)
     except RuntimeError:
         _LOGGER.debug("Chemin statique déjà enregistré : %s", URL_BASE)
 

@@ -7,7 +7,7 @@ card_mod:
   style: |
     ha-card { background: #0b1020; color: #e8e8f0; text-align: center; }
 content: |
-  <img src="/local/moon_phases/{{ states('sensor.moon_phase') }}.png" width="200">
+  <img src="/phase_lune/moon_phases/{{ states('sensor.moon_phase') }}.png" width="200">
 
   ## Current phase: {{ states('sensor.phase_de_la_lune') }}
 

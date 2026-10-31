@@ -3,7 +3,7 @@
   const DEFAULTS = {
     title: "Phase de la Lune",
     entity: "sensor.phase_de_la_lune",
-    image_path: "/local/moon_phases",
+    image_path: "/phase_lune/moon_phases",
     language: "fr",
     show_illumination: true,
     show_anecdote: true,
