@@ -86,7 +86,7 @@ Depuis 1.1.2, les 8 PNG sont **fournies dans l'intégration** et servies via `/p
 
 > Le dossier `www` nécessite parfois un redémarrage de HA après sa création.
 
-📦 Les 8 images prêtes à copier sont dans [`media/moon_phases/`](media/moon_phases/) (incluses dans le zip HACS depuis 1.1.2, servies via `/phase_lune/moon_phases/<slug>.png` — aucune copie). Source/crédit : [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [fil HA Community 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — licence non précisée par l'auteur, redistribuées avec crédit ([détails](media/moon_phases/README.md)).
+📦 Les 8 images prêtes à copier sont dans [`media/moon_phases/`](https://github.com/XAV59213/phase_lune/blob/main/media/moon_phases/) (incluses dans le zip HACS depuis 1.1.2, servies via `/phase_lune/moon_phases/<slug>.png` — aucune copie). Source/crédit : [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [fil HA Community 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — licence non précisée par l'auteur, redistribuées avec crédit ([détails](https://github.com/XAV59213/phase_lune/blob/main/media/moon_phases/README.md)).
 
 ### Exemple de carte Lovelace (fond sombre)
 ```yaml
@@ -109,7 +109,7 @@ content: |
 Âge lunaire = jours écoulés depuis une nouvelle lune de référence modulo le mois synodique (29,530588 j). Seuils alignés sur l’intégration Moon du core (échelle 0–28). Illumination ≈ `(1 − cos(2π·âge/29,530588)) / 2 × 100`. Précision : quelques heures.
 
 ### Documentation
-Guides détaillés dans [`docs/`](docs/) (et le [wiki](https://github.com/XAV59213/phase_lune/wiki)) : [Accueil](docs/Home.fr.md) · [Installation](docs/Installation.fr.md) · [Lovelace](docs/Lovelace.fr.md) · [FAQ](docs/FAQ.fr.md)
+Guides détaillés dans [`docs/`](https://github.com/XAV59213/phase_lune/blob/main/docs/) (et le [wiki](https://github.com/XAV59213/phase_lune/wiki)) : [Accueil](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.fr.md) · [Installation](https://github.com/XAV59213/phase_lune/blob/main/docs/Installation.fr.md) · [Lovelace](https://github.com/XAV59213/phase_lune/blob/main/docs/Lovelace.fr.md) · [FAQ](https://github.com/XAV59213/phase_lune/blob/main/docs/FAQ.fr.md)
 
 ### Contribution
 Issues et pull requests bienvenues : [ouvrir une issue](https://github.com/XAV59213/phase_lune/issues). Merci de vérifier que les workflows Hassfest et HACS passent.
@@ -172,7 +172,7 @@ Since 1.1.2, the 8 PNGs **ship with the integration** at `/phase_lune/moon_phase
 
 > The `www` folder may require a HA restart after it is created.
 
-📦 The 8 ready-to-copy images are in [`media/moon_phases/`](media/moon_phases/) (included in the HACS zip since 1.1.2, served at `/phase_lune/moon_phases/<slug>.png` — no copy needed). Source/credit: [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [HA Community thread 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — no license stated by the author, redistributed with credit ([details](media/moon_phases/README.md)).
+📦 The 8 ready-to-copy images are in [`media/moon_phases/`](https://github.com/XAV59213/phase_lune/blob/main/media/moon_phases/) (included in the HACS zip since 1.1.2, served at `/phase_lune/moon_phases/<slug>.png` — no copy needed). Source/credit: [papo-o/home-assistant-config](https://github.com/papo-o/home-assistant-config/tree/master/www/moon_phases) · [HA Community thread 86646](https://community.home-assistant.io/t/moon-platform-with-moon-phases-pictures/86646) — no license stated by the author, redistributed with credit ([details](https://github.com/XAV59213/phase_lune/blob/main/media/moon_phases/README.md)).
 
 ### Lovelace card example (dark)
 ```yaml
@@ -195,7 +195,7 @@ content: |
 Lunar age = days since a reference new moon modulo the synodic month (29.530588 d). Thresholds match the core Moon integration (0–28 scale). Illumination ≈ `(1 − cos(2π·age/29.530588)) / 2 × 100`. Accuracy: a few hours.
 
 ### Documentation
-Detailed guides in [`docs/`](docs/Home.md): [Home](docs/Home.en.md) · [Installation](docs/Installation.en.md) · [Lovelace](docs/Lovelace.en.md) · [FAQ](docs/FAQ.en.md)
+Detailed guides in [`docs/`](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.md): [Home](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.en.md) · [Installation](https://github.com/XAV59213/phase_lune/blob/main/docs/Installation.en.md) · [Lovelace](https://github.com/XAV59213/phase_lune/blob/main/docs/Lovelace.en.md) · [FAQ](https://github.com/XAV59213/phase_lune/blob/main/docs/FAQ.en.md)
 
 ### Contributing
 Issues and pull requests welcome: [open an issue](https://github.com/XAV59213/phase_lune/issues). Please make sure the Hassfest and HACS workflows pass.
