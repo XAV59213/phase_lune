@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 — 2026-10-31
+- FR: documentation bilingue (README, docs/, wiki/, info.md), traductions enrichies
+- EN: bilingual documentation (README, docs/, wiki/, info.md), richer translations
+
 ## 1.0.1 — 2026-10-31
 - Ajout des assets brand (icon/logo, clair/sombre, @2x)
 - README enrichi (badges, documentation, contribution)

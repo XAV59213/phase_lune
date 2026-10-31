@@ -1,6 +1,25 @@
 {
+  "title": "Moon Phase",
   "config": {
-    "step": {"user": {"title": "Phase de la Lune", "description": "Do you want to add the Moon phase sensors?"}},
-    "abort": {"single_instance_allowed": "Already configured. Only a single instance is allowed.", "already_configured": "Already configured."}
+    "step": {
+      "user": {
+        "title": "Moon Phase (Phase de la Lune)",
+        "description": "Add the Moon phase sensors (phase, illumination, lunar age, poetic text)? Computed 100% locally, no options."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Already configured. Only a single instance is allowed.",
+      "already_configured": "Already configured."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "moon_phase": {
+        "name": "Moon phase"
+      },
+      "phase_de_la_lune": {
+        "name": "Phase de la Lune"
+      }
+    }
   }
 }

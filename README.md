@@ -1,6 +1,6 @@
 <p align="center"><img src="custom_components/phase_lune/brand/logo.png" alt="Phase de la Lune" width="400"></p>
 
-# 🌙 Phase de la Lune — Home Assistant
+# 🌙 Phase de la Lune / Moon Phase — Home Assistant
 
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz)
 [![Release](https://img.shields.io/github/v/release/XAV59213/phase_lune)](https://github.com/XAV59213/phase_lune/releases)
@@ -8,10 +8,16 @@
 [![HACS Validation](https://github.com/XAV59213/phase_lune/actions/workflows/hacs.yml/badge.svg)](https://github.com/XAV59213/phase_lune/actions/workflows/hacs.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## Description
+**[🇫🇷 Français](#-français) · [🇬🇧 English](#-english)**
+
+---
+
+## 🇫🇷 Français
+
+### Description
 Intégration Home Assistant qui calcule **localement** (sans API, sans dépendance) la phase de la lune, son illumination et un texte poétique en français.
 
-## Fonctionnalités
+### Fonctionnalités
 - **2 capteurs** :
   - `sensor.moon_phase` → slug anglais (nom des images PNG) ; attributs `illumination`, `age_days`, `phase_fr`, `poetic`
   - `sensor.phase_de_la_lune` → libellé français ; attributs `illumination`, `age_days`, `phase_slug`, `poetic`
@@ -19,7 +25,7 @@ Intégration Home Assistant qui calcule **localement** (sans API, sans dépendan
 - **Textes poétiques** pour chaque phase
 - Icônes `mdi:moon-*` dynamiques, traductions FR/EN, configuration UI en un clic
 
-## Installation (HACS)
+### Installation (HACS)
 
 [![Ouvrir dans HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=XAV59213&repository=phase_lune&category=integration)
 
@@ -29,10 +35,10 @@ Intégration Home Assistant qui calcule **localement** (sans API, sans dépendan
 
 Installation manuelle : copier `custom_components/phase_lune` dans `config/custom_components/`.
 
-## Configuration
+### Configuration
 Paramètres → Appareils et services → **Ajouter une intégration** → « Phase de la Lune » → Valider. Aucune option (instance unique).
 
-## Images
+### Images
 Placer 8 images PNG dans `config/www/moon_phases/` (accessibles via `/local/moon_phases/`), nommées exactement :
 
 | État `sensor.moon_phase` | `sensor.phase_de_la_lune` | Fichier |
@@ -48,7 +54,7 @@ Placer 8 images PNG dans `config/www/moon_phases/` (accessibles via `/local/moon
 
 > Le dossier `www` nécessite parfois un redémarrage de HA après sa création.
 
-## Exemple de carte Lovelace (fond sombre)
+### Exemple de carte Lovelace (fond sombre)
 ```yaml
 type: markdown
 card_mod:
@@ -65,17 +71,86 @@ content: |
 ```
 (`card_mod` est optionnel ; sans lui, utiliser un thème sombre.)
 
-## Calcul
+### Calcul
 Âge lunaire = jours écoulés depuis une nouvelle lune de référence modulo le mois synodique (29,530588 j). Seuils alignés sur l’intégration Moon du core (échelle 0–28). Illumination ≈ `(1 − cos(2π·âge/29,530588)) / 2 × 100`. Précision : quelques heures.
 
-## À venir
-Icônes brand (`brand/icon.png`) pourront être ajoutées dans une version ultérieure.
+### Documentation
+Guides détaillés dans [`docs/`](docs/) (et le [wiki](https://github.com/XAV59213/phase_lune/wiki)) : [Accueil](docs/Home.fr.md) · [Installation](docs/Installation.fr.md) · [Lovelace](docs/Lovelace.fr.md) · [FAQ](docs/FAQ.fr.md)
 
-## Documentation
-Guides détaillés dans [`docs/`](docs/) (et le [wiki](https://github.com/XAV59213/phase_lune/wiki)) : [Installation](docs/Installation.md) · [Lovelace](docs/Lovelace.md) · [FAQ](docs/FAQ.md)
-
-## Contribution
+### Contribution
 Issues et pull requests bienvenues : [ouvrir une issue](https://github.com/XAV59213/phase_lune/issues). Merci de vérifier que les workflows Hassfest et HACS passent.
 
-## Licence
+---
+
+## 🇬🇧 English
+
+### Description
+Home Assistant integration that computes the moon phase, its illumination and a French poetic text **locally** (no API, no dependency).
+
+### Features
+- **2 sensors**:
+  - `sensor.moon_phase` → English slug (PNG image name); attributes `illumination`, `age_days`, `phase_fr`, `poetic`
+  - `sensor.phase_de_la_lune` → French label; attributes `illumination`, `age_days`, `phase_slug`, `poetic`
+- **Illumination** in % (0–100) and lunar age in days
+- **Poetic texts** for each phase (French)
+- Dynamic `mdi:moon-*` icons, FR/EN translations, one-click UI setup
+
+### Installation (HACS)
+
+[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=XAV59213&repository=phase_lune&category=integration)
+
+1. HACS → Integrations → ⋮ → **Custom repositories**
+2. Add `https://github.com/XAV59213/phase_lune`, category **Integration**
+3. Install **Phase de la Lune**, then restart Home Assistant
+
+Manual install: copy `custom_components/phase_lune` into `config/custom_components/`.
+
+### Configuration
+Settings → Devices & services → **Add integration** → "Phase de la Lune" → Submit. No options (single instance).
+
+### Images
+Put 8 PNG images in `config/www/moon_phases/` (served at `/local/moon_phases/`), named exactly:
+
+| `sensor.moon_phase` state | `sensor.phase_de_la_lune` | File |
+|---|---|---|
+| `new_moon` | Nouvelle lune (New moon) | `new_moon.png` |
+| `waxing_crescent` | Premier croissant (Waxing crescent) | `waxing_crescent.png` |
+| `first_quarter` | Premier quartier (First quarter) | `first_quarter.png` |
+| `waxing_gibbous` | Gibbeuse croissante (Waxing gibbous) | `waxing_gibbous.png` |
+| `full_moon` | Pleine lune (Full moon) | `full_moon.png` |
+| `waning_gibbous` | Gibbeuse décroissante (Waning gibbous) | `waning_gibbous.png` |
+| `last_quarter` | Dernier quartier (Last quarter) | `last_quarter.png` |
+| `waning_crescent` | Dernier croissant (Waning crescent) | `waning_crescent.png` |
+
+> The `www` folder may require a HA restart after it is created.
+
+### Lovelace card example (dark)
+```yaml
+type: markdown
+card_mod:
+  style: |
+    ha-card { background: #0b1020; color: #e8e8f0; text-align: center; }
+content: |
+  <img src="/local/moon_phases/{{ states('sensor.moon_phase') }}.png" width="200">
+
+  ## Current phase: {{ states('sensor.phase_de_la_lune') }}
+
+  *{{ state_attr('sensor.phase_de_la_lune','poetic') }}*
+
+  Illumination: {{ state_attr('sensor.phase_de_la_lune','illumination') }} %
+```
+(`card_mod` is optional; without it, use a dark theme.)
+
+### Calculation
+Lunar age = days since a reference new moon modulo the synodic month (29.530588 d). Thresholds match the core Moon integration (0–28 scale). Illumination ≈ `(1 − cos(2π·age/29.530588)) / 2 × 100`. Accuracy: a few hours.
+
+### Documentation
+Detailed guides in [`docs/`](docs/Home.md): [Home](docs/Home.en.md) · [Installation](docs/Installation.en.md) · [Lovelace](docs/Lovelace.en.md) · [FAQ](docs/FAQ.en.md)
+
+### Contributing
+Issues and pull requests welcome: [open an issue](https://github.com/XAV59213/phase_lune/issues). Please make sure the Hassfest and HACS workflows pass.
+
+---
+
+## Licence / License
 MIT © 2025-2026 XAV59213

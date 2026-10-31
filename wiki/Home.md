@@ -1,9 +1,8 @@
-# 🌙 Phase de la Lune — Wiki
+# 🌙 Phase de la Lune / Moon Phase
 
-Intégration Home Assistant (HACS) qui calcule localement la phase de la lune, l'illumination et un texte poétique en français.
-
-- [Installation](Installation.md)
-- [Lovelace](Lovelace.md)
-- [FAQ](FAQ.md)
-
-Entités : `sensor.moon_phase` (slug anglais, nom des images) et `sensor.phase_de_la_lune` (libellé FR).
+| 🇫🇷 Français | 🇬🇧 English |
+|---|---|
+| [Accueil](Home.fr.md) | [Home](Home.en.md) |
+| [Installation](Installation.fr.md) | [Installation](Installation.en.md) |
+| [Carte Lovelace](Lovelace.fr.md) | [Lovelace card](Lovelace.en.md) |
+| [FAQ](FAQ.fr.md) | [FAQ](FAQ.en.md) |

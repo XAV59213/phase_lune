@@ -1,6 +1,25 @@
 {
+  "title": "Phase de la Lune",
   "config": {
-    "step": {"user": {"title": "Phase de la Lune", "description": "Voulez-vous ajouter les capteurs de phase de la lune ?"}},
-    "abort": {"single_instance_allowed": "Déjà configuré. Une seule instance est autorisée.", "already_configured": "Déjà configuré."}
+    "step": {
+      "user": {
+        "title": "Phase de la Lune",
+        "description": "Ajouter les capteurs de phase de la lune (phase, illumination, âge lunaire, texte poétique) ? Calcul 100 % local, aucune option."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Déjà configuré. Une seule instance est autorisée.",
+      "already_configured": "Déjà configuré."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "moon_phase": {
+        "name": "Phase lunaire (slug)"
+      },
+      "phase_de_la_lune": {
+        "name": "Phase de la Lune"
+      }
+    }
   }
 }
