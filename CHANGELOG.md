@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0 — 2026-10-31
+- FR : carte Lovelace `custom:phase-lune-card` (chargée automatiquement, éditeur visuel) ; 365 anecdotes FR/EN (jour de l’année, `anecdotes.json`) ; 4 textes poétiques FR/EN par phase en rotation quotidienne ; nouveaux attributs `anecdote`, `anecdote_en`, `day_of_year`, `poetic_en`, `poetics`.
+- EN: `custom:phase-lune-card` Lovelace card (auto-loaded, visual editor); 365 FR/EN facts (day of year, `anecdotes.json`); 4 FR/EN poetic texts per phase with daily rotation; new attributes.
+
 ## 1.0.3 — 2026-10-31
 
 - FR : correction du logo du README dans HACS (URL absolue).

@@ -25,6 +25,21 @@ Intégration Home Assistant qui calcule **localement** (sans API, sans dépendan
 - **Textes poétiques** pour chaque phase
 - Icônes `mdi:moon-*` dynamiques, traductions FR/EN, configuration UI en un clic
 
+### Carte Lovelace custom (1.1.0)
+La carte `custom:phase-lune-card` est **chargée automatiquement** par l’intégration (aucune ressource à ajouter). Fond sombre hexagones, grande image de lune, phase actuelle, texte poétique (4 par phase, rotation quotidienne) et **anecdote du jour** (365 anecdotes FR/EN, une par jour de l’année).
+
+Tableau de bord → Modifier → Ajouter une carte → cherchez « Phase de la Lune », ou en YAML :
+```yaml
+type: custom:phase-lune-card
+title: Phase de la Lune
+entity: sensor.phase_de_la_lune
+image_path: /local/moon_phases   # PNG à copier dans config/www/moon_phases/
+language: fr                     # ou en
+show_illumination: true
+show_anecdote: true
+```
+Nouveaux attributs : `anecdote`, `anecdote_en`, `day_of_year`, `poetic_en`, `poetics`.
+
 ### Installation (HACS)
 
 [![Ouvrir dans HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=XAV59213&repository=phase_lune&category=integration)
@@ -96,6 +111,18 @@ Home Assistant integration that computes the moon phase, its illumination and a 
 - **Illumination** in % (0–100) and lunar age in days
 - **Poetic texts** for each phase (French)
 - Dynamic `mdi:moon-*` icons, FR/EN translations, one-click UI setup
+
+### Custom Lovelace card (1.1.0)
+The `custom:phase-lune-card` card is **loaded automatically** by the integration (no resource to add). Dark hexagon background, large moon picture, current phase, poetic text (4 per phase, daily rotation) and **fact of the day** (365 FR/EN facts, one per day of the year).
+
+Dashboard → Edit → Add card → search “Phase de la Lune”, or YAML:
+```yaml
+type: custom:phase-lune-card
+entity: sensor.phase_de_la_lune
+image_path: /local/moon_phases   # copy PNGs to config/www/moon_phases/
+language: en
+```
+New attributes: `anecdote`, `anecdote_en`, `day_of_year`, `poetic_en`, `poetics`.
 
 ### Installation (HACS)
 

@@ -1,7 +1,9 @@
 """Capteurs Phase de la Lune (calcul 100 % local)."""
 from __future__ import annotations
 
+import json
 import math
+from pathlib import Path
 from datetime import datetime, timedelta, timezone
 
 from homeassistant.components.sensor import SensorEntity
@@ -9,9 +11,13 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from .const import DOMAIN, NAME, PHASES, REFERENCE_NEW_MOON_JD, SYNODIC_MONTH, VERSION
+from .const import DOMAIN, NAME, PHASES, POETICS, REFERENCE_NEW_MOON_JD, SYNODIC_MONTH, VERSION
 
 SCAN_INTERVAL = timedelta(minutes=15)
+
+ANECDOTES: list[dict] = json.loads(
+    (Path(__file__).parent / "anecdotes.json").read_text("utf-8")
+)
 
 
 def moon_age(now: datetime | None = None) -> float:
@@ -44,9 +50,16 @@ def phase_slug(age: float) -> str:
 def compute(now: datetime | None = None) -> dict:
     age = moon_age(now)
     slug = phase_slug(age)
-    fr, icon, poetic = PHASES[slug]
+    fr, icon, _ = PHASES[slug]
+    local = datetime.now().astimezone() if now is None else now
+    doy = min(local.timetuple().tm_yday, 365)
+    poems = POETICS[slug]
+    poetic, poetic_en = poems[local.toordinal() % len(poems)]
+    anec = ANECDOTES[doy - 1]
     illum = (1 - math.cos(2 * math.pi * age / SYNODIC_MONTH)) / 2 * 100
     return {"slug": slug, "fr": fr, "icon": icon, "poetic": poetic,
+            "poetic_en": poetic_en, "poetics": [p[0] for p in poems],
+            "anecdote": anec["fr"], "anecdote_en": anec["en"], "day_of_year": doy,
             "illumination": round(illum, 1), "age_days": round(age, 2)}
 
 
@@ -91,7 +104,10 @@ class MoonPhaseSensor(_BaseMoonSensor):
     def extra_state_attributes(self) -> dict:
         d = self._data
         return {"illumination": d["illumination"], "age_days": d["age_days"],
-                "phase_fr": d["fr"], "poetic": d["poetic"]}
+                "phase_fr": d["fr"], "poetic": d["poetic"],
+                "poetic_en": d["poetic_en"], "poetics": d["poetics"],
+                "anecdote": d["anecdote"], "anecdote_en": d["anecdote_en"],
+                "day_of_year": d["day_of_year"]}
 
 
 class PhaseDeLaLuneSensor(_BaseMoonSensor):
@@ -111,4 +127,7 @@ class PhaseDeLaLuneSensor(_BaseMoonSensor):
     def extra_state_attributes(self) -> dict:
         d = self._data
         return {"illumination": d["illumination"], "age_days": d["age_days"],
-                "phase_slug": d["slug"], "poetic": d["poetic"]}
+                "phase_slug": d["slug"], "poetic": d["poetic"],
+                "poetic_en": d["poetic_en"], "poetics": d["poetics"],
+                "anecdote": d["anecdote"], "anecdote_en": d["anecdote_en"],
+                "day_of_year": d["day_of_year"]}
