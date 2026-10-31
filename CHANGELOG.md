@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3 — 2026-10-31
+
+- FR : correction du logo du README dans HACS (URL absolue).
+- EN: fix README logo in HACS (absolute URL).
+
 ## 1.0.2 — 2026-10-31
 - FR: documentation bilingue (README, docs/, wiki/, info.md), traductions enrichies ; images `media/moon_phases/` (crédit papo-o / HA Community)
 - EN: bilingual documentation (README, docs/, wiki/, info.md), richer translations; `media/moon_phases/` images (credit papo-o / HA Community)
