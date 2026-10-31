@@ -30,9 +30,15 @@
       ] };
     }
     static getStubConfig() { return { ...DEFAULTS }; }
-    setConfig(c) { this._c = { ...DEFAULTS, ...(c || {}) }; this._render(); }
+    setConfig(c) {
+      const cfg = { ...DEFAULTS, ...(c || {}) };
+      if (!cfg.image_path || /^\/local\/moon_phases\/?$/.test(cfg.image_path)) cfg.image_path = DEFAULTS.image_path;
+      cfg.image_path = String(cfg.image_path).replace(/\/+$/, "");
+      if (cfg.show_anecdote === undefined || cfg.show_anecdote === null) cfg.show_anecdote = true;
+      this._c = cfg; this._render();
+    }
     set hass(h) { this._h = h; this._render(); }
-    getCardSize() { return 6; }
+    getCardSize() { return 9; }
     _render() {
       if (!this._c || !this._h) return;
       if (!this.shadowRoot) this.attachShadow({ mode: "open" });
@@ -42,8 +48,9 @@
       const slug = a.phase_slug || (s.entity_id === "sensor.moon_phase" ? s.state : "") || st["sensor.moon_phase"]?.state || "full_moon";
       const img = a.image_slug || slug;
       const label = en ? EN[slug] || slug : (a.phase_fr || s.state);
-      const poetic = en ? a.poetic_en : a.poetic;
-      const anec = en ? a.anecdote_en : a.anecdote;
+      const pick = (k) => { for (const o of [s, st["sensor.phase_de_la_lune"], st["sensor.moon_phase"]]) { const v = o?.attributes?.[k]; if (v) return v; } return ""; };
+      const poetic = en ? (pick("poetic_en") || pick("poetic")) : pick("poetic");
+      const anec = en ? (pick("anecdote_en") || pick("anecdote")) : pick("anecdote");
       const [head, ...rest] = String(poetic || "").split(/(?<=\.)\s/);
       this.shadowRoot.innerHTML = `
 <style>
@@ -52,6 +59,7 @@
  h2{margin:0 0 14px;font-size:1.7em;font-weight:700;text-shadow:0 2px 6px #000}
  img{width:min(48%,220px);aspect-ratio:1;border-radius:50%;display:block;margin:4px 0 18px;filter:drop-shadow(0 0 18px rgba(255,255,255,.18))}
  p{margin:10px 0;font-size:1.08em;line-height:1.4;text-shadow:0 1px 4px #000}
+ .anec{background:rgba(255,255,255,.08);border-left:3px solid #f5d76e;padding:10px 12px;border-radius:6px;font-size:1em}
  b{font-weight:700} .s{opacity:.85;font-size:.95em}
 </style>
 <ha-card>
@@ -59,8 +67,8 @@
  <img src="${esc(c.image_path)}/${esc(img)}.png" alt="${esc(label)}" onerror="this.style.display='none'">
  <p>🌕 <b>${t.cur} : ${esc(label)}</b></p>
  ${poetic ? `<p>🌗 <b>${esc(head)}</b> ${esc(rest.join(" "))}</p>` : ""}
+ ${c.show_anecdote && anec ? `<p class="anec">✨ <b>${t.know} :</b> ${esc(anec)}</p>` : ""}
  ${c.show_illumination && a.illumination != null ? `<p class="s">💡 ${t.ill} : ${esc(a.illumination)} %</p>` : ""}
- ${c.show_anecdote && anec ? `<p class="s">✨ <b>${t.know} :</b> ${esc(anec)}</p>` : ""}
 </ha-card>`;
     }
   }

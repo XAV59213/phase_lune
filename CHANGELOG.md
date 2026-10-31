@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1 — 2026-10-31
+- FR : carte — l’anecdote du jour s’affiche juste sous le texte poétique, encadrée et bien visible ; repli sur `sensor.phase_de_la_lune` / `sensor.moon_phase` si l’entité choisie n’a pas `anecdote`/`poetic` ; `image_path` `/local/moon_phases` migré automatiquement vers `/phase_lune/moon_phases` ; `show_anecdote` vrai par défaut ; taille de carte augmentée.
+- EN: card — fact of the day shown right under the poetic text, highlighted; fallback to `sensor.phase_de_la_lune` / `sensor.moon_phase` when the chosen entity lacks `anecdote`/`poetic`; `/local/moon_phases` image_path silently migrated to `/phase_lune/moon_phases`; `show_anecdote` defaults to true; larger card size.
+
 ## 1.2.0 — 2026-10-31
 - FR : choix du **pays** à l’installation (défaut France, modifiable via Options) → hémisphère N/S ; au sud, image miroir (croissant ↔ décroissant). Nouveaux attributs `country`, `hemisphere`, `image_slug` ; `entity_picture` ; la carte utilise `image_slug`.
 - EN: **country** selection at setup (default France, editable via Options) → N/S hemisphere; southern hemisphere gets mirrored picture. New attributes `country`, `hemisphere`, `image_slug`; `entity_picture`; card uses `image_slug`.
