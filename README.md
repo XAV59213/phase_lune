@@ -7,6 +7,7 @@
 [![Hassfest](https://github.com/XAV59213/phase_lune/actions/workflows/hassfest.yml/badge.svg)](https://github.com/XAV59213/phase_lune/actions/workflows/hassfest.yml)
 [![HACS Validation](https://github.com/XAV59213/phase_lune/actions/workflows/hacs.yml/badge.svg)](https://github.com/XAV59213/phase_lune/actions/workflows/hacs.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Buy Me A Coffee](https://img.buymeacoffee.com/button-api/?text=xav59213&emoji=&slug=xav59213&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00)](https://www.buymeacoffee.com/xav59213)
 
 **[🇫🇷 Français](#-français) · [🇬🇧 English](#-english)**
 
