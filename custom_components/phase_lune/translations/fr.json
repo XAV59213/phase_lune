@@ -4,7 +4,10 @@
     "step": {
       "user": {
         "title": "Phase de la Lune",
-        "description": "Ajouter les capteurs de phase de la lune (phase, illumination, âge lunaire, texte poétique) ? Calcul 100 % local, aucune option."
+        "description": "Choisissez votre pays : au sud de l’équateur, la Lune apparaît inversée (côté éclairé à gauche quand elle croît). Calcul 100 % local.",
+        "data": {
+          "country": "Pays"
+        }
       }
     },
     "abort": {
@@ -19,6 +22,56 @@
       },
       "phase_de_la_lune": {
         "name": "Phase de la Lune"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Phase de la Lune",
+        "description": "Choisissez votre pays : au sud de l’équateur, la Lune apparaît inversée (côté éclairé à gauche quand elle croît). Calcul 100 % local.",
+        "data": {
+          "country": "Pays"
+        }
+      }
+    }
+  },
+  "selector": {
+    "country": {
+      "options": {
+        "FR": "France (hémisphère nord)",
+        "BE": "Belgique (hémisphère nord)",
+        "CH": "Suisse (hémisphère nord)",
+        "LU": "Luxembourg (hémisphère nord)",
+        "MC": "Monaco (hémisphère nord)",
+        "CA": "Canada (hémisphère nord)",
+        "US": "États-Unis (hémisphère nord)",
+        "GB": "Royaume-Uni (hémisphère nord)",
+        "DE": "Allemagne (hémisphère nord)",
+        "ES": "Espagne (hémisphère nord)",
+        "IT": "Italie (hémisphère nord)",
+        "PT": "Portugal (hémisphère nord)",
+        "NL": "Pays-Bas (hémisphère nord)",
+        "MA": "Maroc (hémisphère nord)",
+        "DZ": "Algérie (hémisphère nord)",
+        "TN": "Tunisie (hémisphère nord)",
+        "SN": "Sénégal (hémisphère nord)",
+        "CI": "Côte d’Ivoire (hémisphère nord)",
+        "GP": "Guadeloupe (hémisphère nord)",
+        "MQ": "Martinique (hémisphère nord)",
+        "GF": "Guyane (hémisphère nord)",
+        "RE": "La Réunion (hémisphère sud)",
+        "YT": "Mayotte (hémisphère sud)",
+        "NC": "Nouvelle-Calédonie (hémisphère sud)",
+        "PF": "Polynésie française (hémisphère sud)",
+        "MG": "Madagascar (hémisphère sud)",
+        "MU": "Maurice (hémisphère sud)",
+        "AU": "Australie (hémisphère sud)",
+        "NZ": "Nouvelle-Zélande (hémisphère sud)",
+        "ZA": "Afrique du Sud (hémisphère sud)",
+        "BR": "Brésil (hémisphère sud)",
+        "AR": "Argentine (hémisphère sud)",
+        "CL": "Chili (hémisphère sud)"
       }
     }
   }

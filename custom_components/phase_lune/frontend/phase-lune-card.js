@@ -40,6 +40,7 @@
       if (!s) { this.shadowRoot.innerHTML = `<ha-card><div style="padding:16px">Entité introuvable : ${esc(c.entity)}</div></ha-card>`; return; }
       const a = s.attributes || {}, en = c.language === "en", t = L[en ? "en" : "fr"];
       const slug = a.phase_slug || (s.entity_id === "sensor.moon_phase" ? s.state : "") || st["sensor.moon_phase"]?.state || "full_moon";
+      const img = a.image_slug || slug;
       const label = en ? EN[slug] || slug : (a.phase_fr || s.state);
       const poetic = en ? a.poetic_en : a.poetic;
       const anec = en ? a.anecdote_en : a.anecdote;
@@ -55,7 +56,7 @@
 </style>
 <ha-card>
  <h2>🌙 ${esc(c.title)}</h2>
- <img src="${esc(c.image_path)}/${esc(slug)}.png" alt="${esc(label)}" onerror="this.style.display='none'">
+ <img src="${esc(c.image_path)}/${esc(img)}.png" alt="${esc(label)}" onerror="this.style.display='none'">
  <p>🌕 <b>${t.cur} : ${esc(label)}</b></p>
  ${poetic ? `<p>🌗 <b>${esc(head)}</b> ${esc(rest.join(" "))}</p>` : ""}
  ${c.show_illumination && a.illumination != null ? `<p class="s">💡 ${t.ill} : ${esc(a.illumination)} %</p>` : ""}

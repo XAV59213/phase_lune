@@ -11,7 +11,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from .const import DOMAIN, NAME, PHASES, POETICS, REFERENCE_NEW_MOON_JD, SYNODIC_MONTH, VERSION
+from .const import COUNTRIES, CONF_COUNTRY, DEFAULT_COUNTRY, IMAGES_URL, MIRROR, DOMAIN, NAME, PHASES, POETICS, REFERENCE_NEW_MOON_JD, SYNODIC_MONTH, VERSION
 
 SCAN_INTERVAL = timedelta(minutes=15)
 
@@ -73,6 +73,8 @@ class _BaseMoonSensor(SensorEntity):
     _attr_should_poll = True
 
     def __init__(self, entry: ConfigEntry) -> None:
+        self._country = entry.options.get(CONF_COUNTRY, entry.data.get(CONF_COUNTRY, DEFAULT_COUNTRY))
+        self._hemi = COUNTRIES.get(self._country, "N")
         self._data: dict = compute()
         self._attr_device_info = {
             "identifiers": {(DOMAIN, entry.entry_id)},
@@ -85,6 +87,19 @@ class _BaseMoonSensor(SensorEntity):
     @property
     def icon(self) -> str:
         return self._data["icon"]
+
+    @property
+    def _image_slug(self) -> str:
+        slug = self._data["slug"]
+        return MIRROR.get(slug, slug) if self._hemi == "S" else slug
+
+    @property
+    def entity_picture(self) -> str:
+        return f"{IMAGES_URL}/{self._image_slug}.png"
+
+    def _geo(self) -> dict:
+        return {"country": self._country, "hemisphere": "south" if self._hemi == "S" else "north",
+                "image_slug": self._image_slug}
 
 
 class MoonPhaseSensor(_BaseMoonSensor):
@@ -107,7 +122,7 @@ class MoonPhaseSensor(_BaseMoonSensor):
                 "phase_fr": d["fr"], "poetic": d["poetic"],
                 "poetic_en": d["poetic_en"], "poetics": d["poetics"],
                 "anecdote": d["anecdote"], "anecdote_en": d["anecdote_en"],
-                "day_of_year": d["day_of_year"]}
+                "day_of_year": d["day_of_year"], **self._geo()}
 
 
 class PhaseDeLaLuneSensor(_BaseMoonSensor):
@@ -130,4 +145,4 @@ class PhaseDeLaLuneSensor(_BaseMoonSensor):
                 "phase_slug": d["slug"], "poetic": d["poetic"],
                 "poetic_en": d["poetic_en"], "poetics": d["poetics"],
                 "anecdote": d["anecdote"], "anecdote_en": d["anecdote_en"],
-                "day_of_year": d["day_of_year"]}
+                "day_of_year": d["day_of_year"], **self._geo()}

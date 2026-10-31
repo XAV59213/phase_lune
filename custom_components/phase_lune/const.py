@@ -1,7 +1,7 @@
 """Constantes pour l'intégration Phase de la Lune."""
 DOMAIN = "phase_lune"
 NAME = "Phase de la Lune"
-VERSION = "1.1.2"
+VERSION = "1.2.0"
 
 URL_BASE = "/phase_lune_frontend"
 CARD_FILENAME = "phase-lune-card.js"
@@ -76,3 +76,19 @@ POETICS = {
 
 IMAGES_URL = "/phase_lune/moon_phases"
 IMAGES_DIR = "www/moon_phases"
+
+CONF_COUNTRY = "country"
+DEFAULT_COUNTRY = "FR"
+# Pays -> hémisphère (N/S). Les phases sont identiques partout ; seul l'aspect (côté éclairé) s'inverse au sud.
+COUNTRIES = {
+    "FR": "N", "BE": "N", "CH": "N", "LU": "N", "MC": "N", "CA": "N", "US": "N",
+    "GB": "N", "DE": "N", "ES": "N", "IT": "N", "PT": "N", "NL": "N", "MA": "N",
+    "DZ": "N", "TN": "N", "SN": "N", "CI": "N", "GP": "N", "MQ": "N", "GF": "N",
+    "RE": "S", "YT": "S", "NC": "S", "PF": "S", "MG": "S", "MU": "S", "AU": "S",
+    "NZ": "S", "ZA": "S", "BR": "S", "AR": "S", "CL": "S",
+}
+MIRROR = {
+    "waxing_crescent": "waning_crescent", "waning_crescent": "waxing_crescent",
+    "first_quarter": "last_quarter", "last_quarter": "first_quarter",
+    "waxing_gibbous": "waning_gibbous", "waning_gibbous": "waxing_gibbous",
+}

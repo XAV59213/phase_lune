@@ -12,6 +12,9 @@
 
 ---
 
+## 🌍 Pays / hémisphère (1.2.0)
+À l’installation, choisissez votre **pays** (défaut **France**) ; modifiable ensuite via *Configurer*. La phase (nom, illumination) est la même partout ; dans l’**hémisphère sud**, l’image est inversée (croissant ↔ décroissant). Attributs : `country`, `hemisphere`, `image_slug` (utilisez `image_slug` pour l’image : `/phase_lune/moon_phases/{{ state_attr('sensor.moon_phase','image_slug') }}.png`). En France : aucun changement, image = état.
+
 ## 🇫🇷 Français
 
 ### Description
@@ -98,6 +101,9 @@ Guides détaillés dans [`docs/`](docs/) (et le [wiki](https://github.com/XAV592
 Issues et pull requests bienvenues : [ouvrir une issue](https://github.com/XAV59213/phase_lune/issues). Merci de vérifier que les workflows Hassfest et HACS passent.
 
 ---
+
+## 🌍 Country / hemisphere (1.2.0)
+At setup, pick your **country** (default **France**); change it later via *Configure*. The phase (name, illumination) is the same worldwide; in the **southern hemisphere** the picture is mirrored (waxing ↔ waning look). Attributes: `country`, `hemisphere`, `image_slug` (use `image_slug` for the picture). In France: nothing changes, picture = state.
 
 ## 🇬🇧 English
 

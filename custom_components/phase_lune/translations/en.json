@@ -4,7 +4,10 @@
     "step": {
       "user": {
         "title": "Moon Phase (Phase de la Lune)",
-        "description": "Add the Moon phase sensors (phase, illumination, lunar age, poetic text)? Computed 100% locally, no options."
+        "description": "Choose your country: south of the equator the Moon looks mirrored (lit side on the left while waxing). Computed 100% locally.",
+        "data": {
+          "country": "Country"
+        }
       }
     },
     "abort": {
@@ -19,6 +22,56 @@
       },
       "phase_de_la_lune": {
         "name": "Phase de la Lune"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Moon Phase",
+        "description": "Choose your country: south of the equator the Moon looks mirrored (lit side on the left while waxing). Computed 100% locally.",
+        "data": {
+          "country": "Country"
+        }
+      }
+    }
+  },
+  "selector": {
+    "country": {
+      "options": {
+        "FR": "France (northern hemisphere)",
+        "BE": "Belgium (northern hemisphere)",
+        "CH": "Switzerland (northern hemisphere)",
+        "LU": "Luxembourg (northern hemisphere)",
+        "MC": "Monaco (northern hemisphere)",
+        "CA": "Canada (northern hemisphere)",
+        "US": "United States (northern hemisphere)",
+        "GB": "United Kingdom (northern hemisphere)",
+        "DE": "Germany (northern hemisphere)",
+        "ES": "Spain (northern hemisphere)",
+        "IT": "Italy (northern hemisphere)",
+        "PT": "Portugal (northern hemisphere)",
+        "NL": "Netherlands (northern hemisphere)",
+        "MA": "Morocco (northern hemisphere)",
+        "DZ": "Algeria (northern hemisphere)",
+        "TN": "Tunisia (northern hemisphere)",
+        "SN": "Senegal (northern hemisphere)",
+        "CI": "Ivory Coast (northern hemisphere)",
+        "GP": "Guadeloupe (northern hemisphere)",
+        "MQ": "Martinique (northern hemisphere)",
+        "GF": "French Guiana (northern hemisphere)",
+        "RE": "Réunion (southern hemisphere)",
+        "YT": "Mayotte (southern hemisphere)",
+        "NC": "New Caledonia (southern hemisphere)",
+        "PF": "French Polynesia (southern hemisphere)",
+        "MG": "Madagascar (southern hemisphere)",
+        "MU": "Mauritius (southern hemisphere)",
+        "AU": "Australia (southern hemisphere)",
+        "NZ": "New Zealand (southern hemisphere)",
+        "ZA": "South Africa (southern hemisphere)",
+        "BR": "Brazil (southern hemisphere)",
+        "AR": "Argentina (southern hemisphere)",
+        "CL": "Chile (southern hemisphere)"
       }
     }
   }
