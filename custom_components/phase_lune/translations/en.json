@@ -1,0 +1,6 @@
+{
+  "config": {
+    "step": {"user": {"title": "Phase de la Lune", "description": "Do you want to add the Moon phase sensors?"}},
+    "abort": {"single_instance_allowed": "Already configured. Only a single instance is allowed.", "already_configured": "Already configured."}
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "config": {
+    "step": {"user": {"title": "Phase de la Lune", "description": "Voulez-vous ajouter les capteurs de phase de la lune ?"}},
+    "abort": {"single_instance_allowed": "Déjà configuré. Une seule instance est autorisée.", "already_configured": "Déjà configuré."}
+  }
+}
