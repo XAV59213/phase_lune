@@ -65,32 +65,12 @@ def compute(now: datetime | None = None) -> dict:
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry,
                             async_add_entities: AddEntitiesCallback) -> None:
-    # 1.2.3 : renommage des entity_id (préfixe phase_lune) pour éviter le conflit avec l'intégration Moon du core
-    from homeassistant.helpers import entity_registry as er
-    reg = er.async_get(hass)
-    for uid, new in ((f"{DOMAIN}_moon_phase", "sensor.phase_lune_slug"),
-                     (f"{DOMAIN}_phase_de_la_lune", "sensor.phase_lune"),
-                     (f"{DOMAIN}_illumination", "sensor.phase_lune_illumination"),
-                     (f"{DOMAIN}_anecdote", "sensor.phase_lune_anecdote")):
-        old = reg.async_get_entity_id("sensor", DOMAIN, uid)
-        if old and old != new:
-            if reg.async_get(new) is None:
-                try:
-                    reg.async_update_entity(old, new_entity_id=new)
-                    continue
-                except ValueError:
-                    pass
-            reg.async_remove(old)
-    # supprime toute ancienne entité phase_lune (ex. *_2) qui ne porte pas le nouveau préfixe
-    for ent in list(reg.entities.values()):
-        if ent.platform == DOMAIN and not ent.entity_id.startswith("sensor.phase_lune"):
-            reg.async_remove(ent.entity_id)
     async_add_entities([MoonPhaseSensor(entry), PhaseDeLaLuneSensor(entry),
                         IlluminationSensor(entry), AnecdoteSensor(entry)], True)
 
 
 class _BaseMoonSensor(SensorEntity):
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_should_poll = True
 
     def __init__(self, entry: ConfigEntry) -> None:
@@ -124,12 +104,11 @@ class _BaseMoonSensor(SensorEntity):
 
 
 class MoonPhaseSensor(_BaseMoonSensor):
-    """sensor.phase_lune_slug : slug anglais (nom des PNG)."""
+    """slug anglais (nom des PNG)."""
 
     def __init__(self, entry: ConfigEntry) -> None:
         super().__init__(entry)
-        self.entity_id = "sensor.phase_lune_slug"
-        self._attr_name = "Phase lunaire (image)"
+        self._attr_translation_key = "slug"
         self._attr_unique_id = f"{DOMAIN}_moon_phase"
 
     @property
@@ -147,12 +126,11 @@ class MoonPhaseSensor(_BaseMoonSensor):
 
 
 class PhaseDeLaLuneSensor(_BaseMoonSensor):
-    """sensor.phase_lune : libellé FR."""
+    """libellé FR."""
 
     def __init__(self, entry: ConfigEntry) -> None:
         super().__init__(entry)
-        self.entity_id = "sensor.phase_lune"
-        self._attr_name = "Phase de la Lune"
+        self._attr_translation_key = "phase"
         self._attr_unique_id = f"{DOMAIN}_phase_de_la_lune"
 
     @property
@@ -170,15 +148,14 @@ class PhaseDeLaLuneSensor(_BaseMoonSensor):
 
 
 class IlluminationSensor(_BaseMoonSensor):
-    """sensor.illumination_lune : pourcentage éclairé."""
+    """pourcentage éclairé."""
 
     _attr_native_unit_of_measurement = "%"
     _attr_state_class = SensorStateClass.MEASUREMENT
 
     def __init__(self, entry: ConfigEntry) -> None:
         super().__init__(entry)
-        self.entity_id = "sensor.phase_lune_illumination"
-        self._attr_name = "Illumination de la Lune"
+        self._attr_translation_key = "illumination"
         self._attr_unique_id = f"{DOMAIN}_illumination"
 
     @property
@@ -195,12 +172,11 @@ class IlluminationSensor(_BaseMoonSensor):
 
 
 class AnecdoteSensor(_BaseMoonSensor):
-    """sensor.anecdote_lune : anecdote du jour (FR), version EN en attribut."""
+    """anecdote du jour (FR), version EN en attribut."""
 
     def __init__(self, entry: ConfigEntry) -> None:
         super().__init__(entry)
-        self.entity_id = "sensor.phase_lune_anecdote"
-        self._attr_name = "Anecdote lunaire du jour"
+        self._attr_translation_key = "anecdote"
         self._attr_unique_id = f"{DOMAIN}_anecdote"
 
     @property

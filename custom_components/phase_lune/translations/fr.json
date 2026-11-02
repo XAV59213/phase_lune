@@ -17,11 +17,17 @@
   },
   "entity": {
     "sensor": {
-      "moon_phase": {
-        "name": "Phase lunaire (image)"
+      "slug": {
+        "name": "Phase (image)"
       },
-      "phase_de_la_lune": {
-        "name": "Phase de la Lune"
+      "phase": {
+        "name": "Phase"
+      },
+      "illumination": {
+        "name": "Illumination"
+      },
+      "anecdote": {
+        "name": "Anecdote du jour"
       }
     }
   },

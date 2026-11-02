@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0
+- FR : suppression de la boucle qui renommait/supprimait les entrées du registre d’entités au démarrage ; plus aucun `entity_id` codé en dur. `has_entity_name` + appareil « Phase de la Lune » + noms traduits (`translation_key`). Les unique_id sont inchangés : les ids existants (et vos renommages) sont conservés. Aucune migration nécessaire. Carte : `entity` optionnelle, détection automatique des capteurs via leurs attributs.
+- EN: removed the setup loop that renamed/removed entity registry entries; no more hardcoded `entity_id`. `has_entity_name` + "Phase de la Lune" device + translated names (`translation_key`). Unique ids unchanged, so existing ids (and user renames) are kept. No migration needed. Card: `entity` optional, sensors auto-detected by attributes.
+
 ## 1.2.5
 - Correctif hassfest : clés pays en minuscules (compatibilité anciennes configs)
 - Captures d’écran dans le README
