@@ -1,5 +1,9 @@
 # Changelog
 
+## Non publié / Unreleased
+- FR : pays stocké dans les options (anciennes entrées lues en repli) ; aide par champ (data_description) ; capteur slug en classe `enum` (états traduits) ; appareil de type service ; `PARALLEL_UPDATES = 0` ; indisponibilité journalisée une fois puis rétablissement ; entité de base dans `entity.py`, calcul dans `calc.py` ; HA minimum 2024.12 (options flow `self.config_entry`) ; docs fonctions, mises à jour, cas d'usage, exemples, dépannage ; 301 tests, couverture 100 % par module ; checklist Quality Scale réévaluée (27/22/5).
+- EN: country stored in options (legacy entries read as fallback); per-field help (data_description); slug sensor `enum` device class (translated states); service device type; `PARALLEL_UPDATES = 0`; unavailability logged once then recovery; base entity in `entity.py`, computation in `calc.py`; minimum HA 2024.12 (options flow `self.config_entry`); docs for functions, updates, use cases, examples, troubleshooting; 301 tests, 100% per-module coverage; Quality Scale checklist reassessed (27/22/5).
+
 ## 1.3.2
 - FR : phase et illumination calculées depuis l'élongation vraie Lune−Soleil (Meeus), vérifiées sur 249 instants USNO (voir docs/PRECISION.md) ; anecdote liée à la date du calendrier (29 février = 28 février, plus de doublon 30/31 décembre en année bissextile). Tests Home Assistant (pytest) ajoutés.
 - EN: phase and illumination from true Moon−Sun elongation (Meeus), checked against 249 USNO instants (see docs/PRECISION.md); anecdote tied to calendar date (Feb 29 = Feb 28, no Dec 30/31 duplicate in leap years). Home Assistant pytest suite added.

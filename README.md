@@ -65,6 +65,8 @@ Nouveaux attributs : `anecdote`, `anecdote_en`, `day_of_year`, `poetic_en`, `poe
 2. Ajouter `https://github.com/XAV59213/phase_lune`, catégorie **Intégration**
 3. Installer **Phase de la Lune**, puis redémarrer Home Assistant
 
+Prérequis : Home Assistant **2024.12** ou plus récent, HACS (ou installation manuelle).
+
 Installation manuelle : copier `custom_components/phase_lune` dans `config/custom_components/`.
 
 ### Configuration
@@ -119,11 +121,52 @@ content: |
 ### Calcul
 Âge lunaire = jours écoulés depuis une nouvelle lune de référence modulo le mois synodique (29,530588 j). Seuils alignés sur l’intégration Moon du core (échelle 0–28). Illumination ≈ `(1 − cos(2π·âge/29,530588)) / 2 × 100`. Précision : quelques heures.
 
+### Fonctions prises en charge
+- 4 capteurs sur un appareil de service « Phase de la Lune » : phase (image, slug anglais, classe `enum` à 8 valeurs traduites), phase en français, illumination (%), anecdote du jour (FR, EN en attribut).
+- Attributs : `illumination`, `age_days` (âge équivalent), `poetic`/`poetic_en`, `anecdote`/`anecdote_en`, `day_of_year`, `country`, `hemisphere`, `image_slug`.
+- Carte Lovelace `custom:phase-lune-card` et images servies par l'intégration. Pas d'action/service, pas de réseau.
+
+### Mise à jour des données
+Calcul local toutes les **15 minutes** (pas d'API). En cas d'erreur inattendue de calcul, les capteurs passent « indisponible » (un message `info` au journal), puis reviennent au calcul suivant (nouveau message).
+
+### Cas d'usage
+Afficher la lune du jour sur un tableau de bord ; déclencher un éclairage d'ambiance les nuits de pleine lune ; rappel jardinage/photo à la nouvelle lune ; afficher l'anecdote du jour sur une tablette murale.
+
+### Exemples d'automatisation
+```yaml
+automation:
+  - alias: Pleine lune – notification
+    triggers:
+      - trigger: state
+        entity_id: sensor.phase_de_la_lune_phase_image   # adaptez à votre entity_id
+        to: full_moon
+    actions:
+      - action: notify.notify
+        data:
+          message: "Pleine lune ce soir 🌕 ({{ state_attr('sensor.phase_de_la_lune_phase_image', 'illumination') }} %)"
+  - alias: Nuit sombre – éclairage jardin réduit
+    triggers:
+      - trigger: numeric_state
+        entity_id: sensor.phase_de_la_lune_illumination
+        below: 10
+    actions:
+      - action: light.turn_on
+        target: {entity_id: light.jardin}
+        data: {brightness_pct: 30}
+```
+
+### Dépannage
+- **Carte introuvable / ancienne version** : vider le cache du navigateur ou de l'application compagnon, puis recharger.
+- **Image absente** : utiliser `image_path: /phase_lune/moon_phases` (servi par l'intégration, aucune copie nécessaire).
+- **Image inversée** : vérifier le pays dans *Configurer* (au sud l'image est volontairement miroir).
+- **Capteurs « indisponible »** : consulter le journal (`custom_components.phase_lune`) ; ils reviennent au calcul suivant.
+- **Phase « décalée » d'un jour par rapport au calendrier** : voir [Précision et limites](#précision-et-limites) (fenêtre ±11–14 h des phases principales).
+
 ### Auto-évaluation Quality Scale
 Auto-évaluation **volontaire** d'une intégration custom HACS, selon les règles de la [Quality Scale de Home Assistant](https://developers.home-assistant.io/docs/core/integration-quality-scale/) : aucun niveau officiel (bronze, argent…) n'est revendiqué ni attribué. Détail et preuves : [`quality_scale.yaml`](custom_components/phase_lune/quality_scale.yaml).
-- 54 règles : **12 faites**, **10 exemptées**, **32 à faire**.
-- 292 tests pytest dans un environnement Home Assistant (workflow Pytest), couverture globale 96 %.
-- Limites : le seuil de plus de 95 % par module n'est pas atteint (`__init__.py` 90 %, `frontend/__init__.py` 78 %) ; le formulaire de configuration n'a pas encore de textes d'aide par champ.
+- 54 règles : **27 faites**, **22 exemptées**, **5 à faire**.
+- 301 tests pytest dans un environnement Home Assistant (workflow Pytest), couverture 100 % (lignes et branches) pour chaque module.
+- Restent à faire : logo dans le dépôt officiel brands, icônes via `icons.json`, étape de reconfiguration, diagnostics, typage strict vérifié en CI.
 
 ### Documentation
 Guides détaillés dans [`docs/`](https://github.com/XAV59213/phase_lune/blob/main/docs/) (et le [wiki](https://github.com/XAV59213/phase_lune/wiki)) : [Accueil](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.fr.md) · [Installation](https://github.com/XAV59213/phase_lune/blob/main/docs/Installation.fr.md) · [Lovelace](https://github.com/XAV59213/phase_lune/blob/main/docs/Lovelace.fr.md) · [FAQ](https://github.com/XAV59213/phase_lune/blob/main/docs/FAQ.fr.md)
@@ -167,6 +210,8 @@ New attributes: `anecdote`, `anecdote_en`, `day_of_year`, `poetic_en`, `poetics`
 1. HACS → Integrations → ⋮ → **Custom repositories**
 2. Add `https://github.com/XAV59213/phase_lune`, category **Integration**
 3. Install **Phase de la Lune**, then restart Home Assistant
+
+Prerequisites: Home Assistant **2024.12** or newer, HACS (or manual install).
 
 Manual install: copy `custom_components/phase_lune` into `config/custom_components/`.
 
@@ -222,11 +267,52 @@ content: |
 ### Calculation
 Lunar age = days since a reference new moon modulo the synodic month (29.530588 d). Thresholds match the core Moon integration (0–28 scale). Illumination ≈ `(1 − cos(2π·age/29.530588)) / 2 × 100`. Accuracy: a few hours.
 
+### Supported functions
+- 4 sensors on a "Phase de la Lune" service device: phase (picture, English slug, `enum` class with 8 translated values), French phase label, illumination (%), fact of the day (FR, EN as attribute).
+- Attributes: `illumination`, `age_days` (equivalent age), `poetic`/`poetic_en`, `anecdote`/`anecdote_en`, `day_of_year`, `country`, `hemisphere`, `image_slug`.
+- `custom:phase-lune-card` Lovelace card and pictures served by the integration. No actions/services, no network.
+
+### Data updates
+Local computation every **15 minutes** (no API). On an unexpected computation error the sensors become unavailable (one `info` log line), then recover on the next run (another log line).
+
+### Use cases
+Show tonight's moon on a dashboard; turn on mood lighting on full-moon nights; gardening/astrophotography reminder at new moon; show the fact of the day on a wall tablet.
+
+### Automation examples
+```yaml
+automation:
+  - alias: Full moon – notification
+    triggers:
+      - trigger: state
+        entity_id: sensor.phase_de_la_lune_phase_image   # adapt to your entity_id
+        to: full_moon
+    actions:
+      - action: notify.notify
+        data:
+          message: "Full moon tonight 🌕 ({{ state_attr('sensor.phase_de_la_lune_phase_image', 'illumination') }} %)"
+  - alias: Dark night – dim garden lights
+    triggers:
+      - trigger: numeric_state
+        entity_id: sensor.phase_de_la_lune_illumination
+        below: 10
+    actions:
+      - action: light.turn_on
+        target: {entity_id: light.garden}
+        data: {brightness_pct: 30}
+```
+
+### Troubleshooting
+- **Card not found / old version**: clear the browser or companion app cache, then reload.
+- **Missing picture**: use `image_path: /phase_lune/moon_phases` (served by the integration, no copy needed).
+- **Mirrored picture**: check the country in *Configure* (southern hemisphere is mirrored on purpose).
+- **Sensors unavailable**: check the log (`custom_components.phase_lune`); they recover on the next run.
+- **Phase "off by a day" vs a calendar**: see [Accuracy and limitations](#accuracy-and-limitations) (±11–14 h window for principal phases).
+
 ### Quality Scale self-assessment
 **Voluntary** self-assessment of a custom HACS integration against the [Home Assistant Quality Scale](https://developers.home-assistant.io/docs/core/integration-quality-scale/) rules: no official tier (bronze, silver…) is claimed or awarded. Details and evidence: [`quality_scale.yaml`](custom_components/phase_lune/quality_scale.yaml).
-- 54 rules: **12 done**, **10 exempt**, **32 todo**.
-- 292 pytest tests in a Home Assistant test environment (Pytest workflow), 96% overall coverage.
-- Limitations: the >95% per-module threshold is not met (`__init__.py` 90%, `frontend/__init__.py` 78%); the config form has no per-field help texts yet.
+- 54 rules: **27 done**, **22 exempt**, **5 todo**.
+- 301 pytest tests in a Home Assistant test environment (Pytest workflow), 100% line and branch coverage for every module.
+- Still todo: logo in the official brands repository, icons via `icons.json`, reconfigure step, diagnostics, strict typing enforced in CI.
 
 ### Documentation
 Detailed guides in [`docs/`](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.md): [Home](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.en.md) · [Installation](https://github.com/XAV59213/phase_lune/blob/main/docs/Installation.en.md) · [Lovelace](https://github.com/XAV59213/phase_lune/blob/main/docs/Lovelace.en.md) · [FAQ](https://github.com/XAV59213/phase_lune/blob/main/docs/FAQ.en.md)
