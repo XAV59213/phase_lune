@@ -119,6 +119,12 @@ content: |
 ### Calcul
 Âge lunaire = jours écoulés depuis une nouvelle lune de référence modulo le mois synodique (29,530588 j). Seuils alignés sur l’intégration Moon du core (échelle 0–28). Illumination ≈ `(1 − cos(2π·âge/29,530588)) / 2 × 100`. Précision : quelques heures.
 
+### Auto-évaluation Quality Scale
+Auto-évaluation **volontaire** d'une intégration custom HACS, selon les règles de la [Quality Scale de Home Assistant](https://developers.home-assistant.io/docs/core/integration-quality-scale/) : aucun niveau officiel (bronze, argent…) n'est revendiqué ni attribué. Détail et preuves : [`quality_scale.yaml`](custom_components/phase_lune/quality_scale.yaml).
+- 54 règles : **12 faites**, **10 exemptées**, **32 à faire**.
+- 292 tests pytest dans un environnement Home Assistant (workflow Pytest), couverture globale 96 %.
+- Limites : le seuil de plus de 95 % par module n'est pas atteint (`__init__.py` 90 %, `frontend/__init__.py` 78 %) ; le formulaire de configuration n'a pas encore de textes d'aide par champ.
+
 ### Documentation
 Guides détaillés dans [`docs/`](https://github.com/XAV59213/phase_lune/blob/main/docs/) (et le [wiki](https://github.com/XAV59213/phase_lune/wiki)) : [Accueil](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.fr.md) · [Installation](https://github.com/XAV59213/phase_lune/blob/main/docs/Installation.fr.md) · [Lovelace](https://github.com/XAV59213/phase_lune/blob/main/docs/Lovelace.fr.md) · [FAQ](https://github.com/XAV59213/phase_lune/blob/main/docs/FAQ.fr.md)
 
@@ -215,6 +221,12 @@ content: |
 
 ### Calculation
 Lunar age = days since a reference new moon modulo the synodic month (29.530588 d). Thresholds match the core Moon integration (0–28 scale). Illumination ≈ `(1 − cos(2π·age/29.530588)) / 2 × 100`. Accuracy: a few hours.
+
+### Quality Scale self-assessment
+**Voluntary** self-assessment of a custom HACS integration against the [Home Assistant Quality Scale](https://developers.home-assistant.io/docs/core/integration-quality-scale/) rules: no official tier (bronze, silver…) is claimed or awarded. Details and evidence: [`quality_scale.yaml`](custom_components/phase_lune/quality_scale.yaml).
+- 54 rules: **12 done**, **10 exempt**, **32 todo**.
+- 292 pytest tests in a Home Assistant test environment (Pytest workflow), 96% overall coverage.
+- Limitations: the >95% per-module threshold is not met (`__init__.py` 90%, `frontend/__init__.py` 78%); the config form has no per-field help texts yet.
 
 ### Documentation
 Detailed guides in [`docs/`](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.md): [Home](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.en.md) · [Installation](https://github.com/XAV59213/phase_lune/blob/main/docs/Installation.en.md) · [Lovelace](https://github.com/XAV59213/phase_lune/blob/main/docs/Lovelace.en.md) · [FAQ](https://github.com/XAV59213/phase_lune/blob/main/docs/FAQ.en.md)
