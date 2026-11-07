@@ -1,5 +1,9 @@
 # Changelog
 
+## Non publié / Unreleased
+- FR : phase et illumination calculées depuis l'élongation vraie Lune−Soleil (Meeus), vérifiées sur 249 instants USNO (voir docs/PRECISION.md) ; anecdote liée à la date du calendrier (29 février = 28 février, plus de doublon 30/31 décembre en année bissextile). Tests Home Assistant (pytest) ajoutés.
+- EN: phase and illumination from true Moon−Sun elongation (Meeus), checked against 249 USNO instants (see docs/PRECISION.md); anecdote tied to calendar date (Feb 29 = Feb 28, no Dec 30/31 duplicate in leap years). Home Assistant pytest suite added.
+
 ## 1.3.1
 - FR : ajout de `quality_scale.yaml` (auto-évaluation Quality Scale, sans niveau officiel revendiqué). Aucun changement fonctionnel.
 - EN: added `quality_scale.yaml` (Quality Scale self-assessment, no official tier claimed). No functional changes.
