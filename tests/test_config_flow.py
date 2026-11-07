@@ -13,7 +13,7 @@ async def test_user_flow_default_france(hass):
     assert key.default() == "fr"
     r = await hass.config_entries.flow.async_configure(r["flow_id"], {"country": "au"})
     assert r["type"] is FlowResultType.CREATE_ENTRY
-    assert r["title"] == NAME and r["data"] == {"country": "au"}
+    assert r["title"] == NAME and r["data"] == {} and r["result"].options == {"country": "au"}
     assert r["result"].unique_id == DOMAIN
 
 
@@ -38,3 +38,25 @@ async def test_options_flow_changes_country_and_reloads(hass):
     assert e.options == {"country": "nz"}
     st = hass.states.get(eid(hass, "slug"))
     assert st.attributes["country"] == "nz" and st.attributes["hemisphere"] == "south"
+
+
+async def test_legacy_entry_country_in_data_still_used(hass):
+    """Entrées < 1.3.3 : pays dans data, lu en repli (options flow pré-rempli)."""
+    e = MockConfigEntry(domain=DOMAIN, unique_id=DOMAIN, data={"country": "AU"})
+    e.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(e.entry_id)
+    await hass.async_block_till_done()
+    st = hass.states.get(eid(hass, "slug"))
+    assert st.attributes["country"] == "au" and st.attributes["hemisphere"] == "south"
+    r = await hass.config_entries.options.async_init(e.entry_id)
+    assert next(iter(r["data_schema"].schema)).default() == "au"
+
+
+def test_data_description_translated():
+    import json
+    from pathlib import Path
+    root = Path(__file__).parent.parent / "custom_components" / "phase_lune"
+    for f in ("strings.json", "translations/en.json", "translations/fr.json"):
+        t = json.loads((root / f).read_text("utf-8"))
+        assert t["config"]["step"]["user"]["data_description"]["country"]
+        assert t["options"]["step"]["init"]["data_description"]["country"]

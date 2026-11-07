@@ -54,9 +54,9 @@ def elongation(dt: datetime) -> float:
     moon_lon = lp + s / 1e6
     # Soleil (Meeus ch. 25, basse précision) ; l'aberration/nutation communes s'annulent presque
     l0 = 280.46646 + 36000.76983 * t
-    c = ((1.914602 - 0.004817 * t) * math.sin(r(m)) + 0.019993 * math.sin(r(2 * m))
+    eq = ((1.914602 - 0.004817 * t) * math.sin(r(m)) + 0.019993 * math.sin(r(2 * m))
          + 0.000289 * math.sin(r(3 * m)))
-    sun_lon = l0 + c - 0.00569  # aberration
+    sun_lon = l0 + eq - 0.00569  # aberration
     return (moon_lon - sun_lon) % 360.0
 
 

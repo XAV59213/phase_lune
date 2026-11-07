@@ -10,3 +10,5 @@ htmlcov/
 .coverage
 .pytest_cache/
 __pycache__/
+.mypy_cache/
+coverage.json

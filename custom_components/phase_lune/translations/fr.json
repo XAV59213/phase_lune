@@ -7,18 +7,42 @@
         "description": "Choisissez votre pays : au sud de l’équateur, la Lune apparaît inversée (côté éclairé à gauche quand elle croît). Calcul 100 % local.",
         "data": {
           "country": "Pays"
+        },
+        "data_description": {
+          "country": "Fixe l'hémisphère : au sud l'image est inversée. La phase elle-même est identique partout. Modifiable ensuite via Configurer."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigurer Phase de la Lune",
+        "description": "Changer le pays (hémisphère). L'intégration se recharge.",
+        "data": {
+          "country": "Pays"
+        },
+        "data_description": {
+          "country": "Fixe l'hémisphère : au sud l'image est inversée. La phase elle-même est identique partout."
         }
       }
     },
     "abort": {
       "single_instance_allowed": "Déjà configuré. Une seule instance est autorisée.",
-      "already_configured": "Déjà configuré."
+      "already_configured": "Déjà configuré.",
+      "reconfigure_successful": "Pays mis à jour."
     }
   },
   "entity": {
     "sensor": {
       "slug": {
-        "name": "Phase (image)"
+        "name": "Phase (image)",
+        "state": {
+          "new_moon": "Nouvelle lune",
+          "waxing_crescent": "Premier croissant",
+          "first_quarter": "Premier quartier",
+          "waxing_gibbous": "Gibbeuse croissante",
+          "full_moon": "Pleine lune",
+          "waning_gibbous": "Gibbeuse décroissante",
+          "last_quarter": "Dernier quartier",
+          "waning_crescent": "Dernier croissant"
+        }
       },
       "phase": {
         "name": "Phase"
@@ -38,6 +62,9 @@
         "description": "Choisissez votre pays : au sud de l’équateur, la Lune apparaît inversée (côté éclairé à gauche quand elle croît). Calcul 100 % local.",
         "data": {
           "country": "Pays"
+        },
+        "data_description": {
+          "country": "Fixe l'hémisphère : au sud l'image est inversée. La phase elle-même est identique partout. Modifiable ensuite via Configurer."
         }
       }
     }

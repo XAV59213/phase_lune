@@ -7,18 +7,42 @@
         "description": "Choose your country: south of the equator the Moon looks mirrored (lit side on the left while waxing). Computed 100% locally.",
         "data": {
           "country": "Country"
+        },
+        "data_description": {
+          "country": "Sets the hemisphere: in the south the picture is mirrored. The phase itself is the same everywhere. Can be changed later via Configure."
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Moon Phase",
+        "description": "Change the country (hemisphere). The integration reloads.",
+        "data": {
+          "country": "Country"
+        },
+        "data_description": {
+          "country": "Sets the hemisphere: in the south the picture is mirrored. The phase itself is the same everywhere."
         }
       }
     },
     "abort": {
       "single_instance_allowed": "Already configured. Only a single instance is allowed.",
-      "already_configured": "Already configured."
+      "already_configured": "Already configured.",
+      "reconfigure_successful": "Country updated."
     }
   },
   "entity": {
     "sensor": {
       "slug": {
-        "name": "Phase (image)"
+        "name": "Phase (image)",
+        "state": {
+          "new_moon": "New moon",
+          "waxing_crescent": "Waxing crescent",
+          "first_quarter": "First quarter",
+          "waxing_gibbous": "Waxing gibbous",
+          "full_moon": "Full moon",
+          "waning_gibbous": "Waning gibbous",
+          "last_quarter": "Last quarter",
+          "waning_crescent": "Waning crescent"
+        }
       },
       "phase": {
         "name": "Phase"
@@ -38,6 +62,9 @@
         "description": "Choose your country: south of the equator the Moon looks mirrored (lit side on the left while waxing). Computed 100% locally.",
         "data": {
           "country": "Country"
+        },
+        "data_description": {
+          "country": "Sets the hemisphere: in the south the picture is mirrored. The phase itself is the same everywhere. Can be changed later via Configure."
         }
       }
     }

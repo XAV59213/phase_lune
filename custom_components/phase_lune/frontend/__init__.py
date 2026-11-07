@@ -7,7 +7,7 @@ import logging
 from pathlib import Path
 
 from homeassistant.components.frontend import add_extra_js_url
-from homeassistant.components.http import StaticPathConfig
+from homeassistant.components.http import StaticPathConfig  # type: ignore[attr-defined]  # ré-export HA
 from homeassistant.core import HomeAssistant
 
 from ..const import CARD_FILENAME, CARD_URL, IMAGES_DIR, IMAGES_URL, URL_BASE
@@ -18,7 +18,7 @@ _LOGGER = logging.getLogger(__name__)
 def _version() -> str:
     try:
         manifest = Path(__file__).parent.parent / "manifest.json"
-        return json.loads(manifest.read_text("utf-8")).get("version", "0")
+        return str(json.loads(manifest.read_text("utf-8")).get("version", "0"))
     except Exception:  # noqa: BLE001
         return "0"
 

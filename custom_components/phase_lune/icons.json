@@ -1,0 +1,28 @@
+{
+  "entity": {
+    "sensor": {
+      "slug": {
+        "default": "mdi:weather-night",
+        "state": {
+          "new_moon": "mdi:moon-new",
+          "waxing_crescent": "mdi:moon-waxing-crescent",
+          "first_quarter": "mdi:moon-first-quarter",
+          "waxing_gibbous": "mdi:moon-waxing-gibbous",
+          "full_moon": "mdi:moon-full",
+          "waning_gibbous": "mdi:moon-waning-gibbous",
+          "last_quarter": "mdi:moon-last-quarter",
+          "waning_crescent": "mdi:moon-waning-crescent"
+        }
+      },
+      "phase": {
+        "default": "mdi:weather-night"
+      },
+      "illumination": {
+        "default": "mdi:brightness-6"
+      },
+      "anecdote": {
+        "default": "mdi:book-open-variant"
+      }
+    }
+  }
+}

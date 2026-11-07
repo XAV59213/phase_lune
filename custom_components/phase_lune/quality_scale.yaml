@@ -11,17 +11,17 @@ rules:
     status: done
     comment: "sensor.py:16 uses 15 minutes for slowly changing, locally calculated lunar data; update at 85-86."
   brands:
-    status: todo
-    comment: "Bundled brand assets exist, but no phase_lune entry found in home-assistant/brands master tree. Bundled HACS assets do not establish this core rule."
+    status: done
+    comment: "Custom-integration mechanism since HA 2026.3: brand/ folder (icon, icon@2x, dark_icon(s), logo, logo@2x) per home-assistant/brands README and contributors blog 2026-02-24 (custom_integrations/ is legacy, no submission). Sizes/trim checked in tests/test_reconfigure_diag_icons.py::test_brand_assets_spec. Limitation: HA < 2026.3 does not show local brand images."
   common-modules:
-    status: todo
-    comment: "Shared _BaseMoonSensor is in sensor.py:72-103 rather than entity.py; review applicability to a sensor-only base before moving it."
+    status: done
+    comment: "Base entity PhaseLuneEntity in entity.py (shared by 4 sensors); pure calculation in calc.py/astro.py. No coordinator (no data fetching)."
   config-flow-test-coverage:
     status: done
     comment: "tests/test_config_flow.py covers user flow, default country, singleton abort and options flow with reload; config_flow.py 100% line+branch coverage. tests/ run with pytest-homeassistant-custom-component (HA 2026.10.4, Python 3.14) in .github/workflows/pytest.yml."
   config-flow:
-    status: todo
-    comment: "UI singleton flow exists (config_flow.py:14-30), but data_description is absent and the country data/options semantics need documented review against the full rule."
+    status: done
+    comment: "SelectSelector with translated options, data_description FR/EN (strings.json, translations/*), country stored in ConfigEntry.options (legacy data fallback tested). tests/test_config_flow.py."
   dependency-transparency:
     status: exempt
     comment: "manifest.json requirements is empty; only Home Assistant and Python standard library imports in audited Python modules."
@@ -35,8 +35,8 @@ rules:
     status: done
     comment: "README.md:125 describes the local lunar phase and illumination calculations, without an API."
   docs-installation-instructions:
-    status: todo
-    comment: "README.md:61-71,147-157 and docs/Installation.fr.md:3-13 give setup steps, but README says no options despite the country selector; reconcile and state prerequisites."
+    status: done
+    comment: "README FR/EN Installation (HACS + manual) with prerequisites (HA >= 2024.12, HACS); docs/Installation.{fr,en}.md."
   docs-removal-instructions:
     status: done
     comment: "README.md (FR+EN 'Suppression'/'Removal') and docs/Installation.{fr,en}.md describe entry deletion and optional HACS removal."
@@ -67,8 +67,8 @@ rules:
 
   # Silver
   action-exceptions:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "No custom service actions; only sensor platform (rule exception)."
   config-entry-unloading:
     status: done
     comment: "async_unload_entry unloads platforms and the update listener is removed via async_on_unload; tests/test_init_sensor.py::test_setup_unload_reload asserts LOADED → reload → NOT_LOADED. Global JS/static paths persist intentionally."
@@ -79,96 +79,96 @@ rules:
     status: done
     comment: "README.md and docs/Installation.{fr,en}.md document the single Country parameter (default France, hemisphere) at setup."
   entity-unavailable:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "entity.py update(): unexpected computation error sets available=False, recovers on next success. tests/test_robustness.py::test_unavailable_logged_once_then_recovers."
   integration-owner:
     status: done
     comment: "manifest.json:4-6 lists @xav59213 as codeowner."
   log-when-unavailable:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "entity.py logs once at info when becoming unavailable and once when recovered; asserted in tests/test_robustness.py (count per entity)."
   parallel-updates:
-    status: todo
-    comment: "sensor.py has no PARALLEL_UPDATES declaration."
+    status: done
+    comment: "sensor.py PARALLEL_UPDATES = 0 (local computation, no device/service to protect); asserted in tests/test_robustness.py."
   reauthentication-flow:
     status: exempt
     comment: "No credentials or external authentication are used."
   test-coverage:
-    status: todo
-    comment: "Measured 96% total, but per-module: __init__.py 90%, frontend/__init__.py 78% (error/fallback paths); sensor.py, astro.py, config_flow.py, const.py 100%. Rule requires >95% per module, so not done."
+    status: done
+    comment: "100% line+branch coverage for every module; tools/check_coverage.py fails the Pytest workflow if any module is <= 95% (verified locally incl. a failing threshold)."
 
   # Gold
   devices:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "entity.py DeviceInfo: identifiers, name, manufacturer, model, sw_version, entry_type=SERVICE; asserted in tests/test_robustness.py."
   diagnostics:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "diagnostics.py: version, country, hemisphere, legacy flag, redacted options, anecdote count, calculation status; no entry_id/unique_id/title/coordinates (asserted in tests via get_diagnostics_for_config_entry); error path tested."
   discovery-update-info:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "No device or network service to discover (rule exception)."
   discovery:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "No device or network service to discover (rule exception)."
   docs-data-update:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "README FR/EN 'Mise à jour des données'/'Data updates': local computation every 15 min, unavailable/recovery behaviour."
   docs-examples:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "README FR/EN automation examples (full-moon notification, illumination-based lighting) and Lovelace card examples."
   docs-known-limitations:
     status: done
     comment: "README.md 'Précision et limites'/'Accuracy and limitations' and docs/PRECISION.md: USNO-checked accuracy, quarter window, equivalent age_days, leap-day anecdote, validity range."
   docs-supported-devices:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "Does not connect to any device or service and integrates no physical device (rule exception)."
   docs-supported-functions:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "README FR/EN 'Fonctions prises en charge'/'Supported functions': 4 sensors, attributes, card, no actions."
   docs-troubleshooting:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "README FR/EN 'Dépannage'/'Troubleshooting': cache, image path, mirrored image, unavailable sensors, phase window."
   docs-use-cases:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "README FR/EN 'Cas d'usage'/'Use cases'."
   dynamic-devices:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "Single static service device per config entry tied to its lifecycle (rule exception)."
   entity-category:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "All 4 sensors are primary user-facing entities used by the card; default category appropriate (rule exception)."
   entity-device-class:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "Phase slug sensor uses SensorDeviceClass.ENUM with 8 options and translated states; illumination (% lit) has no matching device class (illuminance is lux); French label and fact are free text."
   entity-disabled-by-default:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "None of the 4 sensors is noisy (15-min local updates) and all feed the card (rule exception)."
   entity-translations:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "All 4 sensors use translation_key with names in strings.json and translations/en.json, fr.json; slug states translated."
   exception-translations:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "The integration raises no custom exceptions (rule exception)."
   icon-translations:
     status: todo
-    comment: "No icons.json in remote tree; icons are properties in sensor.py:88-90,161-163,182-184."
+    comment: "icons.json covers slug (8 state icons), phase (default), illumination and anecdote; their icon properties were removed (tested). The French-label phase sensor keeps a dynamic icon property: its states ('Pleine lune'…) are rejected as icons.json state keys by hassfest ([a-z0-9-_]+, verified locally). Full compliance needs changing that sensor's state values (breaking automations/card) - owner decision."
   reconfiguration-flow:
-    status: todo
-    comment: "config_flow.py has an options flow, but no async_step_reconfigure; do not equate the two."
+    status: done
+    comment: "config_flow.py async_step_reconfigure (country, _get_reconfigure_entry, async_update_reload_and_abort; legacy data cleaned into options). tests/test_reconfigure_diag_icons.py: options and legacy entries, single entry kept, stable entity ids, reload, unknown entry rejected."
   repair-issues:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "No situation requiring user repair (no credentials, network, or deprecated config) (rule exception)."
   stale-devices:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "Single static service device per config entry tied to its lifecycle (rule exception)."
 
   # Platinum
   async-dependency:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "No external requirements (manifest requirements: []) (rule exception)."
   inject-websession:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: exempt
+    comment: "Makes no HTTP requests (rule exception)."
   strict-typing:
-    status: todo
-    comment: "No strict mypy configuration or verified strict-typing result; several unparameterized dict types and untyped flow methods."
+    status: done
+    comment: "mypy --strict (mypy.ini; mypy 1.18.2 pinned in requirements_test*.txt) passes locally on all integration modules with 4 targeted ignores: 3 for voluptuous schemas (HA 2026.10 types expect probatio; voluptuous kept for HA >= 2024.12) and 1 for the StaticPathConfig re-export. Step added to .github/workflows/pytest.yml."
