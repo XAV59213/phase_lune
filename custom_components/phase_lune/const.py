@@ -1,15 +1,13 @@
 """Constantes pour l'intégration Phase de la Lune."""
 DOMAIN = "phase_lune"
 NAME = "Phase de la Lune"
-VERSION = "1.3.1"
+VERSION = "1.3.2"
 
 URL_BASE = "/phase_lune_frontend"
 CARD_FILENAME = "phase-lune-card.js"
 CARD_URL = f"{URL_BASE}/{CARD_FILENAME}"
 
 SYNODIC_MONTH = 29.530588853
-# Nouvelle lune de référence : 6 janvier 2000 18:14 UTC
-REFERENCE_NEW_MOON_JD = 2451550.1
 
 PHASES = {
     "new_moon": ("Nouvelle lune", "mdi:moon-new", "La lune se renouvelle dans l’ombre…"),

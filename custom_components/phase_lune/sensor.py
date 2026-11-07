@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import json
-import math
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 
@@ -11,7 +10,8 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
-from .const import COUNTRIES, CONF_COUNTRY, DEFAULT_COUNTRY, IMAGES_URL, MIRROR, DOMAIN, NAME, PHASES, POETICS, REFERENCE_NEW_MOON_JD, SYNODIC_MONTH, VERSION
+from .astro import elongation, illumination
+from .const import COUNTRIES, CONF_COUNTRY, DEFAULT_COUNTRY, IMAGES_URL, MIRROR, DOMAIN, NAME, PHASES, POETICS, SYNODIC_MONTH, VERSION
 
 SCAN_INTERVAL = timedelta(minutes=15)
 
@@ -21,10 +21,9 @@ ANECDOTES: list[dict] = json.loads(
 
 
 def moon_age(now: datetime | None = None) -> float:
-    """Âge lunaire en jours (0 → 29.53)."""
+    """Âge lunaire équivalent en jours (0 → 29.53), dérivé de l'élongation vraie Lune−Soleil."""
     now = now or datetime.now(timezone.utc)
-    jd = now.timestamp() / 86400.0 + 2440587.5
-    return (jd - REFERENCE_NEW_MOON_JD) % SYNODIC_MONTH
+    return elongation(now) / 360.0 * SYNODIC_MONTH
 
 
 def phase_slug(age: float) -> str:
@@ -47,16 +46,24 @@ def phase_slug(age: float) -> str:
     return "waning_crescent"
 
 
+def day_of_year_365(d: datetime) -> int:
+    """Jour 1–365 lié à la date du calendrier (année non bissextile) : le 29 février
+    reprend l'anecdote du 28, et du 1er mars au 31 décembre chaque date garde la même
+    anecdote quelle que soit l'année (avant : décalage d'un jour et 30/31 déc. identiques)."""
+    day = 28 if (d.month, d.day) == (2, 29) else d.day
+    return datetime(2001, d.month, day).timetuple().tm_yday
+
+
 def compute(now: datetime | None = None) -> dict:
     age = moon_age(now)
     slug = phase_slug(age)
     fr, icon, _ = PHASES[slug]
     local = datetime.now().astimezone() if now is None else now
-    doy = min(local.timetuple().tm_yday, 365)
+    doy = day_of_year_365(local)
     poems = POETICS[slug]
     poetic, poetic_en = poems[local.toordinal() % len(poems)]
     anec = ANECDOTES[doy - 1]
-    illum = (1 - math.cos(2 * math.pi * age / SYNODIC_MONTH)) / 2 * 100
+    illum = illumination(age / SYNODIC_MONTH * 360.0)
     return {"slug": slug, "fr": fr, "icon": icon, "poetic": poetic,
             "poetic_en": poetic_en, "poetics": [p[0] for p in poems],
             "anecdote": anec["fr"], "anecdote_en": anec["en"], "day_of_year": doy,

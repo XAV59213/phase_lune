@@ -19,3 +19,12 @@ Ready-to-copy images: [`media/moon_phases/`](https://github.com/XAV59213/phase_l
 
 ## Updating
 HACS offers new versions automatically; restart after updating.
+
+## Country / options
+At setup: **Country** (default France) → hemisphere (picture mirrored in the south). Change via **Configure** (automatic reload). Single instance.
+
+## Removal
+Settings → Devices & services → Phase de la Lune → ⋮ → **Delete**. Optional: HACS → ⋮ → **Remove**, restart, remove `custom:phase-lune-card` cards.
+
+## Accuracy
+See [PRECISION.md](https://github.com/XAV59213/phase_lune/blob/main/docs/PRECISION.md) (`age_days` = equivalent age since 1.3.2; Feb 29 = Feb 28 fact).

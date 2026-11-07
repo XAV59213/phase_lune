@@ -19,3 +19,12 @@ Images prêtes à copier : [`media/moon_phases/`](https://github.com/XAV59213/ph
 
 ## Mise à jour
 HACS propose automatiquement les nouvelles versions ; redémarrer après mise à jour.
+
+## Pays / options
+À l'ajout : **Pays** (défaut France) → hémisphère (image inversée au sud). Modifiable via **Configurer** (rechargement automatique). Instance unique.
+
+## Suppression
+Paramètres → Appareils et services → Phase de la Lune → ⋮ → **Supprimer**. Optionnel : HACS → ⋮ → **Supprimer**, redémarrer, retirer les cartes `custom:phase-lune-card`.
+
+## Précision
+Voir [PRECISION.md](https://github.com/XAV59213/phase_lune/blob/main/docs/PRECISION.md) (`age_days` = âge équivalent depuis 1.3.2 ; 29 février = anecdote du 28).

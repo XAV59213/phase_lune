@@ -17,8 +17,8 @@ rules:
     status: todo
     comment: "Shared _BaseMoonSensor is in sensor.py:72-103 rather than entity.py; review applicability to a sensor-only base before moving it."
   config-flow-test-coverage:
-    status: todo
-    comment: "No tests directory or test files in the remote tree; no measured full config-flow coverage."
+    status: done
+    comment: "tests/test_config_flow.py covers user flow, default country, singleton abort and options flow with reload; config_flow.py 100% line+branch coverage. tests/ run with pytest-homeassistant-custom-component (HA 2026.10.4, Python 3.14) in .github/workflows/pytest.yml."
   config-flow:
     status: todo
     comment: "UI singleton flow exists (config_flow.py:14-30), but data_description is absent and the country data/options semantics need documented review against the full rule."
@@ -38,8 +38,8 @@ rules:
     status: todo
     comment: "README.md:61-71,147-157 and docs/Installation.fr.md:3-13 give setup steps, but README says no options despite the country selector; reconcile and state prerequisites."
   docs-removal-instructions:
-    status: todo
-    comment: "No removal instructions in README.md or docs/Installation.fr.md; add bilingual entry removal and optional HACS uninstall instructions."
+    status: done
+    comment: "README.md (FR+EN 'Suppression'/'Removal') and docs/Installation.{fr,en}.md describe entry deletion and optional HACS removal."
   docs-triggers:
     status: exempt
     comment: "Integration exposes no integration-specific triggers."
@@ -70,14 +70,14 @@ rules:
     status: todo
     comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
   config-entry-unloading:
-    status: todo
-    comment: "__init__.py:42-44 implements platform unloading and line 34 cleans its listener; verify unload/reload with tests before marking done. Global JS/static paths persist intentionally."
+    status: done
+    comment: "async_unload_entry unloads platforms and the update listener is removed via async_on_unload; tests/test_init_sensor.py::test_setup_unload_reload asserts LOADED → reload → NOT_LOADED. Global JS/static paths persist intentionally."
   docs-configuration-parameters:
-    status: todo
-    comment: "Document country/default/hemisphere and Configure options consistently in FR and EN; README.md:71,157 currently contradict the country section."
+    status: done
+    comment: "Options flow (Configure → Country, automatic reload) documented in README.md FR+EN and docs/Installation.{fr,en}.md."
   docs-installation-parameters:
-    status: todo
-    comment: "Country paragraph exists (README.md:119-120), but setup instructions still say no options."
+    status: done
+    comment: "README.md and docs/Installation.{fr,en}.md document the single Country parameter (default France, hemisphere) at setup."
   entity-unavailable:
     status: todo
     comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
@@ -95,7 +95,7 @@ rules:
     comment: "No credentials or external authentication are used."
   test-coverage:
     status: todo
-    comment: "No integration tests found; greater than 95 percent per-module coverage has not been demonstrated."
+    comment: "Measured 96% total, but per-module: __init__.py 90%, frontend/__init__.py 78% (error/fallback paths); sensor.py, astro.py, config_flow.py, const.py 100%. Rule requires >95% per module, so not done."
 
   # Gold
   devices:
@@ -117,8 +117,8 @@ rules:
     status: todo
     comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
   docs-known-limitations:
-    status: todo
-    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+    status: done
+    comment: "README.md 'Précision et limites'/'Accuracy and limitations' and docs/PRECISION.md: USNO-checked accuracy, quarter window, equivalent age_days, leap-day anecdote, validity range."
   docs-supported-devices:
     status: todo
     comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
