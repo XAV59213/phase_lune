@@ -95,7 +95,7 @@ rules:
     comment: "No credentials or external authentication are used."
   test-coverage:
     status: done
-    comment: "100% line+branch coverage for every module; tools/check_coverage.py fails the Pytest workflow if any module is <= 95% (written; verified locally incl. a failing threshold)."
+    comment: "100% line+branch coverage for every module; tools/check_coverage.py fails the Pytest workflow if any module is <= 95% (verified locally incl. a failing threshold)."
 
   # Gold
   devices:
@@ -171,4 +171,4 @@ rules:
     comment: "Makes no HTTP requests (rule exception)."
   strict-typing:
     status: done
-    comment: "mypy --strict (mypy.ini; mypy 1.18.2 pinned in requirements_test*.txt) passes locally on all integration modules with 4 targeted ignores: 3 for voluptuous schemas (HA 2026.10 types expect probatio; voluptuous kept for HA >= 2024.12) and 1 for the StaticPathConfig re-export. Step added to .github/workflows/pytest.yml (written, not yet run remotely)."
+    comment: "mypy --strict (mypy.ini; mypy 1.18.2 pinned in requirements_test*.txt) passes locally on all integration modules with 4 targeted ignores: 3 for voluptuous schemas (HA 2026.10 types expect probatio; voluptuous kept for HA >= 2024.12) and 1 for the StaticPathConfig re-export. Step added to .github/workflows/pytest.yml."

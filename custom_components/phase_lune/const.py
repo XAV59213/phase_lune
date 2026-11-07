@@ -1,7 +1,7 @@
 """Constantes pour l'intégration Phase de la Lune."""
 DOMAIN = "phase_lune"
 NAME = "Phase de la Lune"
-VERSION = "1.3.2"
+VERSION = "1.3.3"
 
 URL_BASE = "/phase_lune_frontend"
 CARD_FILENAME = "phase-lune-card.js"
