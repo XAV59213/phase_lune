@@ -1,0 +1,28 @@
+name: Pytest
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: pytest-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    name: Pytest (Home Assistant)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v6
+      - name: Install Python 3.14 + locked test deps
+        run: |
+          uv venv -p 3.14 .venv
+          uv pip install -p .venv -r requirements_test.lock.txt
+      - name: Run tests
+        run: .venv/bin/pytest -v --cov --cov-report=term-missing

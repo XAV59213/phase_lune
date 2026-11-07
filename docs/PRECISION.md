@@ -1,6 +1,6 @@
 # Précision du calcul / Calculation accuracy
 
-**FR** — Depuis la version de développement suivant 1.3.1, la phase est déduite de l'élongation
+**FR** — Depuis la version 1.3.2, la phase est déduite de l'élongation
 écliptique vraie Lune − Soleil, calculée localement (sans réseau ni dépendance) avec les séries
 basse précision de J. Meeus, *Astronomical Algorithms* (2e éd., ch. 25 et 47 ; illumination ch. 48).
 - Vérifié contre 249 instants officiels de l'US Naval Observatory (2020, 2024, 2025, 2026, 2030) :
