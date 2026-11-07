@@ -61,6 +61,13 @@ class PhaseDeLaLuneSensor(_BaseMoonSensor):
         self._attr_unique_id = f"{DOMAIN}_phase_de_la_lune"
 
     @property
+    def icon(self) -> str | None:
+        """Icône dynamique conservée : les états sont des libellés français libres
+        (« Pleine lune »…), refusés comme clés d'état par le schéma icons.json
+        (translation_key_validator). Changer ces états casserait cartes/automations."""
+        return str(self._data["icon"])
+
+    @property
     def native_value(self) -> str:
         return str(self._data["fr"])
 
@@ -86,10 +93,6 @@ class IlluminationSensor(_BaseMoonSensor):
         self._attr_unique_id = f"{DOMAIN}_illumination"
 
     @property
-    def icon(self) -> str | None:
-        return "mdi:brightness-6"
-
-    @property
     def native_value(self) -> float:
         return float(self._data["illumination"])
 
@@ -105,10 +108,6 @@ class AnecdoteSensor(_BaseMoonSensor):
         super().__init__(entry)
         self._attr_translation_key = "anecdote"
         self._attr_unique_id = f"{DOMAIN}_anecdote"
-
-    @property
-    def icon(self) -> str | None:
-        return "mdi:book-open-variant"
 
     @property
     def entity_picture(self) -> str | None:

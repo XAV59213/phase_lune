@@ -70,7 +70,7 @@ Prérequis : Home Assistant **2024.12** ou plus récent, HACS (ou installation m
 Installation manuelle : copier `custom_components/phase_lune` dans `config/custom_components/`.
 
 ### Configuration
-Paramètres → Appareils et services → **Ajouter une intégration** → « Phase de la Lune ». Un seul paramètre : **Pays** (défaut France), qui fixe l'hémisphère (seule l'image est inversée au sud). Modifiable ensuite via **Configurer** (l'intégration se recharge). Instance unique : un second ajout est refusé.
+Paramètres → Appareils et services → **Ajouter une intégration** → « Phase de la Lune ». Un seul paramètre : **Pays** (défaut France), qui fixe l'hémisphère (seule l'image est inversée au sud). Modifiable ensuite via **Configurer** ou **Reconfigurer** (l'intégration se recharge). Diagnostics téléchargeables (pays, hémisphère, version, état du calcul ; aucune donnée personnelle). Instance unique : un second ajout est refusé.
 
 ### Suppression
 1. Paramètres → Appareils et services → Phase de la Lune → ⋮ → **Supprimer** (retire l'entrée, l'appareil et les 4 capteurs).
@@ -164,9 +164,9 @@ automation:
 
 ### Auto-évaluation Quality Scale
 Auto-évaluation **volontaire** d'une intégration custom HACS, selon les règles de la [Quality Scale de Home Assistant](https://developers.home-assistant.io/docs/core/integration-quality-scale/) : aucun niveau officiel (bronze, argent…) n'est revendiqué ni attribué. Détail et preuves : [`quality_scale.yaml`](custom_components/phase_lune/quality_scale.yaml).
-- 54 règles : **27 faites**, **22 exemptées**, **5 à faire**.
-- 301 tests pytest dans un environnement Home Assistant (workflow Pytest), couverture 100 % (lignes et branches) pour chaque module.
-- Restent à faire : logo dans le dépôt officiel brands, icônes via `icons.json`, étape de reconfiguration, diagnostics, typage strict vérifié en CI.
+- 54 règles : **31 faites**, **22 exemptées**, **1 à faire**.
+- 308 tests pytest dans un environnement Home Assistant, couverture 100 % (lignes et branches) pour chaque module, contrôle « > 95 % par module » et `mypy --strict` dans le workflow Pytest.
+- Reste à faire : icônes via `icons.json` pour le capteur « Phase » en français (ses états libres ne sont pas acceptés comme clés ; les changer casserait automatisations et carte). Les images de marque sont dans `brand/` (affichées à partir de HA 2026.3).
 
 ### Documentation
 Guides détaillés dans [`docs/`](https://github.com/XAV59213/phase_lune/blob/main/docs/) (et le [wiki](https://github.com/XAV59213/phase_lune/wiki)) : [Accueil](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.fr.md) · [Installation](https://github.com/XAV59213/phase_lune/blob/main/docs/Installation.fr.md) · [Lovelace](https://github.com/XAV59213/phase_lune/blob/main/docs/Lovelace.fr.md) · [FAQ](https://github.com/XAV59213/phase_lune/blob/main/docs/FAQ.fr.md)
@@ -216,7 +216,7 @@ Prerequisites: Home Assistant **2024.12** or newer, HACS (or manual install).
 Manual install: copy `custom_components/phase_lune` into `config/custom_components/`.
 
 ### Configuration
-Settings → Devices & services → **Add integration** → "Phase de la Lune". One setting: **Country** (default France), which sets the hemisphere (only the picture is mirrored in the south). Change it later via **Configure** (the integration reloads). Single instance: a second setup is refused.
+Settings → Devices & services → **Add integration** → "Phase de la Lune". One setting: **Country** (default France), which sets the hemisphere (only the picture is mirrored in the south). Change it later via **Configure** or **Reconfigure** (the integration reloads). Downloadable diagnostics (country, hemisphere, version, calculation status; no personal data). Single instance: a second setup is refused.
 
 ### Removal
 1. Settings → Devices & services → Phase de la Lune → ⋮ → **Delete** (removes the entry, device and the 4 sensors).
@@ -310,9 +310,9 @@ automation:
 
 ### Quality Scale self-assessment
 **Voluntary** self-assessment of a custom HACS integration against the [Home Assistant Quality Scale](https://developers.home-assistant.io/docs/core/integration-quality-scale/) rules: no official tier (bronze, silver…) is claimed or awarded. Details and evidence: [`quality_scale.yaml`](custom_components/phase_lune/quality_scale.yaml).
-- 54 rules: **27 done**, **22 exempt**, **5 todo**.
-- 301 pytest tests in a Home Assistant test environment (Pytest workflow), 100% line and branch coverage for every module.
-- Still todo: logo in the official brands repository, icons via `icons.json`, reconfigure step, diagnostics, strict typing enforced in CI.
+- 54 rules: **31 done**, **22 exempt**, **1 todo**.
+- 308 pytest tests in a Home Assistant test environment, 100% line and branch coverage for every module, “> 95% per module” check and `mypy --strict` in the Pytest workflow.
+- Still todo: `icons.json` icons for the French “Phase” sensor (its free-text states are not accepted as keys; changing them would break automations and the card). Brand images ship in `brand/` (shown from HA 2026.3).
 
 ### Documentation
 Detailed guides in [`docs/`](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.md): [Home](https://github.com/XAV59213/phase_lune/blob/main/docs/Home.en.md) · [Installation](https://github.com/XAV59213/phase_lune/blob/main/docs/Installation.en.md) · [Lovelace](https://github.com/XAV59213/phase_lune/blob/main/docs/Lovelace.en.md) · [FAQ](https://github.com/XAV59213/phase_lune/blob/main/docs/FAQ.en.md)

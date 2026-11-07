@@ -71,6 +71,8 @@ mashumaro==3.23
 mdurl==0.1.2
 mock-open==1.4.0
 multidict==7.2.1
+mypy==1.18.2
+mypy-extensions==1.2.0
 nab==0.0.26
 nab-index==0.0.26
 nab-markersets==0.0.26
@@ -81,6 +83,7 @@ numpy==2.3.2
 orjson==3.11.9
 packaging==26.3
 paho-mqtt==2.1.0
+pathspec==1.1.1
 pillow==12.3.0
 pipdeptree==4.2.5
 pluggy==1.7.0

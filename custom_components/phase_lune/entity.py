@@ -9,7 +9,8 @@ from homeassistant.helpers.device_registry import DeviceEntryType, DeviceInfo
 from homeassistant.helpers.entity import Entity
 
 from . import calc
-from .const import COUNTRIES, CONF_COUNTRY, DEFAULT_COUNTRY, DOMAIN, IMAGES_URL, MIRROR, NAME, VERSION
+from .config_flow import current_country
+from .const import COUNTRIES, DOMAIN, IMAGES_URL, MIRROR, NAME, VERSION
 
 _LOGGER = logging.getLogger(__package__)
 
@@ -21,7 +22,7 @@ class PhaseLuneEntity(Entity):
     _attr_should_poll = True
 
     def __init__(self, entry: ConfigEntry) -> None:
-        self._country = str(entry.options.get(CONF_COUNTRY, entry.data.get(CONF_COUNTRY, DEFAULT_COUNTRY))).lower()
+        self._country = current_country(entry)
         self._hemi = COUNTRIES.get(self._country, "N")
         self._data: dict[str, Any] = calc.compute()
         self._attr_device_info = DeviceInfo(
@@ -46,10 +47,6 @@ class PhaseLuneEntity(Entity):
             _LOGGER.info("Phase de la Lune : calcul rétabli")
         self._attr_available = True
         self._data = data
-
-    @property
-    def icon(self) -> str | None:
-        return str(self._data["icon"])
 
     @property
     def _image_slug(self) -> str:

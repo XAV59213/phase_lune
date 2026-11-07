@@ -11,11 +11,22 @@
         "data_description": {
           "country": "Fixe l'hémisphère : au sud l'image est inversée. La phase elle-même est identique partout. Modifiable ensuite via Configurer."
         }
+      },
+      "reconfigure": {
+        "title": "Reconfigurer Phase de la Lune",
+        "description": "Changer le pays (hémisphère). L'intégration se recharge.",
+        "data": {
+          "country": "Pays"
+        },
+        "data_description": {
+          "country": "Fixe l'hémisphère : au sud l'image est inversée. La phase elle-même est identique partout."
+        }
       }
     },
     "abort": {
       "single_instance_allowed": "Déjà configuré. Une seule instance est autorisée.",
-      "already_configured": "Déjà configuré."
+      "already_configured": "Déjà configuré.",
+      "reconfigure_successful": "Pays mis à jour."
     }
   },
   "entity": {

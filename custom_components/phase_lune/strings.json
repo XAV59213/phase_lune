@@ -11,11 +11,22 @@
         "data_description": {
           "country": "Sets the hemisphere: in the south the picture is mirrored. The phase itself is the same everywhere. Can be changed later via Configure."
         }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Moon Phase",
+        "description": "Change the country (hemisphere). The integration reloads.",
+        "data": {
+          "country": "Country"
+        },
+        "data_description": {
+          "country": "Sets the hemisphere: in the south the picture is mirrored. The phase itself is the same everywhere."
+        }
       }
     },
     "abort": {
       "single_instance_allowed": "Already configured. Only a single instance is allowed.",
-      "already_configured": "Already configured."
+      "already_configured": "Already configured.",
+      "reconfigure_successful": "Country updated."
     }
   },
   "entity": {

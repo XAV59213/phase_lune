@@ -11,6 +11,11 @@ from homeassistant.helpers.selector import SelectSelector, SelectSelectorConfig,
 from .const import COUNTRIES, CONF_COUNTRY, DEFAULT_COUNTRY, DOMAIN, NAME
 
 
+def current_country(entry: ConfigEntry) -> str:
+    """Pays effectif : options, sinon data (entrées < 1.3.3), sinon défaut."""
+    return str(entry.options.get(CONF_COUNTRY, entry.data.get(CONF_COUNTRY, DEFAULT_COUNTRY))).lower()
+
+
 def _schema(default: str) -> vol.Schema:
     return vol.Schema({vol.Required(CONF_COUNTRY, default=default): SelectSelector(
         SelectSelectorConfig(options=list(COUNTRIES), mode=SelectSelectorMode.DROPDOWN,
@@ -33,6 +38,14 @@ class PhaseLuneConfigFlow(ConfigFlow, domain=DOMAIN):
             return self.async_create_entry(title=NAME, data={}, options=user_input)
         return self.async_show_form(step_id="user", data_schema=_schema(DEFAULT_COUNTRY))  # type: ignore[arg-type]  # voluptuous gardé pour HA >= 2024.12
 
+    async def async_step_reconfigure(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
+        """Reconfigurer le pays sans supprimer l'intégration (entrée existante)."""
+        entry = self._get_reconfigure_entry()
+        if user_input is not None:
+            # data vidée : le pays vit dans options (nettoie les entrées anciennes)
+            return self.async_update_reload_and_abort(entry, data={}, options={CONF_COUNTRY: user_input[CONF_COUNTRY]})
+        return self.async_show_form(step_id="reconfigure", data_schema=_schema(current_country(entry)))  # type: ignore[arg-type]  # voluptuous gardé pour HA >= 2024.12
+
     @staticmethod
     @callback
     def async_get_options_flow(config_entry: ConfigEntry) -> PhaseLuneOptionsFlow:
@@ -45,5 +58,4 @@ class PhaseLuneOptionsFlow(OptionsFlow):
     async def async_step_init(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
         if user_input is not None:
             return self.async_create_entry(title="", data=user_input)
-        cur = str(self.config_entry.options.get(CONF_COUNTRY, self.config_entry.data.get(CONF_COUNTRY, DEFAULT_COUNTRY))).lower()
-        return self.async_show_form(step_id="init", data_schema=_schema(cur))  # type: ignore[arg-type]  # idem
+        return self.async_show_form(step_id="init", data_schema=_schema(current_country(self.config_entry)))  # type: ignore[arg-type]  # idem
