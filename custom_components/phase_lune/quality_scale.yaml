@@ -1,0 +1,174 @@
+# DRAFT ONLY - custom HACS self-audit, not an official Home Assistant tier.
+# Evidence ref: XAV59213/phase_lune@38e8a983ac4beb1a9a658235985104490ccbbbe7
+# File/line references are relative to that ref. Higher-tier todo may mean not audited.
+# Do not add quality_scale: bronze to manifest.json. See AUDIT.md.
+rules:
+  # Bronze
+  action-setup:
+    status: exempt
+    comment: "No integration actions are registered; __init__.py:19-44 and sensor.py:66-198."
+  appropriate-polling:
+    status: done
+    comment: "sensor.py:16 uses 15 minutes for slowly changing, locally calculated lunar data; update at 85-86."
+  brands:
+    status: todo
+    comment: "Bundled brand assets exist, but no phase_lune entry found in home-assistant/brands master tree. Bundled HACS assets do not establish this core rule."
+  common-modules:
+    status: todo
+    comment: "Shared _BaseMoonSensor is in sensor.py:72-103 rather than entity.py; review applicability to a sensor-only base before moving it."
+  config-flow-test-coverage:
+    status: todo
+    comment: "No tests directory or test files in the remote tree; no measured full config-flow coverage."
+  config-flow:
+    status: todo
+    comment: "UI singleton flow exists (config_flow.py:14-30), but data_description is absent and the country data/options semantics need documented review against the full rule."
+  dependency-transparency:
+    status: exempt
+    comment: "manifest.json requirements is empty; only Home Assistant and Python standard library imports in audited Python modules."
+  docs-actions:
+    status: exempt
+    comment: "Integration exposes no integration-specific actions."
+  docs-conditions:
+    status: exempt
+    comment: "Integration exposes no integration-specific conditions."
+  docs-high-level-description:
+    status: done
+    comment: "README.md:125 describes the local lunar phase and illumination calculations, without an API."
+  docs-installation-instructions:
+    status: todo
+    comment: "README.md:61-71,147-157 and docs/Installation.fr.md:3-13 give setup steps, but README says no options despite the country selector; reconcile and state prerequisites."
+  docs-removal-instructions:
+    status: todo
+    comment: "No removal instructions in README.md or docs/Installation.fr.md; add bilingual entry removal and optional HACS uninstall instructions."
+  docs-triggers:
+    status: exempt
+    comment: "Integration exposes no integration-specific triggers."
+  entity-event-setup:
+    status: exempt
+    comment: "Sensors poll and do not subscribe to events. Entry update listener is registered with async_on_unload in __init__.py:34."
+  entity-unique-id:
+    status: done
+    comment: "Four stable unique IDs in sensor.py:112,134,159,180; singleton enforced by config_flow.py:26-27."
+  has-entity-name:
+    status: done
+    comment: "sensor.py:73 sets has_entity_name=True; device name at 80-83 and translation keys at 111,133,158,179; strings.json:18-32 contains names."
+  runtime-data:
+    status: exempt
+    comment: "No per-entry API client or coordinator/runtime object is shared. Entity-local calculated state stays on entities; hass.data in __init__.py:21-25 only guards global frontend registration."
+  test-before-configure:
+    status: exempt
+    comment: "Only local calculations; country selects image hemisphere, not a connection to a device/service."
+  test-before-setup:
+    status: exempt
+    comment: "Only local calculations, explicitly allowed by this rule; __init__.py:31-35 forwards sensor setup and sensor.py:23-63 computes locally."
+  unique-config-entry:
+    status: done
+    comment: "config_flow.py:26-27 sets DOMAIN as unique ID and aborts when already configured."
+
+  # Silver
+  action-exceptions:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  config-entry-unloading:
+    status: todo
+    comment: "__init__.py:42-44 implements platform unloading and line 34 cleans its listener; verify unload/reload with tests before marking done. Global JS/static paths persist intentionally."
+  docs-configuration-parameters:
+    status: todo
+    comment: "Document country/default/hemisphere and Configure options consistently in FR and EN; README.md:71,157 currently contradict the country section."
+  docs-installation-parameters:
+    status: todo
+    comment: "Country paragraph exists (README.md:119-120), but setup instructions still say no options."
+  entity-unavailable:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  integration-owner:
+    status: done
+    comment: "manifest.json:4-6 lists @xav59213 as codeowner."
+  log-when-unavailable:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  parallel-updates:
+    status: todo
+    comment: "sensor.py has no PARALLEL_UPDATES declaration."
+  reauthentication-flow:
+    status: exempt
+    comment: "No credentials or external authentication are used."
+  test-coverage:
+    status: todo
+    comment: "No integration tests found; greater than 95 percent per-module coverage has not been demonstrated."
+
+  # Gold
+  devices:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  diagnostics:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  discovery-update-info:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  discovery:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  docs-data-update:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  docs-examples:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  docs-known-limitations:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  docs-supported-devices:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  docs-supported-functions:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  docs-troubleshooting:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  docs-use-cases:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  dynamic-devices:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  entity-category:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  entity-device-class:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  entity-disabled-by-default:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  entity-translations:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  exception-translations:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  icon-translations:
+    status: todo
+    comment: "No icons.json in remote tree; icons are properties in sensor.py:88-90,161-163,182-184."
+  reconfiguration-flow:
+    status: todo
+    comment: "config_flow.py has an options flow, but no async_step_reconfigure; do not equate the two."
+  repair-issues:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  stale-devices:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+
+  # Platinum
+  async-dependency:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  inject-websession:
+    status: todo
+    comment: "Not assessed in this Bronze-focused static audit; no compliance claim. Review the official rule and tests before updating."
+  strict-typing:
+    status: todo
+    comment: "No strict mypy configuration or verified strict-typing result; several unparameterized dict types and untyped flow methods."
