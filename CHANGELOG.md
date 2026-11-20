@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.5
+- FR : ajout d'un badge « GitHub Stars » cliquable vers la page des stargazers dans le README. Aucun changement de code.
+- EN: added a clickable « GitHub Stars » badge linking to the stargazers page in the README. No code changes.
+
 ## 1.3.4
 - FR : ajout du bouton « Discuter sur Forum Domotique » (40 px) dans le README, avec un lien vers le sujet Phase de la Lune. Aucun changement de code.
 - EN: added the « Discuter sur Forum Domotique » (40 px) button to the README, linking to the Phase de la Lune topic. No code changes.
