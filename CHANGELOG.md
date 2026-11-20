@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.4
+- FR : ajout du bouton « Discuter sur Forum Domotique » (40 px) dans le README, avec un lien vers le sujet Phase de la Lune. Aucun changement de code.
+- EN: added the « Discuter sur Forum Domotique » (40 px) button to the README, linking to the Phase de la Lune topic. No code changes.
+
 ## 1.3.3
 - FR : pays stocké dans les options (anciennes entrées lues en repli) ; aide par champ (data_description) ; capteur slug en classe `enum` (états traduits) ; appareil de type service ; `PARALLEL_UPDATES = 0` ; indisponibilité journalisée une fois puis rétablissement ; entité de base dans `entity.py`, calcul dans `calc.py` ; HA minimum 2024.12 (options flow `self.config_entry`) ; docs fonctions, mises à jour, cas d'usage, exemples, dépannage ; 308 tests, couverture 100 % par module ; étape Reconfigurer ; diagnostics ; `icons.json` (sauf capteur Phase FR) ; images de marque recadrées sans perte ; `mypy --strict` et contrôle de couverture par module dans le workflow ; checklist Quality Scale 31/22/1.
 - EN: country stored in options (legacy entries read as fallback); per-field help (data_description); slug sensor `enum` device class (translated states); service device type; `PARALLEL_UPDATES = 0`; unavailability logged once then recovery; base entity in `entity.py`, computation in `calc.py`; minimum HA 2024.12 (options flow `self.config_entry`); docs for functions, updates, use cases, examples, troubleshooting; 308 tests, 100% per-module coverage; Reconfigure step; diagnostics; `icons.json` (except French Phase sensor); brand images trimmed losslessly; `mypy --strict` and per-module coverage check in the workflow; Quality Scale checklist 31/22/1.
